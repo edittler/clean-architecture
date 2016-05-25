@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		37AB33FD1CF64E5A00CF8359 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB33FC1CF64E5A00CF8359 /* AppDelegate.swift */; };
+		37AB33FF1CF64E5A00CF8359 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB33FE1CF64E5A00CF8359 /* ViewController.swift */; };
+		37AB34021CF64E5A00CF8359 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37AB34001CF64E5A00CF8359 /* Main.storyboard */; };
+		37AB34041CF64E5A00CF8359 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37AB34031CF64E5A00CF8359 /* Assets.xcassets */; };
+		37AB34071CF64E5A00CF8359 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37AB34051CF64E5A00CF8359 /* LaunchScreen.storyboard */; };
+		37AB34121CF64E5A00CF8359 /* FIUBATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB34111CF64E5A00CF8359 /* FIUBATests.swift */; };
+		37AB341D1CF64E5A00CF8359 /* FIUBAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB341C1CF64E5A00CF8359 /* FIUBAUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		37AB340E1CF64E5A00CF8359 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37AB33F11CF64E5A00CF8359 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37AB33F81CF64E5A00CF8359;
+			remoteInfo = FIUBA;
+		};
+		37AB34191CF64E5A00CF8359 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37AB33F11CF64E5A00CF8359 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37AB33F81CF64E5A00CF8359;
+			remoteInfo = FIUBA;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		37AB33F91CF64E5A00CF8359 /* FIUBA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FIUBA.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		37AB33FC1CF64E5A00CF8359 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		37AB33FE1CF64E5A00CF8359 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		37AB34011CF64E5A00CF8359 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		37AB34031CF64E5A00CF8359 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		37AB34061CF64E5A00CF8359 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		37AB34081CF64E5A00CF8359 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37AB340D1CF64E5A00CF8359 /* FIUBATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FIUBATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		37AB34111CF64E5A00CF8359 /* FIUBATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIUBATests.swift; sourceTree = "<group>"; };
+		37AB34131CF64E5A00CF8359 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37AB34181CF64E5A00CF8359 /* FIUBAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FIUBAUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		37AB341C1CF64E5A00CF8359 /* FIUBAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIUBAUITests.swift; sourceTree = "<group>"; };
+		37AB341E1CF64E5A00CF8359 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		37AB33F61CF64E5A00CF8359 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37AB340A1CF64E5A00CF8359 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37AB34151CF64E5A00CF8359 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		37AB33F01CF64E5A00CF8359 = {
+			isa = PBXGroup;
+			children = (
+				37AB33FB1CF64E5A00CF8359 /* FIUBA */,
+				37AB34101CF64E5A00CF8359 /* FIUBATests */,
+				37AB341B1CF64E5A00CF8359 /* FIUBAUITests */,
+				37AB33FA1CF64E5A00CF8359 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		37AB33FA1CF64E5A00CF8359 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37AB33F91CF64E5A00CF8359 /* FIUBA.app */,
+				37AB340D1CF64E5A00CF8359 /* FIUBATests.xctest */,
+				37AB34181CF64E5A00CF8359 /* FIUBAUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		37AB33FB1CF64E5A00CF8359 /* FIUBA */ = {
+			isa = PBXGroup;
+			children = (
+				37AB33FC1CF64E5A00CF8359 /* AppDelegate.swift */,
+				37AB33FE1CF64E5A00CF8359 /* ViewController.swift */,
+				37AB34001CF64E5A00CF8359 /* Main.storyboard */,
+				37AB34031CF64E5A00CF8359 /* Assets.xcassets */,
+				37AB34051CF64E5A00CF8359 /* LaunchScreen.storyboard */,
+				37AB34081CF64E5A00CF8359 /* Info.plist */,
+			);
+			path = FIUBA;
+			sourceTree = "<group>";
+		};
+		37AB34101CF64E5A00CF8359 /* FIUBATests */ = {
+			isa = PBXGroup;
+			children = (
+				37AB34111CF64E5A00CF8359 /* FIUBATests.swift */,
+				37AB34131CF64E5A00CF8359 /* Info.plist */,
+			);
+			path = FIUBATests;
+			sourceTree = "<group>";
+		};
+		37AB341B1CF64E5A00CF8359 /* FIUBAUITests */ = {
+			isa = PBXGroup;
+			children = (
+				37AB341C1CF64E5A00CF8359 /* FIUBAUITests.swift */,
+				37AB341E1CF64E5A00CF8359 /* Info.plist */,
+			);
+			path = FIUBAUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		37AB33F81CF64E5A00CF8359 /* FIUBA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37AB34211CF64E5A00CF8359 /* Build configuration list for PBXNativeTarget "FIUBA" */;
+			buildPhases = (
+				37AB33F51CF64E5A00CF8359 /* Sources */,
+				37AB33F61CF64E5A00CF8359 /* Frameworks */,
+				37AB33F71CF64E5A00CF8359 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FIUBA;
+			productName = FIUBA;
+			productReference = 37AB33F91CF64E5A00CF8359 /* FIUBA.app */;
+			productType = "com.apple.product-type.application";
+		};
+		37AB340C1CF64E5A00CF8359 /* FIUBATests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37AB34241CF64E5A00CF8359 /* Build configuration list for PBXNativeTarget "FIUBATests" */;
+			buildPhases = (
+				37AB34091CF64E5A00CF8359 /* Sources */,
+				37AB340A1CF64E5A00CF8359 /* Frameworks */,
+				37AB340B1CF64E5A00CF8359 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				37AB340F1CF64E5A00CF8359 /* PBXTargetDependency */,
+			);
+			name = FIUBATests;
+			productName = FIUBATests;
+			productReference = 37AB340D1CF64E5A00CF8359 /* FIUBATests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		37AB34171CF64E5A00CF8359 /* FIUBAUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37AB34271CF64E5A00CF8359 /* Build configuration list for PBXNativeTarget "FIUBAUITests" */;
+			buildPhases = (
+				37AB34141CF64E5A00CF8359 /* Sources */,
+				37AB34151CF64E5A00CF8359 /* Frameworks */,
+				37AB34161CF64E5A00CF8359 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				37AB341A1CF64E5A00CF8359 /* PBXTargetDependency */,
+			);
+			name = FIUBAUITests;
+			productName = FIUBAUITests;
+			productReference = 37AB34181CF64E5A00CF8359 /* FIUBAUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		37AB33F11CF64E5A00CF8359 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = FIUBA;
+				TargetAttributes = {
+					37AB33F81CF64E5A00CF8359 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					37AB340C1CF64E5A00CF8359 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 37AB33F81CF64E5A00CF8359;
+					};
+					37AB34171CF64E5A00CF8359 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 37AB33F81CF64E5A00CF8359;
+					};
+				};
+			};
+			buildConfigurationList = 37AB33F41CF64E5A00CF8359 /* Build configuration list for PBXProject "FIUBA" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 37AB33F01CF64E5A00CF8359;
+			productRefGroup = 37AB33FA1CF64E5A00CF8359 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				37AB33F81CF64E5A00CF8359 /* FIUBA */,
+				37AB340C1CF64E5A00CF8359 /* FIUBATests */,
+				37AB34171CF64E5A00CF8359 /* FIUBAUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		37AB33F71CF64E5A00CF8359 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37AB34071CF64E5A00CF8359 /* LaunchScreen.storyboard in Resources */,
+				37AB34041CF64E5A00CF8359 /* Assets.xcassets in Resources */,
+				37AB34021CF64E5A00CF8359 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37AB340B1CF64E5A00CF8359 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37AB34161CF64E5A00CF8359 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		37AB33F51CF64E5A00CF8359 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37AB33FF1CF64E5A00CF8359 /* ViewController.swift in Sources */,
+				37AB33FD1CF64E5A00CF8359 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37AB34091CF64E5A00CF8359 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37AB34121CF64E5A00CF8359 /* FIUBATests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37AB34141CF64E5A00CF8359 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37AB341D1CF64E5A00CF8359 /* FIUBAUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		37AB340F1CF64E5A00CF8359 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37AB33F81CF64E5A00CF8359 /* FIUBA */;
+			targetProxy = 37AB340E1CF64E5A00CF8359 /* PBXContainerItemProxy */;
+		};
+		37AB341A1CF64E5A00CF8359 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37AB33F81CF64E5A00CF8359 /* FIUBA */;
+			targetProxy = 37AB34191CF64E5A00CF8359 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		37AB34001CF64E5A00CF8359 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37AB34011CF64E5A00CF8359 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		37AB34051CF64E5A00CF8359 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37AB34061CF64E5A00CF8359 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		37AB341F1CF64E5A00CF8359 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		37AB34201CF64E5A00CF8359 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		37AB34221CF64E5A00CF8359 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FIUBA/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ar.uba.fi.dc.arqsoft.FIUBA;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		37AB34231CF64E5A00CF8359 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FIUBA/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ar.uba.fi.dc.arqsoft.FIUBA;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		37AB34251CF64E5A00CF8359 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FIUBATests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ar.uba.fi.dc.arqsoft.FIUBATests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FIUBA.app/FIUBA";
+			};
+			name = Debug;
+		};
+		37AB34261CF64E5A00CF8359 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FIUBATests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ar.uba.fi.dc.arqsoft.FIUBATests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FIUBA.app/FIUBA";
+			};
+			name = Release;
+		};
+		37AB34281CF64E5A00CF8359 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FIUBAUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ar.uba.fi.dc.arqsoft.FIUBAUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FIUBA;
+			};
+			name = Debug;
+		};
+		37AB34291CF64E5A00CF8359 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FIUBAUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ar.uba.fi.dc.arqsoft.FIUBAUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FIUBA;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		37AB33F41CF64E5A00CF8359 /* Build configuration list for PBXProject "FIUBA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37AB341F1CF64E5A00CF8359 /* Debug */,
+				37AB34201CF64E5A00CF8359 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37AB34211CF64E5A00CF8359 /* Build configuration list for PBXNativeTarget "FIUBA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37AB34221CF64E5A00CF8359 /* Debug */,
+				37AB34231CF64E5A00CF8359 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		37AB34241CF64E5A00CF8359 /* Build configuration list for PBXNativeTarget "FIUBATests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37AB34251CF64E5A00CF8359 /* Debug */,
+				37AB34261CF64E5A00CF8359 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		37AB34271CF64E5A00CF8359 /* Build configuration list for PBXNativeTarget "FIUBAUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37AB34281CF64E5A00CF8359 /* Debug */,
+				37AB34291CF64E5A00CF8359 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 37AB33F11CF64E5A00CF8359 /* Project object */;
+}
