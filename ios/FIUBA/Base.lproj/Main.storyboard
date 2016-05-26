@@ -31,6 +31,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="pJs-Nc-WuG" kind="show" identifier="ShowListSubjectsScene" id="F1r-tq-9EO"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -43,6 +46,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SUf-Ia-umc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1060" y="411"/>
+        </scene>
+        <!--Asignaturas-->
+        <scene sceneID="ydh-Ct-bH7">
+            <objects>
+                <tableViewController title="Asignaturas" id="pJs-Nc-WuG" customClass="ListSubjectsViewController" customModule="FIUBA" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="RRC-8a-X3g">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="subjectCell" textLabel="vHN-0E-Y6w" style="IBUITableViewCellStyleDefault" id="z2N-RJ-JNb">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z2N-RJ-JNb" id="IrP-kx-ad9">
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vHN-0E-Y6w">
+                                            <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="pJs-Nc-WuG" id="nS6-Hf-r9B"/>
+                            <outlet property="delegate" destination="pJs-Nc-WuG" id="3SV-W4-o5F"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Asignaturas" id="RC0-Z2-6Mh"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ave-J5-Ozm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1854" y="411"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="b3O-a6-KJu">

@@ -23,12 +23,6 @@ class ListDegreeProgramsInteractor: ListDegreeProgramsInteractorInput {
     // MARK: Business logic
 
     func fetchDegreePrograms(request: ListDegreePrograms.Request) {
-        // NOTE: Create some Worker to do the work
-
-        worker = ListDegreeProgramsWorker()
-        worker.doSomeWork()
-
-        // NOTE: Pass the result to the Presenter
         degreeProgramsWorker.fetchDegreePrograms { (degreePrograms) in
             let response = ListDegreePrograms.Response(degreePrograms: degreePrograms)
             self.output.presentFetchedDegreePrograms(response)

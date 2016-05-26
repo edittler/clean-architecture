@@ -37,8 +37,6 @@ class ListDegreeProgramsViewController: UITableViewController,
     // MARK: Event handling
 
     func fetchDegreeProgramsOnLoad() {
-        // NOTE: Ask the Interactor to do some work
-
         let request = ListDegreePrograms.Request()
         output.fetchDegreePrograms(request)
     }
