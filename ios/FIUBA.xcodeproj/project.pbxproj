@@ -8,12 +8,41 @@
 
 /* Begin PBXBuildFile section */
 		37AB33FD1CF64E5A00CF8359 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB33FC1CF64E5A00CF8359 /* AppDelegate.swift */; };
-		37AB33FF1CF64E5A00CF8359 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB33FE1CF64E5A00CF8359 /* ViewController.swift */; };
 		37AB34021CF64E5A00CF8359 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37AB34001CF64E5A00CF8359 /* Main.storyboard */; };
 		37AB34041CF64E5A00CF8359 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37AB34031CF64E5A00CF8359 /* Assets.xcassets */; };
 		37AB34071CF64E5A00CF8359 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37AB34051CF64E5A00CF8359 /* LaunchScreen.storyboard */; };
 		37AB34121CF64E5A00CF8359 /* FIUBATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB34111CF64E5A00CF8359 /* FIUBATests.swift */; };
 		37AB341D1CF64E5A00CF8359 /* FIUBAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB341C1CF64E5A00CF8359 /* FIUBAUITests.swift */; };
+		37AB344F1CF660C100CF8359 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB344E1CF660C100CF8359 /* TableViewController.swift */; };
+		37AB34501CF660C100CF8359 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB344E1CF660C100CF8359 /* TableViewController.swift */; };
+		37AB34511CF660C100CF8359 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB344E1CF660C100CF8359 /* TableViewController.swift */; };
+		37AB345A1CF664EA00CF8359 /* ListDegreeProgramsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB34531CF664EA00CF8359 /* ListDegreeProgramsConfigurator.swift */; };
+		37AB345B1CF664EA00CF8359 /* ListDegreeProgramsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB34531CF664EA00CF8359 /* ListDegreeProgramsConfigurator.swift */; };
+		37AB345C1CF664EA00CF8359 /* ListDegreeProgramsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB34531CF664EA00CF8359 /* ListDegreeProgramsConfigurator.swift */; };
+		37AB345D1CF664EA00CF8359 /* ListDegreeProgramsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB34541CF664EA00CF8359 /* ListDegreeProgramsInteractor.swift */; };
+		37AB345E1CF664EA00CF8359 /* ListDegreeProgramsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB34541CF664EA00CF8359 /* ListDegreeProgramsInteractor.swift */; };
+		37AB345F1CF664EA00CF8359 /* ListDegreeProgramsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB34541CF664EA00CF8359 /* ListDegreeProgramsInteractor.swift */; };
+		37AB34601CF664EA00CF8359 /* ListDegreeProgramsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB34551CF664EA00CF8359 /* ListDegreeProgramsModels.swift */; };
+		37AB34611CF664EA00CF8359 /* ListDegreeProgramsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB34551CF664EA00CF8359 /* ListDegreeProgramsModels.swift */; };
+		37AB34621CF664EA00CF8359 /* ListDegreeProgramsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB34551CF664EA00CF8359 /* ListDegreeProgramsModels.swift */; };
+		37AB34631CF664EA00CF8359 /* ListDegreeProgramsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB34561CF664EA00CF8359 /* ListDegreeProgramsPresenter.swift */; };
+		37AB34641CF664EA00CF8359 /* ListDegreeProgramsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB34561CF664EA00CF8359 /* ListDegreeProgramsPresenter.swift */; };
+		37AB34651CF664EA00CF8359 /* ListDegreeProgramsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB34561CF664EA00CF8359 /* ListDegreeProgramsPresenter.swift */; };
+		37AB34661CF664EA00CF8359 /* ListDegreeProgramsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB34571CF664EA00CF8359 /* ListDegreeProgramsRouter.swift */; };
+		37AB34671CF664EA00CF8359 /* ListDegreeProgramsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB34571CF664EA00CF8359 /* ListDegreeProgramsRouter.swift */; };
+		37AB34681CF664EA00CF8359 /* ListDegreeProgramsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB34571CF664EA00CF8359 /* ListDegreeProgramsRouter.swift */; };
+		37AB34691CF664EA00CF8359 /* ListDegreeProgramsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB34581CF664EA00CF8359 /* ListDegreeProgramsViewController.swift */; };
+		37AB346A1CF664EA00CF8359 /* ListDegreeProgramsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB34581CF664EA00CF8359 /* ListDegreeProgramsViewController.swift */; };
+		37AB346B1CF664EA00CF8359 /* ListDegreeProgramsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB34581CF664EA00CF8359 /* ListDegreeProgramsViewController.swift */; };
+		37AB346C1CF664EA00CF8359 /* ListDegreeProgramsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB34591CF664EA00CF8359 /* ListDegreeProgramsWorker.swift */; };
+		37AB346D1CF664EA00CF8359 /* ListDegreeProgramsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB34591CF664EA00CF8359 /* ListDegreeProgramsWorker.swift */; };
+		37AB346E1CF664EA00CF8359 /* ListDegreeProgramsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB34591CF664EA00CF8359 /* ListDegreeProgramsWorker.swift */; };
+		37AB34711CF67A5B00CF8359 /* DegreeProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB34701CF67A5B00CF8359 /* DegreeProgram.swift */; };
+		37AB34721CF67A5B00CF8359 /* DegreeProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB34701CF67A5B00CF8359 /* DegreeProgram.swift */; };
+		37AB34731CF67A5B00CF8359 /* DegreeProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB34701CF67A5B00CF8359 /* DegreeProgram.swift */; };
+		37AB34761CF67D8000CF8359 /* DegreeProgramsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB34751CF67D8000CF8359 /* DegreeProgramsWorker.swift */; };
+		37AB34771CF67D8000CF8359 /* DegreeProgramsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB34751CF67D8000CF8359 /* DegreeProgramsWorker.swift */; };
+		37AB34781CF67D8000CF8359 /* DegreeProgramsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB34751CF67D8000CF8359 /* DegreeProgramsWorker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +65,6 @@
 /* Begin PBXFileReference section */
 		37AB33F91CF64E5A00CF8359 /* FIUBA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FIUBA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37AB33FC1CF64E5A00CF8359 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		37AB33FE1CF64E5A00CF8359 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		37AB34011CF64E5A00CF8359 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		37AB34031CF64E5A00CF8359 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37AB34061CF64E5A00CF8359 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +75,16 @@
 		37AB34181CF64E5A00CF8359 /* FIUBAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FIUBAUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		37AB341C1CF64E5A00CF8359 /* FIUBAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIUBAUITests.swift; sourceTree = "<group>"; };
 		37AB341E1CF64E5A00CF8359 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37AB344E1CF660C100CF8359 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		37AB34531CF664EA00CF8359 /* ListDegreeProgramsConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDegreeProgramsConfigurator.swift; sourceTree = "<group>"; };
+		37AB34541CF664EA00CF8359 /* ListDegreeProgramsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDegreeProgramsInteractor.swift; sourceTree = "<group>"; };
+		37AB34551CF664EA00CF8359 /* ListDegreeProgramsModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDegreeProgramsModels.swift; sourceTree = "<group>"; };
+		37AB34561CF664EA00CF8359 /* ListDegreeProgramsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDegreeProgramsPresenter.swift; sourceTree = "<group>"; };
+		37AB34571CF664EA00CF8359 /* ListDegreeProgramsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDegreeProgramsRouter.swift; sourceTree = "<group>"; };
+		37AB34581CF664EA00CF8359 /* ListDegreeProgramsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDegreeProgramsViewController.swift; sourceTree = "<group>"; };
+		37AB34591CF664EA00CF8359 /* ListDegreeProgramsWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDegreeProgramsWorker.swift; sourceTree = "<group>"; };
+		37AB34701CF67A5B00CF8359 /* DegreeProgram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DegreeProgram.swift; sourceTree = "<group>"; };
+		37AB34751CF67D8000CF8359 /* DegreeProgramsWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DegreeProgramsWorker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +135,10 @@
 		37AB33FB1CF64E5A00CF8359 /* FIUBA */ = {
 			isa = PBXGroup;
 			children = (
+				37AB346F1CF67A2600CF8359 /* Models */,
+				37AB34741CF67D5400CF8359 /* Workers */,
+				37AB342A1CF65BA200CF8359 /* Scenes */,
 				37AB33FC1CF64E5A00CF8359 /* AppDelegate.swift */,
-				37AB33FE1CF64E5A00CF8359 /* ViewController.swift */,
 				37AB34001CF64E5A00CF8359 /* Main.storyboard */,
 				37AB34031CF64E5A00CF8359 /* Assets.xcassets */,
 				37AB34051CF64E5A00CF8359 /* LaunchScreen.storyboard */,
@@ -125,6 +165,45 @@
 			path = FIUBAUITests;
 			sourceTree = "<group>";
 		};
+		37AB342A1CF65BA200CF8359 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				37AB34521CF664D000CF8359 /* ListDegreePrograms */,
+				37AB344E1CF660C100CF8359 /* TableViewController.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		37AB34521CF664D000CF8359 /* ListDegreePrograms */ = {
+			isa = PBXGroup;
+			children = (
+				37AB34531CF664EA00CF8359 /* ListDegreeProgramsConfigurator.swift */,
+				37AB34541CF664EA00CF8359 /* ListDegreeProgramsInteractor.swift */,
+				37AB34551CF664EA00CF8359 /* ListDegreeProgramsModels.swift */,
+				37AB34561CF664EA00CF8359 /* ListDegreeProgramsPresenter.swift */,
+				37AB34571CF664EA00CF8359 /* ListDegreeProgramsRouter.swift */,
+				37AB34581CF664EA00CF8359 /* ListDegreeProgramsViewController.swift */,
+				37AB34591CF664EA00CF8359 /* ListDegreeProgramsWorker.swift */,
+			);
+			path = ListDegreePrograms;
+			sourceTree = "<group>";
+		};
+		37AB346F1CF67A2600CF8359 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				37AB34701CF67A5B00CF8359 /* DegreeProgram.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		37AB34741CF67D5400CF8359 /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				37AB34751CF67D8000CF8359 /* DegreeProgramsWorker.swift */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +214,7 @@
 				37AB33F51CF64E5A00CF8359 /* Sources */,
 				37AB33F61CF64E5A00CF8359 /* Frameworks */,
 				37AB33F71CF64E5A00CF8359 /* Resources */,
+				37AB344D1CF65E4900CF8359 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -251,13 +331,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		37AB344D1CF65E4900CF8359 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		37AB33F51CF64E5A00CF8359 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37AB33FF1CF64E5A00CF8359 /* ViewController.swift in Sources */,
+				37AB34661CF664EA00CF8359 /* ListDegreeProgramsRouter.swift in Sources */,
+				37AB345D1CF664EA00CF8359 /* ListDegreeProgramsInteractor.swift in Sources */,
+				37AB34711CF67A5B00CF8359 /* DegreeProgram.swift in Sources */,
+				37AB34691CF664EA00CF8359 /* ListDegreeProgramsViewController.swift in Sources */,
+				37AB346C1CF664EA00CF8359 /* ListDegreeProgramsWorker.swift in Sources */,
+				37AB34631CF664EA00CF8359 /* ListDegreeProgramsPresenter.swift in Sources */,
 				37AB33FD1CF64E5A00CF8359 /* AppDelegate.swift in Sources */,
+				37AB34761CF67D8000CF8359 /* DegreeProgramsWorker.swift in Sources */,
+				37AB34601CF664EA00CF8359 /* ListDegreeProgramsModels.swift in Sources */,
+				37AB345A1CF664EA00CF8359 /* ListDegreeProgramsConfigurator.swift in Sources */,
+				37AB344F1CF660C100CF8359 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +371,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37AB34671CF664EA00CF8359 /* ListDegreeProgramsRouter.swift in Sources */,
+				37AB345E1CF664EA00CF8359 /* ListDegreeProgramsInteractor.swift in Sources */,
+				37AB34721CF67A5B00CF8359 /* DegreeProgram.swift in Sources */,
+				37AB346A1CF664EA00CF8359 /* ListDegreeProgramsViewController.swift in Sources */,
+				37AB346D1CF664EA00CF8359 /* ListDegreeProgramsWorker.swift in Sources */,
+				37AB34641CF664EA00CF8359 /* ListDegreeProgramsPresenter.swift in Sources */,
+				37AB34611CF664EA00CF8359 /* ListDegreeProgramsModels.swift in Sources */,
+				37AB34771CF67D8000CF8359 /* DegreeProgramsWorker.swift in Sources */,
+				37AB345B1CF664EA00CF8359 /* ListDegreeProgramsConfigurator.swift in Sources */,
+				37AB34501CF660C100CF8359 /* TableViewController.swift in Sources */,
 				37AB34121CF64E5A00CF8359 /* FIUBATests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,6 +389,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37AB34681CF664EA00CF8359 /* ListDegreeProgramsRouter.swift in Sources */,
+				37AB345F1CF664EA00CF8359 /* ListDegreeProgramsInteractor.swift in Sources */,
+				37AB34731CF67A5B00CF8359 /* DegreeProgram.swift in Sources */,
+				37AB346B1CF664EA00CF8359 /* ListDegreeProgramsViewController.swift in Sources */,
+				37AB346E1CF664EA00CF8359 /* ListDegreeProgramsWorker.swift in Sources */,
+				37AB34651CF664EA00CF8359 /* ListDegreeProgramsPresenter.swift in Sources */,
+				37AB34621CF664EA00CF8359 /* ListDegreeProgramsModels.swift in Sources */,
+				37AB34781CF67D8000CF8359 /* DegreeProgramsWorker.swift in Sources */,
+				37AB345C1CF664EA00CF8359 /* ListDegreeProgramsConfigurator.swift in Sources */,
+				37AB34511CF660C100CF8359 /* TableViewController.swift in Sources */,
 				37AB341D1CF64E5A00CF8359 /* FIUBAUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,6 +608,7 @@
 				37AB34231CF64E5A00CF8359 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		37AB34241CF64E5A00CF8359 /* Build configuration list for PBXNativeTarget "FIUBATests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +617,7 @@
 				37AB34261CF64E5A00CF8359 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		37AB34271CF64E5A00CF8359 /* Build configuration list for PBXNativeTarget "FIUBAUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +626,7 @@
 				37AB34291CF64E5A00CF8359 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
