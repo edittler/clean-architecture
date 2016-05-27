@@ -23,7 +23,7 @@ class ListCoursesInteractor: ListCoursesInteractorInput {
 
     func fetchCourses(request: ListCourses.Request) {
         coursesWorker.fetchCourses { (courses) in
-            let response = ListCourses.Response()
+            let response = ListCourses.Response(courses: courses)
             self.output.presentFetchedCourses(response)
         }
     }

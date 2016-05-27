@@ -20,9 +20,15 @@ class ListCoursesPresenter: ListCoursesPresenterInput {
     // MARK: Presentation logic
 
     func presentFetchedCourses(response: ListCourses.Response) {
-        // NOTE: Format the response from the Interactor and pass the result back to the View Controller
-
-        let viewModel = ListCourses.ViewModel()
+        var displayedCourses: [ListCourses.ViewModel.DisplayedCourse] = []
+        for course in response.courses {
+            let displayedCourse = ListCourses.ViewModel.DisplayedCourse(
+                number: course.number ?? 0,
+                teachers: course.teachers?.joinWithSeparator(", ") ?? "",
+                vacancies: course.vacancies ?? 0)
+            displayedCourses.append(displayedCourse)
+        }
+        let viewModel = ListCourses.ViewModel(displayedCourses: displayedCourses)
         output.displayFetchedCourses(viewModel)
     }
 

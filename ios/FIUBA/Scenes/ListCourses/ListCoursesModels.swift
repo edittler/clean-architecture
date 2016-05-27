@@ -11,9 +11,18 @@ struct ListCourses {
     }
 
     struct Response {
+        var courses: [Course]
     }
 
     struct ViewModel {
+
+        struct DisplayedCourse {
+            var number: Int
+            var teachers: String
+            var vacancies: Int
+        }
+
+        var displayedCourses: [DisplayedCourse]
     }
 
 }

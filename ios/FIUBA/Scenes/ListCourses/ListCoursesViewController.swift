@@ -18,6 +18,7 @@ class ListCoursesViewController: UITableViewController,
 
     var output: ListCoursesViewControllerOutput!
     var router: ListCoursesRouter!
+    var displayedCourses: [ListCourses.ViewModel.DisplayedCourse] = []
   
     // MARK: Object lifecycle
   
@@ -43,26 +44,35 @@ class ListCoursesViewController: UITableViewController,
     // MARK: Display logic
   
     func displayFetchedCourses(viewModel: ListCourses.ViewModel) {
-        // NOTE: Display the result from the Presenter
-    
-        // nameTextField.text = viewModel.name
+        displayedCourses = viewModel.displayedCourses
+        tableView.reloadData()
     }
 
-    // MARK: - Table view data source
+    // MARK: - UITableViewDelegate
+
+    override func tableView(tableView: UITableView,
+                            didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+
+    // MARK: - UITableViewDataSource
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 10
+    override func tableView(tableView: UITableView,
+                            numberOfRowsInSection section: Int) -> Int {
+        return displayedCourses.count
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(tableView: UITableView,
+                            cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("courseCell", forIndexPath: indexPath)
 
-        // Configure the cell...
+        let displayedCourse = displayedCourses[indexPath.row]
+        cell.textLabel?.text = "Curso \(displayedCourse.number) - \(displayedCourse.teachers)"
+        cell.detailTextLabel?.text = "Vacantes: \(displayedCourse.vacancies)"
 
         return cell
     }
