@@ -17,6 +17,7 @@ struct ListCourses {
     struct ViewModel {
 
         struct DisplayedCourse {
+            var id: String
             var number: Int
             var teachers: String
             var vacancies: Int
@@ -25,4 +26,28 @@ struct ListCourses {
         var displayedCourses: [DisplayedCourse]
     }
 
+    // MARK: - Select Course
+
+    struct SelectCourse {
+
+        struct Request {
+            var id: String
+        }
+
+        struct Response {
+            var course: Course
+        }
+
+        struct ViewModel {
+            var number: Int
+            var teachers: String
+            var vacancies: Int
+        }
+
+    }
+
+    // MARK: - Enroll Course
+
+    struct EnrollCourse {
+    }
 }

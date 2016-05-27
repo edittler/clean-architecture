@@ -7,10 +7,12 @@ import UIKit
 
 protocol ListCoursesViewControllerInput {
     func displayFetchedCourses(viewModel: ListCourses.ViewModel)
+    func displayEnrollCourseConfirmation(viewModel: ListCourses.SelectCourse.ViewModel)
 }
 
 protocol ListCoursesViewControllerOutput {
     func fetchCourses(request: ListCourses.Request)
+    func selectCourse(request: ListCourses.SelectCourse.Request)
 }
 
 class ListCoursesViewController: UITableViewController,
@@ -48,10 +50,28 @@ class ListCoursesViewController: UITableViewController,
         tableView.reloadData()
     }
 
+    func displayEnrollCourseConfirmation(viewModel: ListCourses.SelectCourse.ViewModel) {
+        let message = "Curso \(viewModel.number)\n\(viewModel.teachers)\nVacantes:\(viewModel.vacancies)"
+        let enrollCourseConfirmationAlert = UIAlertController(title: "Inscribirse",
+                                                          message: message,
+                                                          preferredStyle: .Alert)
+        let cancelAction = UIAlertAction(title: "Cancelar", style: .Cancel, handler: nil)
+        enrollCourseConfirmationAlert.addAction(cancelAction)
+        let enrollAction = UIAlertAction(title: "Inscribir", style: .Default) { (alertAction) in
+            NSLog("Enroll!!")
+        }
+        enrollCourseConfirmationAlert.addAction(enrollAction)
+        presentViewController(enrollCourseConfirmationAlert, animated: true, completion: nil)
+    }
+
     // MARK: - UITableViewDelegate
 
     override func tableView(tableView: UITableView,
                             didSelectRowAtIndexPath indexPath: NSIndexPath) {
+
+        let displayedCourse = displayedCourses[indexPath.row]
+        output.selectCourse(ListCourses.SelectCourse.Request(id: displayedCourse.id))
+        
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
 
