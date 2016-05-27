@@ -10,25 +10,22 @@ protocol ListSubjectsInteractorInput {
 }
 
 protocol ListSubjectsInteractorOutput {
-    func presentFetchedSubjets(response: ListSubjects.Response)
+    func presentFetchedSubjects(response: ListSubjects.Response)
 }
 
 class ListSubjectsInteractor: ListSubjectsInteractorInput {
     var output: ListSubjectsInteractorOutput!
     var worker: ListSubjectsWorker!
+
+    var subjectsWorker = SubjectsWorker()
   
     // MARK: Business logic
   
     func fetchSubjects(request: ListSubjects.Request) {
-        // NOTE: Create some Worker to do the work
-    
-        worker = ListSubjectsWorker()
-        worker.doSomeWork()
-    
-        // NOTE: Pass the result to the Presenter
-    
-        let response = ListSubjects.Response()
-        output.presentFetchedSubjets(response)
+        subjectsWorker.fetchSubjects { (subjects) in
+            let response = ListSubjects.Response(subjects: subjects)
+            self.output.presentFetchedSubjects(response)
+        }
     }
 
 }

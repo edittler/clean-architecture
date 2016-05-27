@@ -6,11 +6,11 @@
 import UIKit
 
 protocol ListSubjectsPresenterInput {
-    func presentFetchedSubjets(response: ListSubjects.Response)
+    func presentFetchedSubjects(response: ListSubjects.Response)
 }
 
 protocol ListSubjectsPresenterOutput: class {
-    func displaySomething(viewModel: ListSubjects.ViewModel)
+    func displayFetchedSubjects(viewModel: ListSubjects.ViewModel)
 }
 
 class ListSubjectsPresenter: ListSubjectsPresenterInput {
@@ -18,11 +18,15 @@ class ListSubjectsPresenter: ListSubjectsPresenterInput {
   
     // MARK: Presentation logic
   
-    func presentFetchedSubjets(response: ListSubjects.Response) {
-        // NOTE: Format the response from the Interactor and pass the result back to the View Controller
-    
-        let viewModel = ListSubjects.ViewModel()
-        output.displaySomething(viewModel)
+    func presentFetchedSubjects(response: ListSubjects.Response) {
+        var displayedSubjects: [ListSubjects.ViewModel.DisplayedSubject] = []
+
+        for subject in response.subjects {
+            let displayedSubject = ListSubjects.ViewModel.DisplayedSubject(
+                id: subject.id ?? "", code: subject.code ?? "", name: subject.name ?? "")
+            displayedSubjects.append(displayedSubject)
+        }
+        output.displayFetchedSubjects(ListSubjects.ViewModel(displayedSubjects: displayedSubjects))
     }
 
 }

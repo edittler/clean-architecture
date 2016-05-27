@@ -20,9 +20,9 @@ class ListDegreeProgramsPresenter: ListDegreeProgramsPresenterInput {
 
     func presentFetchedDegreePrograms(response: ListDegreePrograms.Response) {
         var displayedDegreePrograms: [ListDegreePrograms.ViewModel.DisplayedDegreeProgram] = []
-            for order in response.degreePrograms {
+            for degreeProgram in response.degreePrograms {
                 let displayedDegreeProgram = ListDegreePrograms.ViewModel.DisplayedDegreeProgram(
-                    id: order.id!, collegeDegree: order.collegeDegree!)
+                    id: degreeProgram.id ?? "", collegeDegree: degreeProgram.collegeDegree ?? "")
                 displayedDegreePrograms.append(displayedDegreeProgram)
             }
 

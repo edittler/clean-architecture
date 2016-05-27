@@ -8,16 +8,12 @@ import Foundation
 class SubjectsWorker {
 
     // MARK: Business Logic
-  
-    func doSomeWork() {
-        // NOTE: Do the work
-    }
 
-    func fetchSubjects(completionHandler: (degreePrograms: [DegreeProgram]) -> Void) {
-        var degreePrograms: [DegreeProgram] = []
-        degreePrograms.append(DegreeProgram(id: "ing-informatica",
-            collegeDegree: "Ingeniería en Informática"))
-        completionHandler(degreePrograms: degreePrograms)
+    func fetchSubjects(completionHandler: (subjects: [Subject]) -> Void) {
+        var subjects: [Subject] = []
+        subjects.append(Subject(id: "", code: "61.09", name: "Probabilidad y Estadística B"))
+        subjects.append(Subject(id: "", code: "75.09", name: "Análisis de la Información"))
+        completionHandler(subjects: subjects)
     }
 
 }

@@ -6,7 +6,7 @@
 import UIKit
 
 protocol ListSubjectsViewControllerInput {
-    func displaySomething(viewModel: ListSubjects.ViewModel)
+    func displayFetchedSubjects(viewModel: ListSubjects.ViewModel)
 }
 
 protocol ListSubjectsViewControllerOutput {
@@ -18,6 +18,7 @@ class ListSubjectsViewController: UITableViewController,
 
     var output: ListSubjectsViewControllerOutput!
     var router: ListSubjectsRouter!
+    var displayedSubjects: [ListSubjects.ViewModel.DisplayedSubject] = []
   
     // MARK: Object lifecycle
   
@@ -42,10 +43,8 @@ class ListSubjectsViewController: UITableViewController,
   
     // MARK: Display logic
   
-    func displaySomething(viewModel: ListSubjects.ViewModel) {
-        // NOTE: Display the result from the Presenter
-    
-        // nameTextField.text = viewModel.name
+    func displayFetchedSubjects(viewModel: ListSubjects.ViewModel) {
+        displayedSubjects = viewModel.displayedSubjects
     }
 
     // MARK: - UITableViewDelegate
@@ -62,8 +61,7 @@ class ListSubjectsViewController: UITableViewController,
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 10
+        return displayedSubjects.count
     }
 
     override func tableView(tableView: UITableView,
@@ -71,7 +69,8 @@ class ListSubjectsViewController: UITableViewController,
         let cell = tableView.dequeueReusableCellWithIdentifier("subjectCell",
                                                                forIndexPath: indexPath)
 
-        // Configure the cell...
+        let displayedSubject = displayedSubjects[indexPath.row]
+        cell.textLabel?.text = "\(displayedSubject.code) - \(displayedSubject.name)"
 
         return cell
     }
