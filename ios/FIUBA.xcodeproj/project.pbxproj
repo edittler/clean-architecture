@@ -70,6 +70,33 @@
 		37AB349C1CF721FB00CF8359 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB349B1CF721FB00CF8359 /* Subject.swift */; };
 		37AB349D1CF721FB00CF8359 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB349B1CF721FB00CF8359 /* Subject.swift */; };
 		37AB349E1CF721FB00CF8359 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB349B1CF721FB00CF8359 /* Subject.swift */; };
+		37D308A61CF7F6A300E03F1C /* ListCoursesConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D3089F1CF7F6A300E03F1C /* ListCoursesConfigurator.swift */; };
+		37D308A71CF7F6A300E03F1C /* ListCoursesConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D3089F1CF7F6A300E03F1C /* ListCoursesConfigurator.swift */; };
+		37D308A81CF7F6A300E03F1C /* ListCoursesConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D3089F1CF7F6A300E03F1C /* ListCoursesConfigurator.swift */; };
+		37D308A91CF7F6A300E03F1C /* ListCoursesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D308A01CF7F6A300E03F1C /* ListCoursesInteractor.swift */; };
+		37D308AA1CF7F6A300E03F1C /* ListCoursesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D308A01CF7F6A300E03F1C /* ListCoursesInteractor.swift */; };
+		37D308AB1CF7F6A300E03F1C /* ListCoursesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D308A01CF7F6A300E03F1C /* ListCoursesInteractor.swift */; };
+		37D308AC1CF7F6A300E03F1C /* ListCoursesModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D308A11CF7F6A300E03F1C /* ListCoursesModels.swift */; };
+		37D308AD1CF7F6A300E03F1C /* ListCoursesModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D308A11CF7F6A300E03F1C /* ListCoursesModels.swift */; };
+		37D308AE1CF7F6A300E03F1C /* ListCoursesModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D308A11CF7F6A300E03F1C /* ListCoursesModels.swift */; };
+		37D308AF1CF7F6A300E03F1C /* ListCoursesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D308A21CF7F6A300E03F1C /* ListCoursesPresenter.swift */; };
+		37D308B01CF7F6A300E03F1C /* ListCoursesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D308A21CF7F6A300E03F1C /* ListCoursesPresenter.swift */; };
+		37D308B11CF7F6A300E03F1C /* ListCoursesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D308A21CF7F6A300E03F1C /* ListCoursesPresenter.swift */; };
+		37D308B21CF7F6A300E03F1C /* ListCoursesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D308A31CF7F6A300E03F1C /* ListCoursesRouter.swift */; };
+		37D308B31CF7F6A300E03F1C /* ListCoursesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D308A31CF7F6A300E03F1C /* ListCoursesRouter.swift */; };
+		37D308B41CF7F6A300E03F1C /* ListCoursesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D308A31CF7F6A300E03F1C /* ListCoursesRouter.swift */; };
+		37D308B51CF7F6A300E03F1C /* ListCoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D308A41CF7F6A300E03F1C /* ListCoursesViewController.swift */; };
+		37D308B61CF7F6A300E03F1C /* ListCoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D308A41CF7F6A300E03F1C /* ListCoursesViewController.swift */; };
+		37D308B71CF7F6A300E03F1C /* ListCoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D308A41CF7F6A300E03F1C /* ListCoursesViewController.swift */; };
+		37D308B81CF7F6A300E03F1C /* ListCoursesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D308A51CF7F6A300E03F1C /* ListCoursesWorker.swift */; };
+		37D308B91CF7F6A300E03F1C /* ListCoursesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D308A51CF7F6A300E03F1C /* ListCoursesWorker.swift */; };
+		37D308BA1CF7F6A300E03F1C /* ListCoursesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D308A51CF7F6A300E03F1C /* ListCoursesWorker.swift */; };
+		37D308BC1CF7FC1600E03F1C /* CoursesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D308BB1CF7FC1600E03F1C /* CoursesWorker.swift */; };
+		37D308BD1CF7FC1600E03F1C /* CoursesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D308BB1CF7FC1600E03F1C /* CoursesWorker.swift */; };
+		37D308BE1CF7FC1600E03F1C /* CoursesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D308BB1CF7FC1600E03F1C /* CoursesWorker.swift */; };
+		37D308C01CF7FC9600E03F1C /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D308BF1CF7FC9600E03F1C /* Course.swift */; };
+		37D308C11CF7FC9600E03F1C /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D308BF1CF7FC9600E03F1C /* Course.swift */; };
+		37D308C21CF7FC9600E03F1C /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D308BF1CF7FC9600E03F1C /* Course.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +148,15 @@
 		37AB34811CF6867C00CF8359 /* ListSubjectsWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListSubjectsWorker.swift; sourceTree = "<group>"; };
 		37AB34971CF7218900CF8359 /* SubjectsWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectsWorker.swift; sourceTree = "<group>"; };
 		37AB349B1CF721FB00CF8359 /* Subject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
+		37D3089F1CF7F6A300E03F1C /* ListCoursesConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCoursesConfigurator.swift; sourceTree = "<group>"; };
+		37D308A01CF7F6A300E03F1C /* ListCoursesInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCoursesInteractor.swift; sourceTree = "<group>"; };
+		37D308A11CF7F6A300E03F1C /* ListCoursesModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCoursesModels.swift; sourceTree = "<group>"; };
+		37D308A21CF7F6A300E03F1C /* ListCoursesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCoursesPresenter.swift; sourceTree = "<group>"; };
+		37D308A31CF7F6A300E03F1C /* ListCoursesRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCoursesRouter.swift; sourceTree = "<group>"; };
+		37D308A41CF7F6A300E03F1C /* ListCoursesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCoursesViewController.swift; sourceTree = "<group>"; };
+		37D308A51CF7F6A300E03F1C /* ListCoursesWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCoursesWorker.swift; sourceTree = "<group>"; };
+		37D308BB1CF7FC1600E03F1C /* CoursesWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesWorker.swift; sourceTree = "<group>"; };
+		37D308BF1CF7FC9600E03F1C /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +242,7 @@
 			children = (
 				37AB34521CF664D000CF8359 /* ListDegreePrograms */,
 				37AB347A1CF6864600CF8359 /* ListSubjects */,
+				37D3089E1CF7F67000E03F1C /* ListCourses */,
 				37AB344E1CF660C100CF8359 /* TableViewController.swift */,
 			);
 			path = Scenes;
@@ -228,6 +265,7 @@
 		37AB346F1CF67A2600CF8359 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				37D308BF1CF7FC9600E03F1C /* Course.swift */,
 				37AB34701CF67A5B00CF8359 /* DegreeProgram.swift */,
 				37AB349B1CF721FB00CF8359 /* Subject.swift */,
 			);
@@ -237,6 +275,7 @@
 		37AB34741CF67D5400CF8359 /* Workers */ = {
 			isa = PBXGroup;
 			children = (
+				37D308BB1CF7FC1600E03F1C /* CoursesWorker.swift */,
 				37AB34751CF67D8000CF8359 /* DegreeProgramsWorker.swift */,
 				37AB34971CF7218900CF8359 /* SubjectsWorker.swift */,
 			);
@@ -255,6 +294,20 @@
 				37AB34811CF6867C00CF8359 /* ListSubjectsWorker.swift */,
 			);
 			path = ListSubjects;
+			sourceTree = "<group>";
+		};
+		37D3089E1CF7F67000E03F1C /* ListCourses */ = {
+			isa = PBXGroup;
+			children = (
+				37D3089F1CF7F6A300E03F1C /* ListCoursesConfigurator.swift */,
+				37D308A01CF7F6A300E03F1C /* ListCoursesInteractor.swift */,
+				37D308A11CF7F6A300E03F1C /* ListCoursesModels.swift */,
+				37D308A21CF7F6A300E03F1C /* ListCoursesPresenter.swift */,
+				37D308A31CF7F6A300E03F1C /* ListCoursesRouter.swift */,
+				37D308A41CF7F6A300E03F1C /* ListCoursesViewController.swift */,
+				37D308A51CF7F6A300E03F1C /* ListCoursesWorker.swift */,
+			);
+			path = ListCourses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -407,9 +460,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				37AB34941CF6867C00CF8359 /* ListSubjectsWorker.swift in Sources */,
+				37D308A91CF7F6A300E03F1C /* ListCoursesInteractor.swift in Sources */,
 				37AB34661CF664EA00CF8359 /* ListDegreeProgramsRouter.swift in Sources */,
 				37AB349C1CF721FB00CF8359 /* Subject.swift in Sources */,
 				37AB345D1CF664EA00CF8359 /* ListDegreeProgramsInteractor.swift in Sources */,
+				37D308B81CF7F6A300E03F1C /* ListCoursesWorker.swift in Sources */,
+				37D308B51CF7F6A300E03F1C /* ListCoursesViewController.swift in Sources */,
 				37AB34711CF67A5B00CF8359 /* DegreeProgram.swift in Sources */,
 				37AB348E1CF6867C00CF8359 /* ListSubjectsRouter.swift in Sources */,
 				37AB34851CF6867C00CF8359 /* ListSubjectsInteractor.swift in Sources */,
@@ -421,10 +477,16 @@
 				37AB33FD1CF64E5A00CF8359 /* AppDelegate.swift in Sources */,
 				37AB34911CF6867C00CF8359 /* ListSubjectsViewController.swift in Sources */,
 				37AB34761CF67D8000CF8359 /* DegreeProgramsWorker.swift in Sources */,
+				37D308C01CF7FC9600E03F1C /* Course.swift in Sources */,
 				37AB34881CF6867C00CF8359 /* ListSubjectsModels.swift in Sources */,
+				37D308AC1CF7F6A300E03F1C /* ListCoursesModels.swift in Sources */,
 				37AB348B1CF6867C00CF8359 /* ListSubjectsPresenter.swift in Sources */,
 				37AB34601CF664EA00CF8359 /* ListDegreeProgramsModels.swift in Sources */,
 				37AB345A1CF664EA00CF8359 /* ListDegreeProgramsConfigurator.swift in Sources */,
+				37D308B21CF7F6A300E03F1C /* ListCoursesRouter.swift in Sources */,
+				37D308BC1CF7FC1600E03F1C /* CoursesWorker.swift in Sources */,
+				37D308AF1CF7F6A300E03F1C /* ListCoursesPresenter.swift in Sources */,
+				37D308A61CF7F6A300E03F1C /* ListCoursesConfigurator.swift in Sources */,
 				37AB344F1CF660C100CF8359 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,9 +496,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				37AB34951CF6867C00CF8359 /* ListSubjectsWorker.swift in Sources */,
+				37D308AA1CF7F6A300E03F1C /* ListCoursesInteractor.swift in Sources */,
 				37AB34671CF664EA00CF8359 /* ListDegreeProgramsRouter.swift in Sources */,
 				37AB349D1CF721FB00CF8359 /* Subject.swift in Sources */,
 				37AB345E1CF664EA00CF8359 /* ListDegreeProgramsInteractor.swift in Sources */,
+				37D308B91CF7F6A300E03F1C /* ListCoursesWorker.swift in Sources */,
+				37D308B61CF7F6A300E03F1C /* ListCoursesViewController.swift in Sources */,
 				37AB34721CF67A5B00CF8359 /* DegreeProgram.swift in Sources */,
 				37AB348F1CF6867C00CF8359 /* ListSubjectsRouter.swift in Sources */,
 				37AB34861CF6867C00CF8359 /* ListSubjectsInteractor.swift in Sources */,
@@ -448,10 +513,16 @@
 				37AB34611CF664EA00CF8359 /* ListDegreeProgramsModels.swift in Sources */,
 				37AB34921CF6867C00CF8359 /* ListSubjectsViewController.swift in Sources */,
 				37AB34771CF67D8000CF8359 /* DegreeProgramsWorker.swift in Sources */,
+				37D308C11CF7FC9600E03F1C /* Course.swift in Sources */,
 				37AB34891CF6867C00CF8359 /* ListSubjectsModels.swift in Sources */,
+				37D308AD1CF7F6A300E03F1C /* ListCoursesModels.swift in Sources */,
 				37AB348C1CF6867C00CF8359 /* ListSubjectsPresenter.swift in Sources */,
 				37AB345B1CF664EA00CF8359 /* ListDegreeProgramsConfigurator.swift in Sources */,
 				37AB34501CF660C100CF8359 /* TableViewController.swift in Sources */,
+				37D308B31CF7F6A300E03F1C /* ListCoursesRouter.swift in Sources */,
+				37D308BD1CF7FC1600E03F1C /* CoursesWorker.swift in Sources */,
+				37D308B01CF7F6A300E03F1C /* ListCoursesPresenter.swift in Sources */,
+				37D308A71CF7F6A300E03F1C /* ListCoursesConfigurator.swift in Sources */,
 				37AB34121CF64E5A00CF8359 /* FIUBATests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,9 +532,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				37AB34961CF6867C00CF8359 /* ListSubjectsWorker.swift in Sources */,
+				37D308AB1CF7F6A300E03F1C /* ListCoursesInteractor.swift in Sources */,
 				37AB34681CF664EA00CF8359 /* ListDegreeProgramsRouter.swift in Sources */,
 				37AB349E1CF721FB00CF8359 /* Subject.swift in Sources */,
 				37AB345F1CF664EA00CF8359 /* ListDegreeProgramsInteractor.swift in Sources */,
+				37D308BA1CF7F6A300E03F1C /* ListCoursesWorker.swift in Sources */,
+				37D308B71CF7F6A300E03F1C /* ListCoursesViewController.swift in Sources */,
 				37AB34731CF67A5B00CF8359 /* DegreeProgram.swift in Sources */,
 				37AB34901CF6867C00CF8359 /* ListSubjectsRouter.swift in Sources */,
 				37AB34871CF6867C00CF8359 /* ListSubjectsInteractor.swift in Sources */,
@@ -475,10 +549,16 @@
 				37AB34621CF664EA00CF8359 /* ListDegreeProgramsModels.swift in Sources */,
 				37AB34931CF6867C00CF8359 /* ListSubjectsViewController.swift in Sources */,
 				37AB34781CF67D8000CF8359 /* DegreeProgramsWorker.swift in Sources */,
+				37D308C21CF7FC9600E03F1C /* Course.swift in Sources */,
 				37AB348A1CF6867C00CF8359 /* ListSubjectsModels.swift in Sources */,
+				37D308AE1CF7F6A300E03F1C /* ListCoursesModels.swift in Sources */,
 				37AB348D1CF6867C00CF8359 /* ListSubjectsPresenter.swift in Sources */,
 				37AB345C1CF664EA00CF8359 /* ListDegreeProgramsConfigurator.swift in Sources */,
 				37AB34511CF660C100CF8359 /* TableViewController.swift in Sources */,
+				37D308B41CF7F6A300E03F1C /* ListCoursesRouter.swift in Sources */,
+				37D308BE1CF7FC1600E03F1C /* CoursesWorker.swift in Sources */,
+				37D308B11CF7F6A300E03F1C /* ListCoursesPresenter.swift in Sources */,
+				37D308A81CF7F6A300E03F1C /* ListCoursesConfigurator.swift in Sources */,
 				37AB341D1CF64E5A00CF8359 /* FIUBAUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

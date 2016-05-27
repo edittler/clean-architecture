@@ -45,6 +45,7 @@ class ListDegreeProgramsViewController: UITableViewController,
 
     func displayFetchedDegreePrograms(viewModel: ListDegreePrograms.ViewModel) {
         displayedDegreePrograms = viewModel.displayedDegreePrograms
+        tableView.reloadData()
     }
 
     // MARK: - UITableViewDelegate

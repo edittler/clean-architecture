@@ -45,6 +45,7 @@ class ListSubjectsViewController: UITableViewController,
   
     func displayFetchedSubjects(viewModel: ListSubjects.ViewModel) {
         displayedSubjects = viewModel.displayedSubjects
+        tableView.reloadData()
     }
 
     // MARK: - UITableViewDelegate
