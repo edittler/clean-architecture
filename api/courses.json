@@ -1,0 +1,10 @@
+{"courses": [
+    {"id": 1, "teachers": ["profesor1"], "schedule": "Lun y Mie 18 a 19", "classroom": "1", "vacancy": 20},
+    {"id": 2, "teachers": ["proffesor2"], "schedule": "Mar y Mie 18 a 19", "classroom": "2", "vacancy": 20},
+    {"id": 3, "teachers": ["proffesor3"], "schedule": "Lun y Jue 18 a 19", "classroom": "3", "vacancy": 20},
+    {"id": 4, "teachers": ["proffesor4"], "schedule": "Mar y Vie 18 a 19", "classroom": "4", "vacancy": 20},
+    {"id": 5, "teachers": ["proffesor5"], "schedule": "Lun y Vie 18 a 19", "classroom": "5", "vacancy": 10},
+    {"id": 6, "teachers": ["proffesor6"], "schedule": "Mar y Jue 18 a 19", "classroom": "6", "vacancy": 5},
+    {"id": 7, "teachers": ["proffesor7"], "schedule": "Lun y Mie 10 a 12", "classroom": "7", "vacancy": 10},
+    ]
+}
