@@ -7,18 +7,12 @@ import UIKit
 
 // MARK: Connect View, Interactor, and Presenter
 
-extension ListCoursesViewController: ListCoursesPresenterOutput {
+extension ListCoursesViewController {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         router.passDataToNextScene(segue)
     }
 
-}
-
-extension ListCoursesInteractor: ListCoursesViewControllerOutput {
-}
-
-extension ListCoursesPresenter: ListCoursesInteractorOutput {
 }
 
 class ListCoursesConfigurator {

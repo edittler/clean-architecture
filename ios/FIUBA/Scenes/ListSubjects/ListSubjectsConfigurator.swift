@@ -7,18 +7,12 @@ import UIKit
 
 // MARK: Connect View, Interactor, and Presenter
 
-extension ListSubjectsViewController: ListSubjectsPresenterOutput {
+extension ListSubjectsViewController {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         router.passDataToNextScene(segue)
     }
 
-}
-
-extension ListSubjectsInteractor: ListSubjectsViewControllerOutput {
-}
-
-extension ListSubjectsPresenter: ListSubjectsInteractorOutput {
 }
 
 class ListSubjectsConfigurator {

@@ -6,6 +6,7 @@
 import UIKit
 
 class ListSubjectsWorker {
+
     // MARK: Business Logic
 
     func doSomeWork() {

@@ -5,11 +5,11 @@
 
 import UIKit
 
-protocol ListCoursesRouterInput {
+protocol ListCoursesRouterProtocol {
     func navigateToSomewhere()
 }
 
-class ListCoursesRouter: ListCoursesRouterInput {
+class ListCoursesRouter: ListCoursesRouterProtocol {
 
     weak var viewController: ListCoursesViewController!
   
@@ -43,7 +43,7 @@ class ListCoursesRouter: ListCoursesRouterInput {
         }
     }
   
-    func passDataToSomewhereScene(segue: UIStoryboardSegue) {
+    private func passDataToSomewhereScene(segue: UIStoryboardSegue) {
         // NOTE: Teach the router how to pass data to the next scene
     
         // let someWhereViewController = segue.destinationViewController as! SomeWhereViewController

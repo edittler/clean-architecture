@@ -5,20 +5,15 @@
 
 import UIKit
 
-protocol ListCoursesViewControllerInput {
+protocol ListCoursesViewProtocol: class {
     func displayFetchedCourses(viewModel: ListCourses.ViewModel)
     func displayEnrollCourseConfirmation(viewModel: ListCourses.SelectCourse.ViewModel)
 }
 
-protocol ListCoursesViewControllerOutput {
-    func fetchCourses(request: ListCourses.Request)
-    func selectCourse(request: ListCourses.SelectCourse.Request)
-}
-
 class ListCoursesViewController: UITableViewController,
-    ListCoursesViewControllerInput {
+    ListCoursesViewProtocol {
 
-    var output: ListCoursesViewControllerOutput!
+    var output: ListCoursesInteractorInput!
     var router: ListCoursesRouter!
     var displayedCourses: [ListCourses.ViewModel.DisplayedCourse] = []
   
@@ -76,10 +71,6 @@ class ListCoursesViewController: UITableViewController,
     }
 
     // MARK: - UITableViewDataSource
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
 
     override func tableView(tableView: UITableView,
                             numberOfRowsInSection section: Int) -> Int {

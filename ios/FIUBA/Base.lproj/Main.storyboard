@@ -5,48 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Carreras-->
-        <scene sceneID="bRs-bc-Ctv">
-            <objects>
-                <tableViewController title="Carreras" id="59S-Fu-FO6" customClass="ListDegreeProgramsViewController" customModule="FIUBA" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="IoJ-RI-gyb">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="degreeProgramCell" textLabel="5pa-Tq-N24" style="IBUITableViewCellStyleDefault" id="gS9-Ln-w9K">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gS9-Ln-w9K" id="OgT-3m-bfw">
-                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5pa-Tq-N24">
-                                            <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="pJs-Nc-WuG" kind="show" identifier="ShowListSubjectsScene" id="F1r-tq-9EO"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="59S-Fu-FO6" id="d9i-jU-NYD"/>
-                            <outlet property="delegate" destination="59S-Fu-FO6" id="xWU-7i-8Iu"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Carreras" id="C8F-Fx-Ym0"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SUf-Ia-umc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1060" y="411"/>
-        </scene>
         <!--Asignaturas-->
         <scene sceneID="ydh-Ct-bH7">
             <objects>
@@ -146,12 +104,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="59S-Fu-FO6" kind="relationship" relationship="rootViewController" id="krF-hc-CB3"/>
+                        <segue destination="pJs-Nc-WuG" kind="relationship" relationship="rootViewController" id="mDt-WP-qMo"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d0j-T6-sV6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="248" y="411"/>
+            <point key="canvasLocation" x="966" y="411"/>
         </scene>
     </scenes>
 </document>

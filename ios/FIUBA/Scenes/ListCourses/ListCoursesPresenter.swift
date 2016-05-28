@@ -5,19 +5,9 @@
 
 import UIKit
 
-protocol ListCoursesPresenterInput {
-    func presentFetchedCourses(response: ListCourses.Response)
-    func presentEnrollCourseConfirmation(response: ListCourses.SelectCourse.Response)
-}
+class ListCoursesPresenter: ListCoursesInteractorOutput {
 
-protocol ListCoursesPresenterOutput: class {
-    func displayFetchedCourses(viewModel: ListCourses.ViewModel)
-    func displayEnrollCourseConfirmation(viewModel: ListCourses.SelectCourse.ViewModel)
-}
-
-class ListCoursesPresenter: ListCoursesPresenterInput {
-
-    weak var output: ListCoursesPresenterOutput!
+    weak var output: ListCoursesViewProtocol!
 
     // MARK: Presentation logic
 

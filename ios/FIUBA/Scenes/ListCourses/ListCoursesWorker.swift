@@ -7,10 +7,10 @@ import UIKit
 
 class ListCoursesWorker {
 
-  // MARK: Business Logic
-  
-  func doSomeWork() {
-    // NOTE: Do the work
-  }
+    // MARK: Business Logic
+
+    func doSomeWork() {
+        // NOTE: Do the work
+    }
 
 }

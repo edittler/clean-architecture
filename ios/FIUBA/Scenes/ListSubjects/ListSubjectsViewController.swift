@@ -5,18 +5,14 @@
 
 import UIKit
 
-protocol ListSubjectsViewControllerInput {
+protocol ListSubjectsViewProtocol: class {
     func displayFetchedSubjects(viewModel: ListSubjects.ViewModel)
 }
 
-protocol ListSubjectsViewControllerOutput {
-    func fetchSubjects(request: ListSubjects.Request)
-}
-
 class ListSubjectsViewController: UITableViewController,
-    ListSubjectsViewControllerInput {
+    ListSubjectsViewProtocol {
 
-    var output: ListSubjectsViewControllerOutput!
+    var output: ListSubjectsInteractorInput!
     var router: ListSubjectsRouter!
     var displayedSubjects: [ListSubjects.ViewModel.DisplayedSubject] = []
   
@@ -56,10 +52,6 @@ class ListSubjectsViewController: UITableViewController,
     }
 
     // MARK: - UITableViewDataSource
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return displayedSubjects.count

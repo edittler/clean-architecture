@@ -5,11 +5,11 @@
 
 import UIKit
 
-protocol ListSubjectsRouterInput {
-  func navigateToSomewhere()
+protocol ListSubjectsRouterProtocol {
+    func navigateToSomewhere()
 }
 
-class ListSubjectsRouter: ListSubjectsRouterInput {
+class ListSubjectsRouter: ListSubjectsRouterProtocol {
     weak var viewController: ListSubjectsViewController!
   
     // MARK: Navigation

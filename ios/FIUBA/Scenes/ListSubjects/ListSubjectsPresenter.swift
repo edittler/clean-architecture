@@ -5,16 +5,8 @@
 
 import UIKit
 
-protocol ListSubjectsPresenterInput {
-    func presentFetchedSubjects(response: ListSubjects.Response)
-}
-
-protocol ListSubjectsPresenterOutput: class {
-    func displayFetchedSubjects(viewModel: ListSubjects.ViewModel)
-}
-
-class ListSubjectsPresenter: ListSubjectsPresenterInput {
-    weak var output: ListSubjectsPresenterOutput!
+class ListSubjectsPresenter: ListSubjectsInteractorOutput {
+    weak var output: ListSubjectsViewProtocol!
   
     // MARK: Presentation logic
   
