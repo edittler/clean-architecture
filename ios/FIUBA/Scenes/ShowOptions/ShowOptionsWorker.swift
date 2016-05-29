@@ -1,11 +1,11 @@
 //
-//  ListCoursesWorker.swift
+//  ShowOptionsWorker.swift
 //  FIUBA
 //
 
 import Foundation
 
-class ListCoursesWorker {
+class ShowOptionsWorker {
 
     // MARK: Business Logic
 

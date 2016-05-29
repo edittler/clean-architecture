@@ -3,7 +3,7 @@
 //  FIUBA
 //
 
-import UIKit
+import Foundation
 
 protocol ListCoursesInteractorInput {
     func fetchCourses(request: ListCourses.Request)

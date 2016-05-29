@@ -7,6 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3788D5391CFA5C7E00BFB148 /* ShowOptionsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5321CFA5C7E00BFB148 /* ShowOptionsConfigurator.swift */; };
+		3788D53A1CFA5C7E00BFB148 /* ShowOptionsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5321CFA5C7E00BFB148 /* ShowOptionsConfigurator.swift */; };
+		3788D53B1CFA5C7E00BFB148 /* ShowOptionsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5321CFA5C7E00BFB148 /* ShowOptionsConfigurator.swift */; };
+		3788D53C1CFA5C7E00BFB148 /* ShowOptionsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5331CFA5C7E00BFB148 /* ShowOptionsInteractor.swift */; };
+		3788D53D1CFA5C7E00BFB148 /* ShowOptionsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5331CFA5C7E00BFB148 /* ShowOptionsInteractor.swift */; };
+		3788D53E1CFA5C7E00BFB148 /* ShowOptionsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5331CFA5C7E00BFB148 /* ShowOptionsInteractor.swift */; };
+		3788D53F1CFA5C7E00BFB148 /* ShowOptionsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5341CFA5C7E00BFB148 /* ShowOptionsModels.swift */; };
+		3788D5401CFA5C7E00BFB148 /* ShowOptionsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5341CFA5C7E00BFB148 /* ShowOptionsModels.swift */; };
+		3788D5411CFA5C7E00BFB148 /* ShowOptionsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5341CFA5C7E00BFB148 /* ShowOptionsModels.swift */; };
+		3788D5421CFA5C7E00BFB148 /* ShowOptionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5351CFA5C7E00BFB148 /* ShowOptionsPresenter.swift */; };
+		3788D5431CFA5C7E00BFB148 /* ShowOptionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5351CFA5C7E00BFB148 /* ShowOptionsPresenter.swift */; };
+		3788D5441CFA5C7E00BFB148 /* ShowOptionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5351CFA5C7E00BFB148 /* ShowOptionsPresenter.swift */; };
+		3788D5451CFA5C7E00BFB148 /* ShowOptionsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5361CFA5C7E00BFB148 /* ShowOptionsRouter.swift */; };
+		3788D5461CFA5C7E00BFB148 /* ShowOptionsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5361CFA5C7E00BFB148 /* ShowOptionsRouter.swift */; };
+		3788D5471CFA5C7E00BFB148 /* ShowOptionsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5361CFA5C7E00BFB148 /* ShowOptionsRouter.swift */; };
+		3788D5481CFA5C7E00BFB148 /* ShowOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5371CFA5C7E00BFB148 /* ShowOptionsViewController.swift */; };
+		3788D5491CFA5C7E00BFB148 /* ShowOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5371CFA5C7E00BFB148 /* ShowOptionsViewController.swift */; };
+		3788D54A1CFA5C7E00BFB148 /* ShowOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5371CFA5C7E00BFB148 /* ShowOptionsViewController.swift */; };
+		3788D54B1CFA5C7E00BFB148 /* ShowOptionsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5381CFA5C7E00BFB148 /* ShowOptionsWorker.swift */; };
+		3788D54C1CFA5C7E00BFB148 /* ShowOptionsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5381CFA5C7E00BFB148 /* ShowOptionsWorker.swift */; };
+		3788D54D1CFA5C7E00BFB148 /* ShowOptionsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5381CFA5C7E00BFB148 /* ShowOptionsWorker.swift */; };
+		3788D5561CFA648500BFB148 /* ListEnrolledCoursesConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D54F1CFA648500BFB148 /* ListEnrolledCoursesConfigurator.swift */; };
+		3788D5571CFA648500BFB148 /* ListEnrolledCoursesConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D54F1CFA648500BFB148 /* ListEnrolledCoursesConfigurator.swift */; };
+		3788D5581CFA648500BFB148 /* ListEnrolledCoursesConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D54F1CFA648500BFB148 /* ListEnrolledCoursesConfigurator.swift */; };
+		3788D5591CFA648500BFB148 /* ListEnrolledCoursesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5501CFA648500BFB148 /* ListEnrolledCoursesInteractor.swift */; };
+		3788D55A1CFA648500BFB148 /* ListEnrolledCoursesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5501CFA648500BFB148 /* ListEnrolledCoursesInteractor.swift */; };
+		3788D55B1CFA648500BFB148 /* ListEnrolledCoursesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5501CFA648500BFB148 /* ListEnrolledCoursesInteractor.swift */; };
+		3788D55C1CFA648500BFB148 /* ListEnrolledCoursesModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5511CFA648500BFB148 /* ListEnrolledCoursesModels.swift */; };
+		3788D55D1CFA648500BFB148 /* ListEnrolledCoursesModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5511CFA648500BFB148 /* ListEnrolledCoursesModels.swift */; };
+		3788D55E1CFA648500BFB148 /* ListEnrolledCoursesModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5511CFA648500BFB148 /* ListEnrolledCoursesModels.swift */; };
+		3788D55F1CFA648500BFB148 /* ListEnrolledCoursesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5521CFA648500BFB148 /* ListEnrolledCoursesPresenter.swift */; };
+		3788D5601CFA648500BFB148 /* ListEnrolledCoursesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5521CFA648500BFB148 /* ListEnrolledCoursesPresenter.swift */; };
+		3788D5611CFA648500BFB148 /* ListEnrolledCoursesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5521CFA648500BFB148 /* ListEnrolledCoursesPresenter.swift */; };
+		3788D5621CFA648500BFB148 /* ListEnrolledCoursesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5531CFA648500BFB148 /* ListEnrolledCoursesRouter.swift */; };
+		3788D5631CFA648500BFB148 /* ListEnrolledCoursesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5531CFA648500BFB148 /* ListEnrolledCoursesRouter.swift */; };
+		3788D5641CFA648500BFB148 /* ListEnrolledCoursesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5531CFA648500BFB148 /* ListEnrolledCoursesRouter.swift */; };
+		3788D5651CFA648500BFB148 /* ListEnrolledCoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5541CFA648500BFB148 /* ListEnrolledCoursesViewController.swift */; };
+		3788D5661CFA648500BFB148 /* ListEnrolledCoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5541CFA648500BFB148 /* ListEnrolledCoursesViewController.swift */; };
+		3788D5671CFA648500BFB148 /* ListEnrolledCoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5541CFA648500BFB148 /* ListEnrolledCoursesViewController.swift */; };
+		3788D5681CFA648500BFB148 /* ListEnrolledCoursesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5551CFA648500BFB148 /* ListEnrolledCoursesWorker.swift */; };
+		3788D5691CFA648500BFB148 /* ListEnrolledCoursesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5551CFA648500BFB148 /* ListEnrolledCoursesWorker.swift */; };
+		3788D56A1CFA648500BFB148 /* ListEnrolledCoursesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5551CFA648500BFB148 /* ListEnrolledCoursesWorker.swift */; };
 		37AB33FD1CF64E5A00CF8359 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB33FC1CF64E5A00CF8359 /* AppDelegate.swift */; };
 		37AB34021CF64E5A00CF8359 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37AB34001CF64E5A00CF8359 /* Main.storyboard */; };
 		37AB34041CF64E5A00CF8359 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37AB34031CF64E5A00CF8359 /* Assets.xcassets */; };
@@ -90,6 +132,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3788D5321CFA5C7E00BFB148 /* ShowOptionsConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowOptionsConfigurator.swift; sourceTree = "<group>"; };
+		3788D5331CFA5C7E00BFB148 /* ShowOptionsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowOptionsInteractor.swift; sourceTree = "<group>"; };
+		3788D5341CFA5C7E00BFB148 /* ShowOptionsModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowOptionsModels.swift; sourceTree = "<group>"; };
+		3788D5351CFA5C7E00BFB148 /* ShowOptionsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowOptionsPresenter.swift; sourceTree = "<group>"; };
+		3788D5361CFA5C7E00BFB148 /* ShowOptionsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowOptionsRouter.swift; sourceTree = "<group>"; };
+		3788D5371CFA5C7E00BFB148 /* ShowOptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowOptionsViewController.swift; sourceTree = "<group>"; };
+		3788D5381CFA5C7E00BFB148 /* ShowOptionsWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowOptionsWorker.swift; sourceTree = "<group>"; };
+		3788D54F1CFA648500BFB148 /* ListEnrolledCoursesConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEnrolledCoursesConfigurator.swift; sourceTree = "<group>"; };
+		3788D5501CFA648500BFB148 /* ListEnrolledCoursesInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEnrolledCoursesInteractor.swift; sourceTree = "<group>"; };
+		3788D5511CFA648500BFB148 /* ListEnrolledCoursesModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEnrolledCoursesModels.swift; sourceTree = "<group>"; };
+		3788D5521CFA648500BFB148 /* ListEnrolledCoursesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEnrolledCoursesPresenter.swift; sourceTree = "<group>"; };
+		3788D5531CFA648500BFB148 /* ListEnrolledCoursesRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEnrolledCoursesRouter.swift; sourceTree = "<group>"; };
+		3788D5541CFA648500BFB148 /* ListEnrolledCoursesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEnrolledCoursesViewController.swift; sourceTree = "<group>"; };
+		3788D5551CFA648500BFB148 /* ListEnrolledCoursesWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEnrolledCoursesWorker.swift; sourceTree = "<group>"; };
 		37AB33F91CF64E5A00CF8359 /* FIUBA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FIUBA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37AB33FC1CF64E5A00CF8359 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37AB34011CF64E5A00CF8359 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -148,6 +204,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3788D5311CFA5B7C00BFB148 /* ShowOptions */ = {
+			isa = PBXGroup;
+			children = (
+				3788D5321CFA5C7E00BFB148 /* ShowOptionsConfigurator.swift */,
+				3788D5331CFA5C7E00BFB148 /* ShowOptionsInteractor.swift */,
+				3788D5341CFA5C7E00BFB148 /* ShowOptionsModels.swift */,
+				3788D5351CFA5C7E00BFB148 /* ShowOptionsPresenter.swift */,
+				3788D5361CFA5C7E00BFB148 /* ShowOptionsRouter.swift */,
+				3788D5371CFA5C7E00BFB148 /* ShowOptionsViewController.swift */,
+				3788D5381CFA5C7E00BFB148 /* ShowOptionsWorker.swift */,
+			);
+			path = ShowOptions;
+			sourceTree = "<group>";
+		};
+		3788D54E1CFA645900BFB148 /* ListEnrolledCourses */ = {
+			isa = PBXGroup;
+			children = (
+				3788D54F1CFA648500BFB148 /* ListEnrolledCoursesConfigurator.swift */,
+				3788D5501CFA648500BFB148 /* ListEnrolledCoursesInteractor.swift */,
+				3788D5511CFA648500BFB148 /* ListEnrolledCoursesModels.swift */,
+				3788D5521CFA648500BFB148 /* ListEnrolledCoursesPresenter.swift */,
+				3788D5531CFA648500BFB148 /* ListEnrolledCoursesRouter.swift */,
+				3788D5541CFA648500BFB148 /* ListEnrolledCoursesViewController.swift */,
+				3788D5551CFA648500BFB148 /* ListEnrolledCoursesWorker.swift */,
+			);
+			path = ListEnrolledCourses;
+			sourceTree = "<group>";
+		};
 		37AB33F01CF64E5A00CF8359 = {
 			isa = PBXGroup;
 			children = (
@@ -204,8 +288,10 @@
 		37AB342A1CF65BA200CF8359 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				3788D5311CFA5B7C00BFB148 /* ShowOptions */,
 				37AB347A1CF6864600CF8359 /* ListSubjects */,
 				37D3089E1CF7F67000E03F1C /* ListCourses */,
+				3788D54E1CFA645900BFB148 /* ListEnrolledCourses */,
 				37AB344E1CF660C100CF8359 /* TableViewController.swift */,
 			);
 			path = Scenes;
@@ -408,15 +494,25 @@
 			files = (
 				37AB34941CF6867C00CF8359 /* ListSubjectsWorker.swift in Sources */,
 				37D308A91CF7F6A300E03F1C /* ListCoursesInteractor.swift in Sources */,
+				3788D5421CFA5C7E00BFB148 /* ShowOptionsPresenter.swift in Sources */,
 				37AB349C1CF721FB00CF8359 /* Subject.swift in Sources */,
+				3788D5561CFA648500BFB148 /* ListEnrolledCoursesConfigurator.swift in Sources */,
+				3788D5681CFA648500BFB148 /* ListEnrolledCoursesWorker.swift in Sources */,
 				37D308B81CF7F6A300E03F1C /* ListCoursesWorker.swift in Sources */,
+				3788D55F1CFA648500BFB148 /* ListEnrolledCoursesPresenter.swift in Sources */,
+				3788D53C1CFA5C7E00BFB148 /* ShowOptionsInteractor.swift in Sources */,
 				37D308B51CF7F6A300E03F1C /* ListCoursesViewController.swift in Sources */,
 				37AB348E1CF6867C00CF8359 /* ListSubjectsRouter.swift in Sources */,
 				37AB34851CF6867C00CF8359 /* ListSubjectsInteractor.swift in Sources */,
 				37AB34821CF6867C00CF8359 /* ListSubjectsConfigurator.swift in Sources */,
+				3788D54B1CFA5C7E00BFB148 /* ShowOptionsWorker.swift in Sources */,
+				3788D5391CFA5C7E00BFB148 /* ShowOptionsConfigurator.swift in Sources */,
+				3788D53F1CFA5C7E00BFB148 /* ShowOptionsModels.swift in Sources */,
 				37AB34981CF7218900CF8359 /* SubjectsWorker.swift in Sources */,
+				3788D5621CFA648500BFB148 /* ListEnrolledCoursesRouter.swift in Sources */,
 				37AB33FD1CF64E5A00CF8359 /* AppDelegate.swift in Sources */,
 				37AB34911CF6867C00CF8359 /* ListSubjectsViewController.swift in Sources */,
+				3788D5651CFA648500BFB148 /* ListEnrolledCoursesViewController.swift in Sources */,
 				37D308C01CF7FC9600E03F1C /* Course.swift in Sources */,
 				37AB34881CF6867C00CF8359 /* ListSubjectsModels.swift in Sources */,
 				37D308AC1CF7F6A300E03F1C /* ListCoursesModels.swift in Sources */,
@@ -424,8 +520,12 @@
 				37D308B21CF7F6A300E03F1C /* ListCoursesRouter.swift in Sources */,
 				37D308BC1CF7FC1600E03F1C /* CoursesWorker.swift in Sources */,
 				37D308AF1CF7F6A300E03F1C /* ListCoursesPresenter.swift in Sources */,
+				3788D5451CFA5C7E00BFB148 /* ShowOptionsRouter.swift in Sources */,
 				37D308A61CF7F6A300E03F1C /* ListCoursesConfigurator.swift in Sources */,
+				3788D5481CFA5C7E00BFB148 /* ShowOptionsViewController.swift in Sources */,
+				3788D55C1CFA648500BFB148 /* ListEnrolledCoursesModels.swift in Sources */,
 				37AB344F1CF660C100CF8359 /* TableViewController.swift in Sources */,
+				3788D5591CFA648500BFB148 /* ListEnrolledCoursesInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,15 +535,25 @@
 			files = (
 				37AB34951CF6867C00CF8359 /* ListSubjectsWorker.swift in Sources */,
 				37D308AA1CF7F6A300E03F1C /* ListCoursesInteractor.swift in Sources */,
+				3788D5431CFA5C7E00BFB148 /* ShowOptionsPresenter.swift in Sources */,
 				37AB349D1CF721FB00CF8359 /* Subject.swift in Sources */,
+				3788D5571CFA648500BFB148 /* ListEnrolledCoursesConfigurator.swift in Sources */,
+				3788D5691CFA648500BFB148 /* ListEnrolledCoursesWorker.swift in Sources */,
 				37D308B91CF7F6A300E03F1C /* ListCoursesWorker.swift in Sources */,
+				3788D5601CFA648500BFB148 /* ListEnrolledCoursesPresenter.swift in Sources */,
+				3788D53D1CFA5C7E00BFB148 /* ShowOptionsInteractor.swift in Sources */,
 				37D308B61CF7F6A300E03F1C /* ListCoursesViewController.swift in Sources */,
 				37AB348F1CF6867C00CF8359 /* ListSubjectsRouter.swift in Sources */,
 				37AB34861CF6867C00CF8359 /* ListSubjectsInteractor.swift in Sources */,
 				37AB34831CF6867C00CF8359 /* ListSubjectsConfigurator.swift in Sources */,
+				3788D54C1CFA5C7E00BFB148 /* ShowOptionsWorker.swift in Sources */,
+				3788D53A1CFA5C7E00BFB148 /* ShowOptionsConfigurator.swift in Sources */,
+				3788D5401CFA5C7E00BFB148 /* ShowOptionsModels.swift in Sources */,
 				37AB34991CF7218900CF8359 /* SubjectsWorker.swift in Sources */,
+				3788D5631CFA648500BFB148 /* ListEnrolledCoursesRouter.swift in Sources */,
 				37AB34921CF6867C00CF8359 /* ListSubjectsViewController.swift in Sources */,
 				37D308C11CF7FC9600E03F1C /* Course.swift in Sources */,
+				3788D5661CFA648500BFB148 /* ListEnrolledCoursesViewController.swift in Sources */,
 				37AB34891CF6867C00CF8359 /* ListSubjectsModels.swift in Sources */,
 				37D308AD1CF7F6A300E03F1C /* ListCoursesModels.swift in Sources */,
 				37AB348C1CF6867C00CF8359 /* ListSubjectsPresenter.swift in Sources */,
@@ -451,8 +561,12 @@
 				37D308B31CF7F6A300E03F1C /* ListCoursesRouter.swift in Sources */,
 				37D308BD1CF7FC1600E03F1C /* CoursesWorker.swift in Sources */,
 				37D308B01CF7F6A300E03F1C /* ListCoursesPresenter.swift in Sources */,
+				3788D5461CFA5C7E00BFB148 /* ShowOptionsRouter.swift in Sources */,
 				37D308A71CF7F6A300E03F1C /* ListCoursesConfigurator.swift in Sources */,
+				3788D5491CFA5C7E00BFB148 /* ShowOptionsViewController.swift in Sources */,
+				3788D55D1CFA648500BFB148 /* ListEnrolledCoursesModels.swift in Sources */,
 				37AB34121CF64E5A00CF8359 /* FIUBATests.swift in Sources */,
+				3788D55A1CFA648500BFB148 /* ListEnrolledCoursesInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,15 +576,25 @@
 			files = (
 				37AB34961CF6867C00CF8359 /* ListSubjectsWorker.swift in Sources */,
 				37D308AB1CF7F6A300E03F1C /* ListCoursesInteractor.swift in Sources */,
+				3788D5441CFA5C7E00BFB148 /* ShowOptionsPresenter.swift in Sources */,
 				37AB349E1CF721FB00CF8359 /* Subject.swift in Sources */,
+				3788D5581CFA648500BFB148 /* ListEnrolledCoursesConfigurator.swift in Sources */,
+				3788D56A1CFA648500BFB148 /* ListEnrolledCoursesWorker.swift in Sources */,
 				37D308BA1CF7F6A300E03F1C /* ListCoursesWorker.swift in Sources */,
+				3788D5611CFA648500BFB148 /* ListEnrolledCoursesPresenter.swift in Sources */,
+				3788D53E1CFA5C7E00BFB148 /* ShowOptionsInteractor.swift in Sources */,
 				37D308B71CF7F6A300E03F1C /* ListCoursesViewController.swift in Sources */,
 				37AB34901CF6867C00CF8359 /* ListSubjectsRouter.swift in Sources */,
 				37AB34871CF6867C00CF8359 /* ListSubjectsInteractor.swift in Sources */,
 				37AB34841CF6867C00CF8359 /* ListSubjectsConfigurator.swift in Sources */,
+				3788D54D1CFA5C7E00BFB148 /* ShowOptionsWorker.swift in Sources */,
+				3788D53B1CFA5C7E00BFB148 /* ShowOptionsConfigurator.swift in Sources */,
+				3788D5411CFA5C7E00BFB148 /* ShowOptionsModels.swift in Sources */,
 				37AB349A1CF7218900CF8359 /* SubjectsWorker.swift in Sources */,
+				3788D5641CFA648500BFB148 /* ListEnrolledCoursesRouter.swift in Sources */,
 				37AB34931CF6867C00CF8359 /* ListSubjectsViewController.swift in Sources */,
 				37D308C21CF7FC9600E03F1C /* Course.swift in Sources */,
+				3788D5671CFA648500BFB148 /* ListEnrolledCoursesViewController.swift in Sources */,
 				37AB348A1CF6867C00CF8359 /* ListSubjectsModels.swift in Sources */,
 				37D308AE1CF7F6A300E03F1C /* ListCoursesModels.swift in Sources */,
 				37AB348D1CF6867C00CF8359 /* ListSubjectsPresenter.swift in Sources */,
@@ -478,8 +602,12 @@
 				37D308B41CF7F6A300E03F1C /* ListCoursesRouter.swift in Sources */,
 				37D308BE1CF7FC1600E03F1C /* CoursesWorker.swift in Sources */,
 				37D308B11CF7F6A300E03F1C /* ListCoursesPresenter.swift in Sources */,
+				3788D5471CFA5C7E00BFB148 /* ShowOptionsRouter.swift in Sources */,
 				37D308A81CF7F6A300E03F1C /* ListCoursesConfigurator.swift in Sources */,
+				3788D54A1CFA5C7E00BFB148 /* ShowOptionsViewController.swift in Sources */,
+				3788D55E1CFA648500BFB148 /* ListEnrolledCoursesModels.swift in Sources */,
 				37AB341D1CF64E5A00CF8359 /* FIUBAUITests.swift in Sources */,
+				3788D55B1CFA648500BFB148 /* ListEnrolledCoursesInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

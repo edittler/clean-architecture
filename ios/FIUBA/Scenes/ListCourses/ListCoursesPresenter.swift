@@ -3,7 +3,7 @@
 //  FIUBA
 //
 
-import UIKit
+import Foundation
 
 class ListCoursesPresenter: ListCoursesInteractorOutput {
 
