@@ -1,0 +1,19 @@
+platform :ios, '9.0'
+
+target 'FIUBA' do
+  use_frameworks!
+
+  # Pods for FIUBA
+  pod 'RealmSwift'
+
+  target 'FIUBATests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'FIUBAUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

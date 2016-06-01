@@ -19,7 +19,7 @@ class ListCoursesInteractor: ListCoursesInteractorInput {
 
     var output: ListCoursesInteractorOutput!
     var worker: ListCoursesWorker!
-    var coursesWorker: CoursesWorker = CoursesWorker()
+    var coursesWorker: CoursesWorker = CoursesWorker(coursesStore: CoursesJsonStore())
     var courses: [Course]?
   
     // MARK: Business logic

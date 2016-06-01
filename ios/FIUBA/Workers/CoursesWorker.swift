@@ -7,13 +7,64 @@ import Foundation
 
 class CoursesWorker {
 
-    // MARK: Business Logic
+    var coursesStore: CoursesStoreProtocol
 
-    func fetchCourses(completionHandler: (courses: [Course]) -> Void) {
-        var courses: [Course] = []
-        courses.append(Course(id: "750901", number: 1, teachers: ["Gonzalez"], vacancies: 90))
-        courses.append(Course(id: "750903", number: 3, teachers: ["Villagra"], vacancies: 10))
-        completionHandler(courses: courses)
+    init(coursesStore: CoursesStoreProtocol) {
+        self.coursesStore = coursesStore
     }
 
+    func fetchCourses(completionHandler: (courses: [Course]) -> Void) {
+        coursesStore.fetchCourses { (result) in
+            switch result {
+            case .Success(let courses):
+                completionHandler(courses: courses)
+            case .Failure( _):
+                completionHandler(courses: [])
+            }
+        }
+    }
+
+}
+
+protocol CoursesStoreProtocol {
+
+    // MARK: CRUD operations - Generic enum result type
+
+    func fetchCourses(completionHandler: CoursesStoreFetchCoursesCompletionHandler)
+    func fetchCourse(id: String, completionHandler: CoursesStoreFetchCourseCompletionHandler)
+    func createCourse(orderToCreate: Course, completionHandler: CoursesStoreCreateCourseCompletionHandler)
+    func updateCourse(orderToUpdate: Course, completionHandler: CoursesStoreUpdateCourseCompletionHandler)
+    func deleteCourse(id: String, completionHandler: CoursesStoreDeleteCourseCompletionHandler)
+}
+
+// MARK: - Courses store CRUD operation results
+
+typealias CoursesStoreFetchCoursesCompletionHandler = (result: CoursesStoreResult<[Course]>) -> Void
+typealias CoursesStoreFetchCourseCompletionHandler = (result: CoursesStoreResult<Course>) -> Void
+typealias CoursesStoreCreateCourseCompletionHandler = (result: CoursesStoreResult<Void>) -> Void
+typealias CoursesStoreUpdateCourseCompletionHandler = (result: CoursesStoreResult<Void>) -> Void
+typealias CoursesStoreDeleteCourseCompletionHandler = (result: CoursesStoreResult<Void>) -> Void
+
+enum CoursesStoreResult<U> {
+    case Success(result: U)
+    case Failure(error: CoursesStoreError)
+}
+
+// MARK: - Courses store CRUD operation errors
+
+enum CoursesStoreError: Equatable, ErrorType {
+    case CannotFetch(String)
+    case CannotCreate(String)
+    case CannotUpdate(String)
+    case CannotDelete(String)
+}
+
+func==(lhs: CoursesStoreError, rhs: CoursesStoreError) -> Bool {
+    switch (lhs, rhs) {
+        case (.CannotFetch(let a), .CannotFetch(let b)) where a == b: return true
+        case (.CannotCreate(let a), .CannotCreate(let b)) where a == b: return true
+        case (.CannotUpdate(let a), .CannotUpdate(let b)) where a == b: return true
+        case (.CannotDelete(let a), .CannotDelete(let b)) where a == b: return true
+        default: return false
+    }
 }

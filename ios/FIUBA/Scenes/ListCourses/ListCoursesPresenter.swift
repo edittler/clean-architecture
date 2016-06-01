@@ -17,7 +17,7 @@ class ListCoursesPresenter: ListCoursesInteractorOutput {
             let displayedCourse = ListCourses.ViewModel.DisplayedCourse(
                 id: course.id ?? "",
                 number: course.number ?? 0,
-                teachers: course.teachers?.joinWithSeparator(", ") ?? "",
+                teachers: course.teachers ?? "",
                 vacancies: course.vacancies ?? 0)
             displayedCourses.append(displayedCourse)
         }
@@ -28,7 +28,7 @@ class ListCoursesPresenter: ListCoursesInteractorOutput {
     func presentEnrollCourseConfirmation(response: ListCourses.SelectCourse.Response) {
         let viewModel = ListCourses.SelectCourse.ViewModel(
             number: response.course.number ?? 0,
-            teachers: response.course.teachers?.joinWithSeparator(", ") ?? "",
+            teachers: response.course.teachers ?? "",
             vacancies: response.course.vacancies ?? 0)
         output.displayEnrollCourseConfirmation(viewModel)
     }
