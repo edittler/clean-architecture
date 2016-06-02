@@ -3,7 +3,6 @@
 //  FIUBA
 //
 
-import Foundation
 import RealmSwift
 
 class CoursesRealmStore: CoursesStoreProtocol {

@@ -17,7 +17,7 @@ class ListSubjectsInteractor: ListSubjectsInteractorInput {
     var output: ListSubjectsInteractorOutput!
     var worker: ListSubjectsWorker!
 
-    var subjectsWorker = SubjectsWorker(subjectsStore: SubjectsJsonStore())
+    var subjectsWorker = SubjectsWorker(subjectsStore: SubjectsRealmStore())
   
     // MARK: Business logic
   

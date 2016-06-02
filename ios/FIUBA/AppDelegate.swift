@@ -74,6 +74,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let rmlWorker = CoursesWorker(coursesStore: CoursesRealmStore())
             rmlWorker.createCourses(courses)
         }
+        let jsonSubjectsWorker = SubjectsWorker(subjectsStore: SubjectsJsonStore())
+        jsonSubjectsWorker.fetchSubjects { (subjects) in
+            let rmlWorker = SubjectsWorker(subjectsStore: SubjectsRealmStore())
+            rmlWorker.createSubjects(subjects)
+        }
     }
 
 }

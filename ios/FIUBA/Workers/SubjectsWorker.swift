@@ -24,6 +24,11 @@ class SubjectsWorker {
         }
     }
 
+    func createSubjects(subjectsToCreate: [Subject]) {
+        subjectsStore.createSubjects(subjectsToCreate) { (result) in
+        }
+    }
+
 }
 
 protocol SubjectsStoreProtocol {
