@@ -1,25 +1,22 @@
-{"subjects": [    
-    {"name": "Análisis Matemático IIA", "code": 61.03, "Departament": "Matemática"},
-    {"name": "Algebra II", "code": 61.08, "Departament": "Matemática"},
-    {"name": "Análisis Matemático IIIA", "code": 61.10, "Departament": "Matemática"},
-    {"name": "Probabilidad", "code": 61.09, "Departament": "Matemática"},
-    {"name": "Algoritmos y Programación I", "code": 75.40, "Departament": "Computación"},
-    {"name": "Algoritmos y Programación II", "code": 75.41, "Departament": "Computación"},
-    {"name": "Algoritmos y Programación III", "code": 75.07, "Departament": "Computación"},
-    {"name": "Algoritmos y Programación I", "code": 75.40, "Departament": "Computación"},
-    {"name": "Análisis Numérico", "code": 75.12, "Departament": "Computación"},
-    {"name": "Organización de Datos", "code": 75.06, "Departament": "Computación"},
-    {"name": "Taller de Programación I", "code": 75.42, "Departament": "Computación"},
-    {"name": "Taller de Programación II", "code": 75.52, "Departament": "Computación"},
-    {"name": "Base de Datos", "code": 75.15, "Departament": "Computación"},
-    {"name": "Técnicas de Diseño", "code": 75.10, "Departament": "Computación"},
-    {"name": "Análisis de la Información", "code": 75.09, "Departament": "Computación"},
-    {"name": "Sistemas Operativos", "code": 75.40, "Departament": "Computación"},
-    {"name": "Introducción a los Sistemas Distribuidos", "code": 75.43, "Departament": "Computación"},
-    {"name": "Laboratorio", "code": 66.02, "Departament": "Electrónica"},
-    {"name": "Estructura del Computador", "code": 66.70, "Departament": "Electrónica"},
-    {"name": "Organización de Computadoras", "code": 66.20, "Departament": "Electrónica"},
-    {"name": "Laboratorio", "code": 66.02, "Departament": "Electrónica"},
-    {"name": "Quimica", "code": 63.01, "Departament": "Quimica"}
-    ]    
+{
+    "subjects": [{
+        "id": "7112",
+        "name": "Estructura de las Organizaciones",
+        "code": "71.12",
+    },
+    {
+        "id": "7114",
+        "name": "Modelos y Optimización I",
+        "code": "71.14",
+    },
+    {
+        "id": "7508",
+        "name": "Sistemas Operativos",
+        "code": "75.08",
+    },
+    {
+        "id": "7509",
+        "name": "Análisis de la Información",
+        "code": "75.09",
+    }]
 }

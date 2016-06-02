@@ -41,6 +41,7 @@ protocol CoursesStoreProtocol {
     func createCourses(coursesToCreate: [Course], completionHandler: CoursesStoreCreateCoursesCompletionHandler)
     func updateCourse(courseToUpdate: Course, completionHandler: CoursesStoreUpdateCourseCompletionHandler)
     func deleteCourse(id: String, completionHandler: CoursesStoreDeleteCourseCompletionHandler)
+
 }
 
 // MARK: - Courses store CRUD operation results
