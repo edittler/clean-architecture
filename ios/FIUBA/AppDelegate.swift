@@ -59,14 +59,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func checkDataBase() {
-        let DBIsLoaded = NSUserDefaults.standardUserDefaults().boolForKey(UDDataBaseIsLoaded)
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        let DBIsLoaded = userDefaults.boolForKey(UDDataBaseIsLoaded)
         if !DBIsLoaded {
             loadDataBase()
+            userDefaults.setBool(true, forKey: UDDataBaseIsLoaded)
+            userDefaults.synchronize()
         }
     }
 
     func loadDataBase() {
-        
+        let jsonCourseWorker = CoursesWorker(coursesStore: CoursesJsonStore())
+        jsonCourseWorker.fetchCourses { (courses) in
+            let rmlWorker = CoursesWorker(coursesStore: CoursesRealmStore())
+            rmlWorker.createCourses(courses)
+        }
     }
 
 }

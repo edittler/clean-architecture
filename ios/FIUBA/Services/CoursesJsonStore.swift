@@ -23,7 +23,8 @@ class CoursesJsonStore: CoursesStoreProtocol {
                     let course = Course(id: dict["id"] as? String,
                         number: dict["number"] as? Int,
                         teachers: dict["teachers"] as? String,
-                        vacancies: dict["vacancy"] as? Int)
+                        vacancies: dict["vacancy"] as? Int,
+                        enrolled: false)
                     return course
                 })
                 completionHandler(result: CoursesStoreResult.Success(result: courses))
@@ -38,11 +39,15 @@ class CoursesJsonStore: CoursesStoreProtocol {
 
     }
 
-    func createCourse(orderToCreate: Course, completionHandler: CoursesStoreCreateCourseCompletionHandler) {
+    func createCourse(courseToCreate: Course, completionHandler: CoursesStoreCreateCourseCompletionHandler) {
 
     }
 
-    func updateCourse(orderToUpdate: Course, completionHandler: CoursesStoreUpdateCourseCompletionHandler) {
+    func createCourses(coursesToCreate: [Course], completionHandler: CoursesStoreCreateCoursesCompletionHandler) {
+        
+    }
+
+    func updateCourse(courseToUpdate: Course, completionHandler: CoursesStoreUpdateCourseCompletionHandler) {
 
     }
 

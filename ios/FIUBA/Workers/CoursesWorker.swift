@@ -24,6 +24,11 @@ class CoursesWorker {
         }
     }
 
+    func createCourses(coursesToCreate: [Course]) {
+        coursesStore.createCourses(coursesToCreate) { (result) in
+        }
+    }
+
 }
 
 protocol CoursesStoreProtocol {
@@ -32,8 +37,9 @@ protocol CoursesStoreProtocol {
 
     func fetchCourses(completionHandler: CoursesStoreFetchCoursesCompletionHandler)
     func fetchCourse(id: String, completionHandler: CoursesStoreFetchCourseCompletionHandler)
-    func createCourse(orderToCreate: Course, completionHandler: CoursesStoreCreateCourseCompletionHandler)
-    func updateCourse(orderToUpdate: Course, completionHandler: CoursesStoreUpdateCourseCompletionHandler)
+    func createCourse(courseToCreate: Course, completionHandler: CoursesStoreCreateCourseCompletionHandler)
+    func createCourses(coursesToCreate: [Course], completionHandler: CoursesStoreCreateCoursesCompletionHandler)
+    func updateCourse(courseToUpdate: Course, completionHandler: CoursesStoreUpdateCourseCompletionHandler)
     func deleteCourse(id: String, completionHandler: CoursesStoreDeleteCourseCompletionHandler)
 }
 
@@ -42,6 +48,7 @@ protocol CoursesStoreProtocol {
 typealias CoursesStoreFetchCoursesCompletionHandler = (result: CoursesStoreResult<[Course]>) -> Void
 typealias CoursesStoreFetchCourseCompletionHandler = (result: CoursesStoreResult<Course>) -> Void
 typealias CoursesStoreCreateCourseCompletionHandler = (result: CoursesStoreResult<Void>) -> Void
+typealias CoursesStoreCreateCoursesCompletionHandler = (result: CoursesStoreResult<Void>) -> Void
 typealias CoursesStoreUpdateCourseCompletionHandler = (result: CoursesStoreResult<Void>) -> Void
 typealias CoursesStoreDeleteCourseCompletionHandler = (result: CoursesStoreResult<Void>) -> Void
 

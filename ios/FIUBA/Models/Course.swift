@@ -10,4 +10,5 @@ struct Course {
     var number: Int?
     var teachers: String?
     var vacancies: Int?
+    var enrolled: Bool?
 }
