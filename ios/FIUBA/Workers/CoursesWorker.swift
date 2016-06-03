@@ -24,6 +24,17 @@ class CoursesWorker {
         }
     }
 
+    func fetchCoursesBySubject(subject: Subject, completionHandler: (courses: [Course]) -> Void) {
+        coursesStore.fetchCoursesBySubject(subject) { (result) in
+            switch result {
+            case .Success(let courses):
+                completionHandler(courses: courses)
+            case .Failure( _):
+                completionHandler(courses: [])
+            }
+        }
+    }
+
     func createCourses(coursesToCreate: [Course]) {
         coursesStore.createCourses(coursesToCreate) { (result) in
         }
@@ -36,6 +47,7 @@ protocol CoursesStoreProtocol {
     // MARK: CRUD operations - Generic enum result type
 
     func fetchCourses(completionHandler: CoursesStoreFetchCoursesCompletionHandler)
+    func fetchCoursesBySubject(subject: Subject, completionHandler: CoursesStoreFetchCoursesCompletionHandler)
     func fetchCourse(id: String, completionHandler: CoursesStoreFetchCourseCompletionHandler)
     func createCourse(courseToCreate: Course, completionHandler: CoursesStoreCreateCourseCompletionHandler)
     func createCourses(coursesToCreate: [Course], completionHandler: CoursesStoreCreateCoursesCompletionHandler)

@@ -13,8 +13,12 @@ protocol ListCoursesViewProtocol: class {
 class ListCoursesViewController: UITableViewController,
     ListCoursesViewProtocol {
 
+    // MARK: VIP Attributes
     var output: ListCoursesInteractorInput!
     var router: ListCoursesRouter!
+
+    // MARK: Content Attributes
+    var subjectIdToCoursesDisplayed: Int!
     var displayedCourses: [ListCourses.ViewModel.DisplayedCourse] = []
   
     // MARK: Object lifecycle

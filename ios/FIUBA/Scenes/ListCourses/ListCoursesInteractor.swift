@@ -8,6 +8,8 @@ import Foundation
 protocol ListCoursesInteractorInput {
     func fetchCourses(request: ListCourses.Request)
     func selectCourse(request: ListCourses.SelectCourse.Request)
+
+    var subject: Subject! { get set }
 }
 
 protocol ListCoursesInteractorOutput {
@@ -19,13 +21,16 @@ class ListCoursesInteractor: ListCoursesInteractorInput {
 
     var output: ListCoursesInteractorOutput!
     var worker: ListCoursesWorker!
+
     var coursesWorker: CoursesWorker = CoursesWorker(coursesStore: CoursesRealmStore())
+
+    var subject: Subject!
     var courses: [Course]?
   
     // MARK: Business logic
 
     func fetchCourses(request: ListCourses.Request) {
-        coursesWorker.fetchCourses { (courses) in
+        coursesWorker.fetchCoursesBySubject(subject) { (courses) in
             self.courses = courses
             let response = ListCourses.Response(courses: courses)
             self.output.presentFetchedCourses(response)

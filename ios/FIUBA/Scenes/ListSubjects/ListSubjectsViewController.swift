@@ -48,7 +48,7 @@ class ListSubjectsViewController: UITableViewController,
 
     override func tableView(tableView: UITableView,
                             didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        router.navigateToListCourses()
     }
 
     // MARK: - UITableViewDataSource

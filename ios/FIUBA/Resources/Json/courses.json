@@ -1,58 +1,83 @@
 {
     "courses": [{
-        "id": "01",
+        "id": "711201",
+        "subjectId": "7112",
         "number": 1,
-        "teachers": "profesor1",
-        "schedule": "Lun y Mie 18 a 19",
-        "classroom": "1",
-        "vacancy": 20
+        "teachers": "Reyes-Barmack-Zammarano-Frutos-Vever",
+        "schedule": "Martes 17:00 23:00",
+        "classroom": "LH-106",
+        "vacancy": 130
     },
     {
-        "id": "02",
+        "id": "711401",
+        "subjectId": "7114",
+        "number": 1,
+        "teachers": "Ramos-Ramonet-Navarro Pierre-Levy",
+        "schedule": "Martes 18:00 a 21:00",
+        "classroom": "LH-6",
+        "vacancy": 15
+    },
+    {
+        "id": "711402",
+        "subjectId": "7114",
         "number": 2,
-        "teachers": "proffesor2",
-        "schedule": "Mar y Mie 18 a 19",
-        "classroom": "2",
-        "vacancy": 20
+        "teachers": "Ramos-Ramonet-Oitana",
+        "schedule": "Miércoles 19:00 a 22:00",
+        "classroom": "LH-12",
+        "vacancy": 15
     },
     {
-        "id": "03",
+        "id": "711403",
+        "subjectId": "7114",
         "number": 3,
-        "teachers": "proffesor3",
-        "schedule": "Lun y Jue 18 a 19",
-        "classroom": "3",
-        "vacancy": 20
+        "teachers": "Ramos-Ramonet-Echevarria",
+        "schedule": "Martes 9:00 a 12:00",
+        "classroom": "LH-103",
+        "vacancy": 15
     },
     {
-        "id": "04",
+        "id": "711404",
+        "subjectId": "7114",
         "number": 4,
-        "teachers": "proffesor4",
-        "schedule": "Mar y Vie 18 a 19",
-        "classroom": "4",
-        "vacancy": 20
+        "teachers": "Ramos-Ramonet-Colombo-Marin",
+        "schedule": "Sábado 10:00 a 13:00",
+        "classroom": "LH-102",
+        "vacancy": 15
     },
     {
-        "id": "05",
-        "number": 5,
-        "teachers": "proffesor5",
-        "schedule": "Lun y Vie 18 a 19",
-        "classroom": "5",
-        "vacancy": 10
+        "id": "750801",
+        "subjectId": "7508",
+        "number": 1,
+        "teachers": "Clua-Fernandez-Abraham-Muccio",
+        "schedule": "Martes y Jueves 19:00 a 22:00",
+        "classroom": "PC-414",
+        "vacancy": 60
     },
     {
-        "id": "06",
-        "number": 6,
-        "teachers": "proffesor6",
-        "schedule": "Mar y Jue 18 a 19",
-        "classroom": "6",
-        "vacancy": 5
+        "id": "750901",
+        "subjectId": "7509",
+        "number": 1,
+        "teachers": "Gonzalez-Turri-Marcarian",
+        "schedule": "Lunes y Miércoles 19:00 a 22:00",
+        "classroom": "PC-303",
+        "vacancy": 60
     },
     {
-        "id": "07",
-        "number": 7,
-        "teachers": "proffesor7",
-        "schedule": "Lun y Mie 10 a 12",
-        "classroom": "7",
-        "vacancy": 10
+        "id": "750902",
+        "subjectId": "7509",
+        "number": 2,
+        "teachers": "Gonzalez-Rivadulla-Sualdea",
+        "schedule": "Lunes y Viernes 19:00 a 22:00",
+        "classroom": "PC-303",
+        "vacancy": 90
+    },
+    {
+        "id": "750903",
+        "subjectId": "7509",
+        "number": 3,
+        "teachers": "Villagra-Locane-Fernandez",
+        "schedule": "Lunes y Jueves 18:30 a 21:30",
+        "classroom": "PC-303",
+        "vacancy": 30
     }]
 }

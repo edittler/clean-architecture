@@ -21,6 +21,7 @@ class CoursesJsonStore: CoursesStoreProtocol {
                 }
                 let courses = coursesArray.map({ (dict) -> Course in
                     let course = Course(id: dict["id"] as? String,
+                        subjectId: dict["subjectId"] as? String,
                         number: dict["number"] as? Int,
                         teachers: dict["teachers"] as? String,
                         vacancies: dict["vacancy"] as? Int,
@@ -33,6 +34,10 @@ class CoursesJsonStore: CoursesStoreProtocol {
             }
 
         })
+    }
+
+    func fetchCoursesBySubject(subject: Subject, completionHandler: CoursesStoreFetchCoursesCompletionHandler) {
+        
     }
 
     func fetchCourse(id: String, completionHandler: CoursesStoreFetchCourseCompletionHandler) {

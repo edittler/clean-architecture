@@ -16,6 +16,26 @@ class CoursesRealmStore: CoursesStoreProtocol {
         let rlmCourses = realm.objects(CourseRLM)
         let courses: [Course] = rlmCourses.map { (rlmCourse) -> Course in
             return Course(id: rlmCourse.id,
+                subjectId: rlmCourse.subjectId,
+                number: rlmCourse.number,
+                teachers: rlmCourse.teachers,
+                vacancies: rlmCourse.vacancies,
+                enrolled: rlmCourse.enrolled)
+        }
+        completionHandler(result: CoursesStoreResult.Success(result: courses))
+    }
+
+    func fetchCoursesBySubject(subject: Subject, completionHandler: CoursesStoreFetchCoursesCompletionHandler) {
+        guard let realm = realm() else {
+            completionHandler(result: CoursesStoreResult.Failure(error: CoursesStoreError.CannotFetch("No se pudo instanciar Realm")))
+            return
+        }
+
+        let predicate = NSPredicate(format: "subjectId == %@", subject.id!)
+        let rlmCourses = realm.objects(CourseRLM).filter(predicate)
+        let courses: [Course] = rlmCourses.map { (rlmCourse) -> Course in
+            return Course(id: rlmCourse.id,
+                subjectId: rlmCourse.subjectId,
                 number: rlmCourse.number,
                 teachers: rlmCourse.teachers,
                 vacancies: rlmCourse.vacancies,
@@ -41,6 +61,7 @@ class CoursesRealmStore: CoursesStoreProtocol {
         let rlmCourses: [CourseRLM] = courses.map { (course) -> CourseRLM in
             let rlmCourse = CourseRLM()
             rlmCourse.id = course.id ?? ""
+            rlmCourse.subjectId = course.subjectId ?? ""
             rlmCourse.number = course.number ?? 0
             rlmCourse.teachers = course.teachers ?? ""
             rlmCourse.vacancies = course.vacancies ?? 0
