@@ -12,4 +12,9 @@ class CourseRLM: Object {
     dynamic var teachers: String = ""
     dynamic var vacancies: Int = 0
     dynamic var enrolled: Bool = false
+
+    override static func primaryKey() -> String? {
+        return "id"
+    }
+
 }

@@ -45,7 +45,24 @@ class CoursesRealmStore: CoursesStoreProtocol {
     }
 
     func fetchCourse(id: String, completionHandler: CoursesStoreFetchCourseCompletionHandler) {
+        guard let realm = realm() else {
+            completionHandler(result: CoursesStoreResult.Failure(error: CoursesStoreError.CannotFetch("No se pudo instanciar Realm")))
+            return
+        }
 
+        let predicate = NSPredicate(format: "id == %@", id)
+        guard let rlmCourse = realm.objects(CourseRLM).filter(predicate).first else {
+            completionHandler(result: CoursesStoreResult.Failure(error: CoursesStoreError.CannotFetch("No existe un curso con el id dado")))
+            return
+        }
+
+        let course = Course(id: rlmCourse.id,
+                            subjectId: rlmCourse.subjectId,
+                            number: rlmCourse.number,
+                            teachers: rlmCourse.teachers,
+                            vacancies: rlmCourse.vacancies,
+                            enrolled: rlmCourse.enrolled)
+        completionHandler(result: CoursesStoreResult.Success(result: course))
     }
 
     func createCourse(courseToCreate: Course, completionHandler: CoursesStoreCreateCourseCompletionHandler) {
@@ -82,7 +99,27 @@ class CoursesRealmStore: CoursesStoreProtocol {
     }
 
     func updateCourse(courseToUpdate: Course, completionHandler: CoursesStoreUpdateCourseCompletionHandler) {
+        let course = CourseRLM()
+        course.id = courseToUpdate.id!
+        course.subjectId = courseToUpdate.subjectId!
+        course.number = courseToUpdate.number!
+        course.teachers = courseToUpdate.teachers!
+        course.vacancies = courseToUpdate.vacancies!
+        course.enrolled = courseToUpdate.enrolled!
 
+        guard let realm = realm() else {
+            completionHandler(result: CoursesStoreResult.Failure(error: CoursesStoreError.CannotCreate("No se pudo instanciar Realm")))
+            return
+        }
+
+        do {
+            try realm.write {
+                realm.add(course, update: true)
+            }
+        } catch {
+            completionHandler(result: CoursesStoreResult.Failure(error: CoursesStoreError.CannotCreate("No se pudo escribir en Realm")))
+            return
+        }
     }
 
     func deleteCourse(id: String, completionHandler: CoursesStoreDeleteCourseCompletionHandler) {

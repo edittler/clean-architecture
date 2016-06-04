@@ -8,6 +8,7 @@ import UIKit
 protocol ListCoursesViewProtocol: class {
     func displayFetchedCourses(viewModel: ListCourses.ViewModel)
     func displayEnrollCourseConfirmation(viewModel: ListCourses.SelectCourse.ViewModel)
+    func displayEnrollCourseResult(viewModel: ListCourses.EnrollCourse.ViewModel)
 }
 
 class ListCoursesViewController: UITableViewController,
@@ -57,10 +58,20 @@ class ListCoursesViewController: UITableViewController,
         let cancelAction = UIAlertAction(title: "Cancelar", style: .Cancel, handler: nil)
         enrollCourseConfirmationAlert.addAction(cancelAction)
         let enrollAction = UIAlertAction(title: "Inscribir", style: .Default) { (alertAction) in
-            NSLog("Enroll!!")
+            self.output.enrollCourse(ListCourses.EnrollCourse.Request(id: viewModel.id))
         }
         enrollCourseConfirmationAlert.addAction(enrollAction)
         presentViewController(enrollCourseConfirmationAlert, animated: true, completion: nil)
+    }
+
+    func displayEnrollCourseResult(viewModel: ListCourses.EnrollCourse.ViewModel) {
+        fetchCoursesOnLoad()
+        let enrollCourseResultAlert = UIAlertController(title: viewModel.title,
+                                                        message: viewModel.message,
+                                                        preferredStyle: .Alert)
+        let cancelAction = UIAlertAction(title: "Aceptar", style: .Cancel, handler: nil)
+        enrollCourseResultAlert.addAction(cancelAction)
+        presentViewController(enrollCourseResultAlert, animated: true, completion: nil)
     }
 
     // MARK: - UITableViewDelegate
@@ -86,6 +97,18 @@ class ListCoursesViewController: UITableViewController,
         let cell = tableView.dequeueReusableCellWithIdentifier("courseCell", forIndexPath: indexPath)
 
         let displayedCourse = displayedCourses[indexPath.row]
+        if displayedCourse.enrolled {
+            cell.backgroundColor = UIColor(red: 13/255, green: 148/255, blue: 252/255, alpha: 1)
+            let label = UILabel(frame: CGRect.zero)
+            label.text = "INSCRIPTO"
+            label.backgroundColor = UIColor.redColor().colorWithAlphaComponent(0.6)
+            label.textColor = UIColor.whiteColor()
+            label.sizeToFit()
+            label.clipsToBounds = true
+            label.layer.cornerRadius = 5
+            cell.accessoryView = label
+        }
+
         cell.textLabel?.text = "Curso \(displayedCourse.number) - \(displayedCourse.teachers)"
         cell.detailTextLabel?.text = "Vacantes: \(displayedCourse.vacancies)"
 

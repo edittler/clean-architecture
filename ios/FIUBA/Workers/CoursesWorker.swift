@@ -35,8 +35,25 @@ class CoursesWorker {
         }
     }
 
+    func fetchCourse(id: String, completionHandler: (course: Course?) -> Void) {
+        coursesStore.fetchCourse(id) { (result) in
+            switch result {
+            case .Success(let course):
+                completionHandler(course: course)
+            case .Failure( _):
+                completionHandler(course: nil)
+            }
+        }
+    }
+
     func createCourses(coursesToCreate: [Course]) {
         coursesStore.createCourses(coursesToCreate) { (result) in
+        }
+    }
+
+    func updateCourse(courseToUpdate: Course) {
+        coursesStore.updateCourse(courseToUpdate) { (result) in
+            debugPrint(result)
         }
     }
 
