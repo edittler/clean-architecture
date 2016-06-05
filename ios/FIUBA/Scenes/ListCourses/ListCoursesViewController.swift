@@ -19,7 +19,6 @@ class ListCoursesViewController: UITableViewController,
     var router: ListCoursesRouter!
 
     // MARK: Content Attributes
-    var subjectIdToCoursesDisplayed: Int!
     var displayedCourses: [ListCourses.ViewModel.DisplayedCourse] = []
   
     // MARK: Object lifecycle

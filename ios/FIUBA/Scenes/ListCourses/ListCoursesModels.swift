@@ -27,11 +27,6 @@ struct ListCourses {
         var displayedCourses: [DisplayedCourse]
     }
 
-    struct AlertViewModel {
-        var title: String
-        var message: String
-    }
-
     // MARK: - Select Course
 
     struct SelectCourse {

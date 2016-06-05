@@ -44,6 +44,25 @@ class CoursesRealmStore: CoursesStoreProtocol {
         completionHandler(result: CoursesStoreResult.Success(result: courses))
     }
 
+    func fetchEnrolledCourses(completionHandler: CoursesStoreFetchCoursesCompletionHandler) {
+        guard let realm = realm() else {
+            completionHandler(result: CoursesStoreResult.Failure(error: CoursesStoreError.CannotFetch("No se pudo instanciar Realm")))
+            return
+        }
+
+        let predicate = NSPredicate(format: "enrolled == true")
+        let rlmCourses = realm.objects(CourseRLM).filter(predicate)
+        let courses: [Course] = rlmCourses.map { (rlmCourse) -> Course in
+            return Course(id: rlmCourse.id,
+                subjectId: rlmCourse.subjectId,
+                number: rlmCourse.number,
+                teachers: rlmCourse.teachers,
+                vacancies: rlmCourse.vacancies,
+                enrolled: rlmCourse.enrolled)
+        }
+        completionHandler(result: CoursesStoreResult.Success(result: courses))
+    }
+
     func fetchCourse(id: String, completionHandler: CoursesStoreFetchCourseCompletionHandler) {
         guard let realm = realm() else {
             completionHandler(result: CoursesStoreResult.Failure(error: CoursesStoreError.CannotFetch("No se pudo instanciar Realm")))

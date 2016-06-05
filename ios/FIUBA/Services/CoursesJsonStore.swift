@@ -40,6 +40,10 @@ class CoursesJsonStore: CoursesStoreProtocol {
         
     }
 
+    func fetchEnrolledCourses(completionHandler: CoursesStoreFetchCoursesCompletionHandler) {
+        
+    }
+
     func fetchCourse(id: String, completionHandler: CoursesStoreFetchCourseCompletionHandler) {
 
     }

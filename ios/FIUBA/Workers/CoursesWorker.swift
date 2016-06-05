@@ -35,6 +35,17 @@ class CoursesWorker {
         }
     }
 
+    func fetchEnrolledCourses(completionHandler: (courses: [Course]) -> Void) {
+        coursesStore.fetchEnrolledCourses { (result) in
+            switch result {
+            case .Success(let courses):
+                completionHandler(courses: courses)
+            case .Failure( _):
+                completionHandler(courses: [])
+            }
+        }
+    }
+
     func fetchCourse(id: String, completionHandler: (course: Course?) -> Void) {
         coursesStore.fetchCourse(id) { (result) in
             switch result {
@@ -65,6 +76,7 @@ protocol CoursesStoreProtocol {
 
     func fetchCourses(completionHandler: CoursesStoreFetchCoursesCompletionHandler)
     func fetchCoursesBySubject(subject: Subject, completionHandler: CoursesStoreFetchCoursesCompletionHandler)
+    func fetchEnrolledCourses(completionHandler: CoursesStoreFetchCoursesCompletionHandler)
     func fetchCourse(id: String, completionHandler: CoursesStoreFetchCourseCompletionHandler)
     func createCourse(courseToCreate: Course, completionHandler: CoursesStoreCreateCourseCompletionHandler)
     func createCourses(coursesToCreate: [Course], completionHandler: CoursesStoreCreateCoursesCompletionHandler)

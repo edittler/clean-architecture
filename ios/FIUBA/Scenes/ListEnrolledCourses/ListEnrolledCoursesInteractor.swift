@@ -6,29 +6,28 @@
 import Foundation
 
 protocol ListEnrolledCoursesInteractorInput {
-    func doSomething(request: ListEnrolledCourses.Request)
+    func fetchEnrolledCourses(request: ListEnrolledCourses.Request)
 }
 
 protocol ListEnrolledCoursesInteractorOutput {
-    func presentSomething(response: ListEnrolledCourses.Response)
+    func presentFetchedEnrolledCourses(response: ListEnrolledCourses.Response)
 }
 
 class ListEnrolledCoursesInteractor: ListEnrolledCoursesInteractorInput {
+
     var output: ListEnrolledCoursesInteractorOutput!
-    var worker: ListEnrolledCoursesWorker!
-  
+    var worker: ListEnrolledCoursesWorker! = ListEnrolledCoursesWorker()
+
+    var enrolledCourses: [Course]?
+
     // MARK: Business logic
   
-    func doSomething(request: ListEnrolledCourses.Request) {
-        // NOTE: Create some Worker to do the work
-    
-        worker = ListEnrolledCoursesWorker()
-        worker.doSomeWork()
-    
-        // NOTE: Pass the result to the Presenter
-    
-        let response = ListEnrolledCourses.Response()
-        output.presentSomething(response)
+    func fetchEnrolledCourses(request: ListEnrolledCourses.Request) {
+        worker.fetchEnrolledCourses { (courses) in
+            self.enrolledCourses = courses
+            let response = ListEnrolledCourses.Response(courses: courses)
+            self.output.presentFetchedEnrolledCourses(response)
+        }
     }
 
 }
