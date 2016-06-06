@@ -8,6 +8,8 @@
 
 import UIKit
 
+let UDDataBaseIsLoaded = "DataBaseIsLoaded"
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -17,6 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+
+        checkDataBase()
+
         return true
     }
 
@@ -51,6 +56,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate.
         // See also applicationDidEnterBackground:.
+    }
+
+    func checkDataBase() {
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        let DBIsLoaded = userDefaults.boolForKey(UDDataBaseIsLoaded)
+        if !DBIsLoaded {
+            loadDataBase()
+            userDefaults.setBool(true, forKey: UDDataBaseIsLoaded)
+            userDefaults.synchronize()
+        }
+    }
+
+    func loadDataBase() {
+        let jsonCourseWorker = CoursesWorker(coursesStore: CoursesJsonStore())
+        jsonCourseWorker.fetchCourses { (courses) in
+            let rmlWorker = CoursesWorker(coursesStore: CoursesRealmStore())
+            rmlWorker.createCourses(courses)
+        }
+        let jsonSubjectsWorker = SubjectsWorker(subjectsStore: SubjectsJsonStore())
+        jsonSubjectsWorker.fetchSubjects { (subjects) in
+            let rmlWorker = SubjectsWorker(subjectsStore: SubjectsRealmStore())
+            rmlWorker.createSubjects(subjects)
+        }
     }
 
 }

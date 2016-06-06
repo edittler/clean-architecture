@@ -11,11 +11,19 @@ class ListEnrolledCoursesPresenter: ListEnrolledCoursesInteractorOutput {
   
     // MARK: Presentation logic
   
-    func presentSomething(response: ListEnrolledCourses.Response) {
-        // NOTE: Format the response from the Interactor and pass the result back to the View Controller
-
-        let viewModel = ListEnrolledCourses.ViewModel()
-        output.displaySomething(viewModel)
+    func presentFetchedEnrolledCourses(response: ListEnrolledCourses.Response) {
+        var displayedCourses: [ListEnrolledCourses.ViewModel.DisplayedCourse] = []
+        for course in response.courses {
+            let displayedCourse = ListEnrolledCourses.ViewModel.DisplayedCourse(
+                id: course.id ?? "",
+                number: course.number ?? 0,
+                teachers: course.teachers ?? "",
+                vacancies: course.vacancies ?? 0,
+                enrolled: course.enrolled ?? false)
+            displayedCourses.append(displayedCourse)
+        }
+        let viewModel = ListEnrolledCourses.ViewModel(displayedCourses: displayedCourses)
+        output.displayFetchedEnrolledCourses(viewModel)
     }
 
 }

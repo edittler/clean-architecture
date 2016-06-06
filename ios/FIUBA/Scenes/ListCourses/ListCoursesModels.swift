@@ -21,6 +21,7 @@ struct ListCourses {
             var number: Int
             var teachers: String
             var vacancies: Int
+            var enrolled: Bool
         }
 
         var displayedCourses: [DisplayedCourse]
@@ -39,6 +40,7 @@ struct ListCourses {
         }
 
         struct ViewModel {
+            var id: String
             var number: Int
             var teachers: String
             var vacancies: Int
@@ -49,5 +51,23 @@ struct ListCourses {
     // MARK: - Enroll Course
 
     struct EnrollCourse {
+
+        struct Request {
+            var id: String
+        }
+
+        struct Response {
+            var enrollSuccess: Bool
+            var title: String
+            var message: String
+        }
+
+        struct ViewModel {
+            var enrollSuccess: Bool
+            var title: String
+            var message: String
+        }
+
     }
+
 }

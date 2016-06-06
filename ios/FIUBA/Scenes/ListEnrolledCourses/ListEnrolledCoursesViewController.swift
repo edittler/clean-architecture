@@ -6,7 +6,7 @@
 import UIKit
 
 protocol ListEnrolledCoursesViewInput: class {
-  func displaySomething(viewModel: ListEnrolledCourses.ViewModel)
+  func displayFetchedEnrolledCourses(viewModel: ListEnrolledCourses.ViewModel)
 }
 
 class ListEnrolledCoursesViewController: UITableViewController,
@@ -14,6 +14,8 @@ class ListEnrolledCoursesViewController: UITableViewController,
 
     var output: ListEnrolledCoursesInteractorInput!
     var router: ListEnrolledCoursesRouter!
+
+    var displayedCourses: [ListEnrolledCourses.ViewModel.DisplayedCourse] = []
   
     // MARK: Object lifecycle
   
@@ -26,39 +28,73 @@ class ListEnrolledCoursesViewController: UITableViewController,
   
     override func viewDidLoad() {
         super.viewDidLoad()
-        doSomethingOnLoad()
+        //self.tableView.allowsMultipleSelectionDuringEditing = false
+        fetchEnrolledCoursesOnLoad()
     }
   
     // MARK: Event handling
   
-    func doSomethingOnLoad() {
-        // NOTE: Ask the Interactor to do some work
-
+    func fetchEnrolledCoursesOnLoad() {
         let request = ListEnrolledCourses.Request()
-        output.doSomething(request)
+        output.fetchEnrolledCourses(request)
     }
   
     // MARK: Display logic
 
-    func displaySomething(viewModel: ListEnrolledCourses.ViewModel) {
-        // NOTE: Display the result from the Presenter
-
-        // nameTextField.text = viewModel.name
+    func displayFetchedEnrolledCourses(viewModel: ListEnrolledCourses.ViewModel) {
+        displayedCourses = viewModel.displayedCourses
+        tableView.reloadData()
     }
 
     // MARK: - UITableViewDataSource
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 10
+        return displayedCourses.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("enrolledCourseCell", forIndexPath: indexPath)
 
-        // Configure the cell...
+        let displayedCourse = displayedCourses[indexPath.row]
+
+        cell.textLabel?.text = "Curso \(displayedCourse.number) - \(displayedCourse.teachers)"
+        cell.detailTextLabel?.text = "Vacantes: \(displayedCourse.vacancies)"
 
         return cell
+    }
+
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+
+    }
+
+    // MARK: - UITableViewDelegate
+
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+
+    override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+        let unrollAction = UITableViewRowAction(style: .Destructive, title: "DESUSCRIBIR") { (action, indexPath) -> Void in
+            let alert = UIAlertController(title: "Desuscribir", message: "¿Está seguro que desea desuscribirse del curso?", preferredStyle: .Alert)
+
+            let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: { (alertAction) in
+
+            })
+            let unrollAction = UIAlertAction(title: "Desuscribir", style: .Destructive, handler: { (alertAction) in
+
+            })
+
+            alert.addAction(cancelAction)
+            alert.addAction(unrollAction)
+
+            self.setEditing(false, animated: true)
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+        return [unrollAction]
     }
     
 }

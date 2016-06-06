@@ -31,9 +31,6 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <connections>
-                                    <segue destination="kOE-yw-5o4" kind="show" id="yVO-CN-Nvc"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -43,6 +40,9 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Asignaturas" id="RC0-Z2-6Mh"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <segue destination="kOE-yw-5o4" kind="show" identifier="ShowListCoursesScene" id="9eC-At-qo0"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ave-J5-Ozm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

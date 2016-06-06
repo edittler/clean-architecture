@@ -6,19 +6,22 @@
 import UIKit
 
 protocol ListSubjectsRouterProtocol {
-    func navigateToSomewhere()
+    func navigateToListCourses()
 }
 
 class ListSubjectsRouter: ListSubjectsRouterProtocol {
+
+    private static let ShowListCoursesSegueId = "ShowListCoursesScene"
+
     weak var viewController: ListSubjectsViewController!
   
     // MARK: Navigation
   
-    func navigateToSomewhere() {
+    func navigateToListCourses() {
         // NOTE: Teach the router how to navigate to another scene. Some examples follow:
     
         // 1. Trigger a storyboard segue
-        // viewController.performSegueWithIdentifier("ShowSomewhereScene", sender: nil)
+        viewController.performSegueWithIdentifier(ListSubjectsRouter.ShowListCoursesSegueId, sender: nil)
     
         // 2. Present another view controller programmatically
         // viewController.presentViewController(someWhereViewController, animated: true, completion: nil)
@@ -37,16 +40,19 @@ class ListSubjectsRouter: ListSubjectsRouterProtocol {
     func passDataToNextScene(segue: UIStoryboardSegue) {
         // NOTE: Teach the router which scenes it can communicate with
     
-        if segue.identifier == "ShowSomewhereScene" {
-            passDataToSomewhereScene(segue)
+        if segue.identifier == ListSubjectsRouter.ShowListCoursesSegueId {
+            passDataToListCoursesScene(segue)
         }
     }
   
-  func passDataToSomewhereScene(segue: UIStoryboardSegue) {
-        // NOTE: Teach the router how to pass data to the next scene
-    
-        // let someWhereViewController = segue.destinationViewController as! SomeWhereViewController
-        // someWhereViewController.output.name = viewController.output.name
+    func passDataToListCoursesScene(segue: UIStoryboardSegue) {
+        if let selectedIndexPath = viewController.tableView.indexPathForSelectedRow {
+            if let selectedSubject = viewController.output.subjects?[selectedIndexPath.row] {
+                // swiftlint:disable:next force_cast
+                let listCoursesViewController = segue.destinationViewController as! ListCoursesViewController
+                listCoursesViewController.output.subject = selectedSubject
+            }
+        }
     }
 
 }

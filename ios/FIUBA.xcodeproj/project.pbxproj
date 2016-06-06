@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		192D05890B350E4A2BF3DA1F /* Pods_FIUBATests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7028691E815D3129437731A /* Pods_FIUBATests.framework */; };
+		375F42981CFFCA1300C8395F /* SubjectsJsonStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375F42971CFFCA1300C8395F /* SubjectsJsonStore.swift */; };
+		375F42991CFFCA1300C8395F /* SubjectsJsonStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375F42971CFFCA1300C8395F /* SubjectsJsonStore.swift */; };
+		375F429A1CFFCA1300C8395F /* SubjectsJsonStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375F42971CFFCA1300C8395F /* SubjectsJsonStore.swift */; };
+		375F429C1CFFD49400C8395F /* SubjectRLM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375F429B1CFFD49400C8395F /* SubjectRLM.swift */; };
+		375F429D1CFFD49400C8395F /* SubjectRLM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375F429B1CFFD49400C8395F /* SubjectRLM.swift */; };
+		375F429E1CFFD49400C8395F /* SubjectRLM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375F429B1CFFD49400C8395F /* SubjectRLM.swift */; };
+		375F42A01CFFD53500C8395F /* SubjectsRealmStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375F429F1CFFD53500C8395F /* SubjectsRealmStore.swift */; };
+		375F42A11CFFD53500C8395F /* SubjectsRealmStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375F429F1CFFD53500C8395F /* SubjectsRealmStore.swift */; };
+		375F42A21CFFD53500C8395F /* SubjectsRealmStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375F429F1CFFD53500C8395F /* SubjectsRealmStore.swift */; };
 		3788D5391CFA5C7E00BFB148 /* ShowOptionsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5321CFA5C7E00BFB148 /* ShowOptionsConfigurator.swift */; };
 		3788D53A1CFA5C7E00BFB148 /* ShowOptionsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5321CFA5C7E00BFB148 /* ShowOptionsConfigurator.swift */; };
 		3788D53B1CFA5C7E00BFB148 /* ShowOptionsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5321CFA5C7E00BFB148 /* ShowOptionsConfigurator.swift */; };
@@ -49,6 +59,24 @@
 		3788D5681CFA648500BFB148 /* ListEnrolledCoursesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5551CFA648500BFB148 /* ListEnrolledCoursesWorker.swift */; };
 		3788D5691CFA648500BFB148 /* ListEnrolledCoursesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5551CFA648500BFB148 /* ListEnrolledCoursesWorker.swift */; };
 		3788D56A1CFA648500BFB148 /* ListEnrolledCoursesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3788D5551CFA648500BFB148 /* ListEnrolledCoursesWorker.swift */; };
+		379DD53D1CFE75D800E9FAF8 /* CoursesRealmStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379DD53C1CFE75D800E9FAF8 /* CoursesRealmStore.swift */; };
+		379DD53E1CFE75D800E9FAF8 /* CoursesRealmStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379DD53C1CFE75D800E9FAF8 /* CoursesRealmStore.swift */; };
+		379DD53F1CFE75D800E9FAF8 /* CoursesRealmStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379DD53C1CFE75D800E9FAF8 /* CoursesRealmStore.swift */; };
+		379DD5411CFE76F400E9FAF8 /* CourseRLM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379DD5401CFE76F400E9FAF8 /* CourseRLM.swift */; };
+		379DD5421CFE76F400E9FAF8 /* CourseRLM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379DD5401CFE76F400E9FAF8 /* CourseRLM.swift */; };
+		379DD5431CFE76F400E9FAF8 /* CourseRLM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379DD5401CFE76F400E9FAF8 /* CourseRLM.swift */; };
+		379DD5481CFE7D9E00E9FAF8 /* courses.json in Resources */ = {isa = PBXBuildFile; fileRef = 379DD5461CFE7D9E00E9FAF8 /* courses.json */; };
+		379DD5491CFE7D9E00E9FAF8 /* courses.json in Resources */ = {isa = PBXBuildFile; fileRef = 379DD5461CFE7D9E00E9FAF8 /* courses.json */; };
+		379DD54A1CFE7D9E00E9FAF8 /* courses.json in Resources */ = {isa = PBXBuildFile; fileRef = 379DD5461CFE7D9E00E9FAF8 /* courses.json */; };
+		379DD54B1CFE7D9E00E9FAF8 /* subjects.json in Resources */ = {isa = PBXBuildFile; fileRef = 379DD5471CFE7D9E00E9FAF8 /* subjects.json */; };
+		379DD54C1CFE7D9E00E9FAF8 /* subjects.json in Resources */ = {isa = PBXBuildFile; fileRef = 379DD5471CFE7D9E00E9FAF8 /* subjects.json */; };
+		379DD54D1CFE7D9E00E9FAF8 /* subjects.json in Resources */ = {isa = PBXBuildFile; fileRef = 379DD5471CFE7D9E00E9FAF8 /* subjects.json */; };
+		379DD54F1CFE7DDE00E9FAF8 /* CoursesJsonStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379DD54E1CFE7DDE00E9FAF8 /* CoursesJsonStore.swift */; };
+		379DD5501CFE7DDE00E9FAF8 /* CoursesJsonStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379DD54E1CFE7DDE00E9FAF8 /* CoursesJsonStore.swift */; };
+		379DD5511CFE7DDE00E9FAF8 /* CoursesJsonStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379DD54E1CFE7DDE00E9FAF8 /* CoursesJsonStore.swift */; };
+		379DD5541CFE7F3A00E9FAF8 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379DD5531CFE7F3A00E9FAF8 /* DataManager.swift */; };
+		379DD5551CFE7F3A00E9FAF8 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379DD5531CFE7F3A00E9FAF8 /* DataManager.swift */; };
+		379DD5561CFE7F3A00E9FAF8 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379DD5531CFE7F3A00E9FAF8 /* DataManager.swift */; };
 		37AB33FD1CF64E5A00CF8359 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB33FC1CF64E5A00CF8359 /* AppDelegate.swift */; };
 		37AB34021CF64E5A00CF8359 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37AB34001CF64E5A00CF8359 /* Main.storyboard */; };
 		37AB34041CF64E5A00CF8359 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37AB34031CF64E5A00CF8359 /* Assets.xcassets */; };
@@ -112,6 +140,8 @@
 		37D308C01CF7FC9600E03F1C /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D308BF1CF7FC9600E03F1C /* Course.swift */; };
 		37D308C11CF7FC9600E03F1C /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D308BF1CF7FC9600E03F1C /* Course.swift */; };
 		37D308C21CF7FC9600E03F1C /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D308BF1CF7FC9600E03F1C /* Course.swift */; };
+		3887FAE98BB365B9D74145DF /* Pods_FIUBAUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53852A05CE30408EF2E277D7 /* Pods_FIUBAUITests.framework */; };
+		70AE106F001DE3A4A388BF64 /* Pods_FIUBA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FBF1C3B0D105551DA410BD5 /* Pods_FIUBA.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +162,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C114DC04ADC6F4F93267F02 /* Pods-FIUBAUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FIUBAUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FIUBAUITests/Pods-FIUBAUITests.release.xcconfig"; sourceTree = "<group>"; };
+		0DEDCB34125AB748C17ABCAC /* Pods-FIUBATests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FIUBATests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FIUBATests/Pods-FIUBATests.release.xcconfig"; sourceTree = "<group>"; };
+		16C3CE8508261FC529A940A8 /* Pods-FIUBA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FIUBA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FIUBA/Pods-FIUBA.debug.xcconfig"; sourceTree = "<group>"; };
+		1AF9492A256F1E1AB096458B /* Pods-FIUBA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FIUBA.release.xcconfig"; path = "Pods/Target Support Files/Pods-FIUBA/Pods-FIUBA.release.xcconfig"; sourceTree = "<group>"; };
+		1FBF1C3B0D105551DA410BD5 /* Pods_FIUBA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FIUBA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		343A6D23CBEAC9E66CF00E01 /* Pods-FIUBATests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FIUBATests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FIUBATests/Pods-FIUBATests.debug.xcconfig"; sourceTree = "<group>"; };
+		375F42971CFFCA1300C8395F /* SubjectsJsonStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectsJsonStore.swift; sourceTree = "<group>"; };
+		375F429B1CFFD49400C8395F /* SubjectRLM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectRLM.swift; sourceTree = "<group>"; };
+		375F429F1CFFD53500C8395F /* SubjectsRealmStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubjectsRealmStore.swift; sourceTree = "<group>"; };
 		3788D5321CFA5C7E00BFB148 /* ShowOptionsConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowOptionsConfigurator.swift; sourceTree = "<group>"; };
 		3788D5331CFA5C7E00BFB148 /* ShowOptionsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowOptionsInteractor.swift; sourceTree = "<group>"; };
 		3788D5341CFA5C7E00BFB148 /* ShowOptionsModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowOptionsModels.swift; sourceTree = "<group>"; };
@@ -146,6 +185,12 @@
 		3788D5531CFA648500BFB148 /* ListEnrolledCoursesRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEnrolledCoursesRouter.swift; sourceTree = "<group>"; };
 		3788D5541CFA648500BFB148 /* ListEnrolledCoursesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEnrolledCoursesViewController.swift; sourceTree = "<group>"; };
 		3788D5551CFA648500BFB148 /* ListEnrolledCoursesWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEnrolledCoursesWorker.swift; sourceTree = "<group>"; };
+		379DD53C1CFE75D800E9FAF8 /* CoursesRealmStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesRealmStore.swift; sourceTree = "<group>"; };
+		379DD5401CFE76F400E9FAF8 /* CourseRLM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseRLM.swift; sourceTree = "<group>"; };
+		379DD5461CFE7D9E00E9FAF8 /* courses.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = courses.json; sourceTree = "<group>"; };
+		379DD5471CFE7D9E00E9FAF8 /* subjects.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = subjects.json; sourceTree = "<group>"; };
+		379DD54E1CFE7DDE00E9FAF8 /* CoursesJsonStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesJsonStore.swift; sourceTree = "<group>"; };
+		379DD5531CFE7F3A00E9FAF8 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		37AB33F91CF64E5A00CF8359 /* FIUBA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FIUBA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37AB33FC1CF64E5A00CF8359 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37AB34011CF64E5A00CF8359 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -177,6 +222,9 @@
 		37D308A51CF7F6A300E03F1C /* ListCoursesWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCoursesWorker.swift; sourceTree = "<group>"; };
 		37D308BB1CF7FC1600E03F1C /* CoursesWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesWorker.swift; sourceTree = "<group>"; };
 		37D308BF1CF7FC9600E03F1C /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		53852A05CE30408EF2E277D7 /* Pods_FIUBAUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FIUBAUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		936BCA698B2C4DA565E6972A /* Pods-FIUBAUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FIUBAUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FIUBAUITests/Pods-FIUBAUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D7028691E815D3129437731A /* Pods_FIUBATests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FIUBATests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +232,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70AE106F001DE3A4A388BF64 /* Pods_FIUBA.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +240,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				192D05890B350E4A2BF3DA1F /* Pods_FIUBATests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +248,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3887FAE98BB365B9D74145DF /* Pods_FIUBAUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +283,53 @@
 			path = ListEnrolledCourses;
 			sourceTree = "<group>";
 		};
+		379DD53A1CFE757F00E9FAF8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				379DD5521CFE7F2500E9FAF8 /* Json */,
+				379DD53B1CFE759100E9FAF8 /* Realm */,
+				379DD54E1CFE7DDE00E9FAF8 /* CoursesJsonStore.swift */,
+				379DD53C1CFE75D800E9FAF8 /* CoursesRealmStore.swift */,
+				375F42971CFFCA1300C8395F /* SubjectsJsonStore.swift */,
+				375F429F1CFFD53500C8395F /* SubjectsRealmStore.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		379DD53B1CFE759100E9FAF8 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				379DD5401CFE76F400E9FAF8 /* CourseRLM.swift */,
+				375F429B1CFFD49400C8395F /* SubjectRLM.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		379DD5441CFE7D8100E9FAF8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				379DD5451CFE7D8100E9FAF8 /* Json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		379DD5451CFE7D8100E9FAF8 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				379DD5461CFE7D9E00E9FAF8 /* courses.json */,
+				379DD5471CFE7D9E00E9FAF8 /* subjects.json */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
+		379DD5521CFE7F2500E9FAF8 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				379DD5531CFE7F3A00E9FAF8 /* DataManager.swift */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
 		37AB33F01CF64E5A00CF8359 = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +337,8 @@
 				37AB34101CF64E5A00CF8359 /* FIUBATests */,
 				37AB341B1CF64E5A00CF8359 /* FIUBAUITests */,
 				37AB33FA1CF64E5A00CF8359 /* Products */,
+				D33D1D54460B35237DE16CBF /* Pods */,
+				545F9355BB7872714AD6B633 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -256,6 +356,8 @@
 			isa = PBXGroup;
 			children = (
 				37AB346F1CF67A2600CF8359 /* Models */,
+				379DD53A1CFE757F00E9FAF8 /* Services */,
+				379DD5441CFE7D8100E9FAF8 /* Resources */,
 				37AB34741CF67D5400CF8359 /* Workers */,
 				37AB342A1CF65BA200CF8359 /* Scenes */,
 				37AB33FC1CF64E5A00CF8359 /* AppDelegate.swift */,
@@ -343,6 +445,29 @@
 			path = ListCourses;
 			sourceTree = "<group>";
 		};
+		545F9355BB7872714AD6B633 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1FBF1C3B0D105551DA410BD5 /* Pods_FIUBA.framework */,
+				D7028691E815D3129437731A /* Pods_FIUBATests.framework */,
+				53852A05CE30408EF2E277D7 /* Pods_FIUBAUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D33D1D54460B35237DE16CBF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				16C3CE8508261FC529A940A8 /* Pods-FIUBA.debug.xcconfig */,
+				1AF9492A256F1E1AB096458B /* Pods-FIUBA.release.xcconfig */,
+				343A6D23CBEAC9E66CF00E01 /* Pods-FIUBATests.debug.xcconfig */,
+				0DEDCB34125AB748C17ABCAC /* Pods-FIUBATests.release.xcconfig */,
+				936BCA698B2C4DA565E6972A /* Pods-FIUBAUITests.debug.xcconfig */,
+				0C114DC04ADC6F4F93267F02 /* Pods-FIUBAUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -350,10 +475,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37AB34211CF64E5A00CF8359 /* Build configuration list for PBXNativeTarget "FIUBA" */;
 			buildPhases = (
+				79E771F2D856D3F6AB93ADFE /* 📦 Check Pods Manifest.lock */,
 				37AB33F51CF64E5A00CF8359 /* Sources */,
 				37AB33F61CF64E5A00CF8359 /* Frameworks */,
 				37AB33F71CF64E5A00CF8359 /* Resources */,
 				37AB344D1CF65E4900CF8359 /* SwiftLint */,
+				E90E9D7BBA422EFB80214B18 /* 📦 Embed Pods Frameworks */,
+				C5DF0122C2E92711990A2CB1 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -368,9 +496,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37AB34241CF64E5A00CF8359 /* Build configuration list for PBXNativeTarget "FIUBATests" */;
 			buildPhases = (
+				A5FD8A96E80E32003A27EFEC /* 📦 Check Pods Manifest.lock */,
 				37AB34091CF64E5A00CF8359 /* Sources */,
 				37AB340A1CF64E5A00CF8359 /* Frameworks */,
 				37AB340B1CF64E5A00CF8359 /* Resources */,
+				8CED0E2E9C7FE9581592BEAF /* 📦 Embed Pods Frameworks */,
+				4EA2B64151619AF87563D404 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -386,9 +517,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37AB34271CF64E5A00CF8359 /* Build configuration list for PBXNativeTarget "FIUBAUITests" */;
 			buildPhases = (
+				A2411F7B4D24D698855E69B6 /* 📦 Check Pods Manifest.lock */,
 				37AB34141CF64E5A00CF8359 /* Sources */,
 				37AB34151CF64E5A00CF8359 /* Frameworks */,
 				37AB34161CF64E5A00CF8359 /* Resources */,
+				D14FEEB2704A7AC66D55F57B /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -448,9 +581,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				379DD5481CFE7D9E00E9FAF8 /* courses.json in Resources */,
 				37AB34071CF64E5A00CF8359 /* LaunchScreen.storyboard in Resources */,
 				37AB34041CF64E5A00CF8359 /* Assets.xcassets in Resources */,
 				37AB34021CF64E5A00CF8359 /* Main.storyboard in Resources */,
+				379DD54B1CFE7D9E00E9FAF8 /* subjects.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +593,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				379DD54C1CFE7D9E00E9FAF8 /* subjects.json in Resources */,
+				379DD5491CFE7D9E00E9FAF8 /* courses.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +602,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				379DD54D1CFE7D9E00E9FAF8 /* subjects.json in Resources */,
+				379DD54A1CFE7D9E00E9FAF8 /* courses.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +624,126 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
+		4EA2B64151619AF87563D404 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FIUBATests/Pods-FIUBATests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79E771F2D856D3F6AB93ADFE /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8CED0E2E9C7FE9581592BEAF /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FIUBATests/Pods-FIUBATests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2411F7B4D24D698855E69B6 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A5FD8A96E80E32003A27EFEC /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C5DF0122C2E92711990A2CB1 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FIUBA/Pods-FIUBA-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D14FEEB2704A7AC66D55F57B /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FIUBAUITests/Pods-FIUBAUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E90E9D7BBA422EFB80214B18 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FIUBA/Pods-FIUBA-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -503,12 +762,15 @@
 				3788D53C1CFA5C7E00BFB148 /* ShowOptionsInteractor.swift in Sources */,
 				37D308B51CF7F6A300E03F1C /* ListCoursesViewController.swift in Sources */,
 				37AB348E1CF6867C00CF8359 /* ListSubjectsRouter.swift in Sources */,
+				375F42A01CFFD53500C8395F /* SubjectsRealmStore.swift in Sources */,
 				37AB34851CF6867C00CF8359 /* ListSubjectsInteractor.swift in Sources */,
 				37AB34821CF6867C00CF8359 /* ListSubjectsConfigurator.swift in Sources */,
 				3788D54B1CFA5C7E00BFB148 /* ShowOptionsWorker.swift in Sources */,
+				375F429C1CFFD49400C8395F /* SubjectRLM.swift in Sources */,
 				3788D5391CFA5C7E00BFB148 /* ShowOptionsConfigurator.swift in Sources */,
 				3788D53F1CFA5C7E00BFB148 /* ShowOptionsModels.swift in Sources */,
 				37AB34981CF7218900CF8359 /* SubjectsWorker.swift in Sources */,
+				379DD5411CFE76F400E9FAF8 /* CourseRLM.swift in Sources */,
 				3788D5621CFA648500BFB148 /* ListEnrolledCoursesRouter.swift in Sources */,
 				37AB33FD1CF64E5A00CF8359 /* AppDelegate.swift in Sources */,
 				37AB34911CF6867C00CF8359 /* ListSubjectsViewController.swift in Sources */,
@@ -516,6 +778,7 @@
 				37D308C01CF7FC9600E03F1C /* Course.swift in Sources */,
 				37AB34881CF6867C00CF8359 /* ListSubjectsModels.swift in Sources */,
 				37D308AC1CF7F6A300E03F1C /* ListCoursesModels.swift in Sources */,
+				379DD53D1CFE75D800E9FAF8 /* CoursesRealmStore.swift in Sources */,
 				37AB348B1CF6867C00CF8359 /* ListSubjectsPresenter.swift in Sources */,
 				37D308B21CF7F6A300E03F1C /* ListCoursesRouter.swift in Sources */,
 				37D308BC1CF7FC1600E03F1C /* CoursesWorker.swift in Sources */,
@@ -523,9 +786,12 @@
 				3788D5451CFA5C7E00BFB148 /* ShowOptionsRouter.swift in Sources */,
 				37D308A61CF7F6A300E03F1C /* ListCoursesConfigurator.swift in Sources */,
 				3788D5481CFA5C7E00BFB148 /* ShowOptionsViewController.swift in Sources */,
+				379DD5541CFE7F3A00E9FAF8 /* DataManager.swift in Sources */,
 				3788D55C1CFA648500BFB148 /* ListEnrolledCoursesModels.swift in Sources */,
 				37AB344F1CF660C100CF8359 /* TableViewController.swift in Sources */,
+				375F42981CFFCA1300C8395F /* SubjectsJsonStore.swift in Sources */,
 				3788D5591CFA648500BFB148 /* ListEnrolledCoursesInteractor.swift in Sources */,
+				379DD54F1CFE7DDE00E9FAF8 /* CoursesJsonStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,12 +810,15 @@
 				3788D53D1CFA5C7E00BFB148 /* ShowOptionsInteractor.swift in Sources */,
 				37D308B61CF7F6A300E03F1C /* ListCoursesViewController.swift in Sources */,
 				37AB348F1CF6867C00CF8359 /* ListSubjectsRouter.swift in Sources */,
+				375F42A11CFFD53500C8395F /* SubjectsRealmStore.swift in Sources */,
 				37AB34861CF6867C00CF8359 /* ListSubjectsInteractor.swift in Sources */,
 				37AB34831CF6867C00CF8359 /* ListSubjectsConfigurator.swift in Sources */,
 				3788D54C1CFA5C7E00BFB148 /* ShowOptionsWorker.swift in Sources */,
+				375F429D1CFFD49400C8395F /* SubjectRLM.swift in Sources */,
 				3788D53A1CFA5C7E00BFB148 /* ShowOptionsConfigurator.swift in Sources */,
 				3788D5401CFA5C7E00BFB148 /* ShowOptionsModels.swift in Sources */,
 				37AB34991CF7218900CF8359 /* SubjectsWorker.swift in Sources */,
+				379DD5421CFE76F400E9FAF8 /* CourseRLM.swift in Sources */,
 				3788D5631CFA648500BFB148 /* ListEnrolledCoursesRouter.swift in Sources */,
 				37AB34921CF6867C00CF8359 /* ListSubjectsViewController.swift in Sources */,
 				37D308C11CF7FC9600E03F1C /* Course.swift in Sources */,
@@ -557,6 +826,7 @@
 				37AB34891CF6867C00CF8359 /* ListSubjectsModels.swift in Sources */,
 				37D308AD1CF7F6A300E03F1C /* ListCoursesModels.swift in Sources */,
 				37AB348C1CF6867C00CF8359 /* ListSubjectsPresenter.swift in Sources */,
+				379DD53E1CFE75D800E9FAF8 /* CoursesRealmStore.swift in Sources */,
 				37AB34501CF660C100CF8359 /* TableViewController.swift in Sources */,
 				37D308B31CF7F6A300E03F1C /* ListCoursesRouter.swift in Sources */,
 				37D308BD1CF7FC1600E03F1C /* CoursesWorker.swift in Sources */,
@@ -564,9 +834,12 @@
 				3788D5461CFA5C7E00BFB148 /* ShowOptionsRouter.swift in Sources */,
 				37D308A71CF7F6A300E03F1C /* ListCoursesConfigurator.swift in Sources */,
 				3788D5491CFA5C7E00BFB148 /* ShowOptionsViewController.swift in Sources */,
+				379DD5551CFE7F3A00E9FAF8 /* DataManager.swift in Sources */,
 				3788D55D1CFA648500BFB148 /* ListEnrolledCoursesModels.swift in Sources */,
 				37AB34121CF64E5A00CF8359 /* FIUBATests.swift in Sources */,
+				375F42991CFFCA1300C8395F /* SubjectsJsonStore.swift in Sources */,
 				3788D55A1CFA648500BFB148 /* ListEnrolledCoursesInteractor.swift in Sources */,
+				379DD5501CFE7DDE00E9FAF8 /* CoursesJsonStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -585,12 +858,15 @@
 				3788D53E1CFA5C7E00BFB148 /* ShowOptionsInteractor.swift in Sources */,
 				37D308B71CF7F6A300E03F1C /* ListCoursesViewController.swift in Sources */,
 				37AB34901CF6867C00CF8359 /* ListSubjectsRouter.swift in Sources */,
+				375F42A21CFFD53500C8395F /* SubjectsRealmStore.swift in Sources */,
 				37AB34871CF6867C00CF8359 /* ListSubjectsInteractor.swift in Sources */,
 				37AB34841CF6867C00CF8359 /* ListSubjectsConfigurator.swift in Sources */,
 				3788D54D1CFA5C7E00BFB148 /* ShowOptionsWorker.swift in Sources */,
+				375F429E1CFFD49400C8395F /* SubjectRLM.swift in Sources */,
 				3788D53B1CFA5C7E00BFB148 /* ShowOptionsConfigurator.swift in Sources */,
 				3788D5411CFA5C7E00BFB148 /* ShowOptionsModels.swift in Sources */,
 				37AB349A1CF7218900CF8359 /* SubjectsWorker.swift in Sources */,
+				379DD5431CFE76F400E9FAF8 /* CourseRLM.swift in Sources */,
 				3788D5641CFA648500BFB148 /* ListEnrolledCoursesRouter.swift in Sources */,
 				37AB34931CF6867C00CF8359 /* ListSubjectsViewController.swift in Sources */,
 				37D308C21CF7FC9600E03F1C /* Course.swift in Sources */,
@@ -598,6 +874,7 @@
 				37AB348A1CF6867C00CF8359 /* ListSubjectsModels.swift in Sources */,
 				37D308AE1CF7F6A300E03F1C /* ListCoursesModels.swift in Sources */,
 				37AB348D1CF6867C00CF8359 /* ListSubjectsPresenter.swift in Sources */,
+				379DD53F1CFE75D800E9FAF8 /* CoursesRealmStore.swift in Sources */,
 				37AB34511CF660C100CF8359 /* TableViewController.swift in Sources */,
 				37D308B41CF7F6A300E03F1C /* ListCoursesRouter.swift in Sources */,
 				37D308BE1CF7FC1600E03F1C /* CoursesWorker.swift in Sources */,
@@ -605,9 +882,12 @@
 				3788D5471CFA5C7E00BFB148 /* ShowOptionsRouter.swift in Sources */,
 				37D308A81CF7F6A300E03F1C /* ListCoursesConfigurator.swift in Sources */,
 				3788D54A1CFA5C7E00BFB148 /* ShowOptionsViewController.swift in Sources */,
+				379DD5561CFE7F3A00E9FAF8 /* DataManager.swift in Sources */,
 				3788D55E1CFA648500BFB148 /* ListEnrolledCoursesModels.swift in Sources */,
 				37AB341D1CF64E5A00CF8359 /* FIUBAUITests.swift in Sources */,
+				375F429A1CFFCA1300C8395F /* SubjectsJsonStore.swift in Sources */,
 				3788D55B1CFA648500BFB148 /* ListEnrolledCoursesInteractor.swift in Sources */,
+				379DD5511CFE7DDE00E9FAF8 /* CoursesJsonStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -731,6 +1011,7 @@
 		};
 		37AB34221CF64E5A00CF8359 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16C3CE8508261FC529A940A8 /* Pods-FIUBA.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FIUBA/Info.plist;
@@ -742,6 +1023,7 @@
 		};
 		37AB34231CF64E5A00CF8359 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AF9492A256F1E1AB096458B /* Pods-FIUBA.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FIUBA/Info.plist;
@@ -753,6 +1035,7 @@
 		};
 		37AB34251CF64E5A00CF8359 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 343A6D23CBEAC9E66CF00E01 /* Pods-FIUBATests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = FIUBATests/Info.plist;
@@ -765,6 +1048,7 @@
 		};
 		37AB34261CF64E5A00CF8359 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DEDCB34125AB748C17ABCAC /* Pods-FIUBATests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = FIUBATests/Info.plist;
@@ -777,6 +1061,7 @@
 		};
 		37AB34281CF64E5A00CF8359 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 936BCA698B2C4DA565E6972A /* Pods-FIUBAUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = FIUBAUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -788,6 +1073,7 @@
 		};
 		37AB34291CF64E5A00CF8359 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C114DC04ADC6F4F93267F02 /* Pods-FIUBAUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = FIUBAUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
