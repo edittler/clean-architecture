@@ -8,17 +8,39 @@ import java.util.List;
 public class Course {
 
     private Integer mId;
-    private String mProffesor;
-    private String mHeadsOfTPs;
-    private List<String> TeachingAssistants;
-    private String mTime;
+    private List<String> mTeachers;
+    private String mSchedule;
     private String mClassroom;
-    private int mSemester;
+    private int mVacancy;
 
     public Course() {}
 
+    public void setId(int id) {
+        mId = id;
+    }
+
+    public void setTeachers(List<String> teachers) {
+        mTeachers = teachers;
+    }
+
+    public void setSchedule(String schedule) {
+        mSchedule = schedule;
+    }
+
+    public void setClassroom(String classroom) {
+        mClassroom = classroom;
+    }
+
+    public void setVacancy(int vacancy) {
+        mVacancy = vacancy;
+    }
+
     public Integer getId() {
         return mId;
+    }
+
+    public List<String> getTeachers() {
+        return mTeachers;
     }
 
 }

@@ -1,6 +1,6 @@
 package com.clean.domain.executor;
 
-import com.clean.domain.interactors.base.AbstractInteractor;
+import com.clean.domain.interactors.AbstractInteractor;
 
 /**
  * This executor is responsible for running interactors on background threads.

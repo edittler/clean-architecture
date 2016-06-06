@@ -1,40 +1,39 @@
-package com.clean.domain.model;
+package com.clean.presentation.model;
 
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Class that represents a SubjectModel in the domain layer.
  */
-public class Subject {
+public class SubjectModel {
 
     private String mName;
     private Integer mCode;
-    private String mDepartament;
+    /*private String mDepartament;
     private int mCredits;
-    private List<Course> mCourses;
+    private List<Course> mCourses;*/
 
-    public Subject() {
+    /*public SubjectModel() {
         mCourses = new ArrayList<>();
+    }*/
+
+    private SubjectModel() {}
+
+    public static SubjectModel buildSubjectModel(){
+        return new SubjectModel();
     }
 
-    public void setName(String name) {
+    public SubjectModel addName(String name) {
         mName = name;
+        return this;
     }
 
-    public void setCode(int code) {
+    public SubjectModel addCode(int code) {
         mCode = code;
+        return this;
     }
 
-    public void setDepartament(String departament) {
-        mDepartament = departament;
-    }
 
-    public void setCredits(int credits) {
-        mCredits = credits;
-    }
-
-    public void addCourse(Course course) {
+    /*public void addCourse(Course course) {
         mCourses.add(course);
     }
 
@@ -42,7 +41,7 @@ public class Subject {
         for (int i = 0; i < courses.size(); i++) {
             addCourse(courses.get(i));
         }
-    }
+    }*/
 
     public Integer getCode() {
         return mCode;
@@ -51,4 +50,6 @@ public class Subject {
     public String getName() {
         return mName;
     }
+
+
 }

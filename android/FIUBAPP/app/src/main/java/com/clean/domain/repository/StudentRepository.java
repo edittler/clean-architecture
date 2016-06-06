@@ -35,15 +35,20 @@ public interface StudentRepository {
 
     /**
      * Get a List of {@link Subject}.
-     * @param degreeName The degree program name used to retrieve the subjects of the program.
      */
-    List<Subject> getAvailableSubjects(final String degreeName);
+    List<Subject> getAvailableSubjects();
 
     /**
      * Get a List of {@link DegreeProgram}.
      * @param subjectCode The subject code used to retrieve the courses of the subject.
      */
     List<DegreeProgram> getEnrolledCourses(final int subjectCode);
+
+    /**
+     * Get a list of {@link Course}.
+     * @param subjectCode The subject code used to retrieve the courses of the subject.
+     */
+    List<Course> getCourses(final int subjectCode);
 
     /**
      * Get a {@link Course}.

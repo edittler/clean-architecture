@@ -1,7 +1,7 @@
 package com.clean.domain.executor.impl;
 
 import com.clean.domain.executor.Executor;
-import com.clean.domain.interactors.base.AbstractInteractor;
+import com.clean.domain.interactors.AbstractInteractor;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
