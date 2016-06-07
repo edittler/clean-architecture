@@ -26,4 +26,12 @@ class ListEnrolledCoursesPresenter: ListEnrolledCoursesInteractorOutput {
         output.displayFetchedEnrolledCourses(viewModel)
     }
 
+    func presentUnenrollCourseResult(response: ListEnrolledCourses.UnenrollCourse.Response) {
+        let viewModel = ListEnrolledCourses.UnenrollCourse.ViewModel(
+            unenrollSuccess: response.unenrollSuccess,
+            title: response.title,
+            message: response.message)
+        output.displayUnenrollCourseResult(viewModel)
+    }
+
 }

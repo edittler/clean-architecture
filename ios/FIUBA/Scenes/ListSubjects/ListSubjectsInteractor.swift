@@ -14,18 +14,20 @@ protocol ListSubjectsInteractorOutput {
     func presentFetchedSubjects(response: ListSubjects.Response)
 }
 
+protocol ListSubjectsWorkerProtocol {
+    func fetchSubjects(completionHandler: (subjects: [Subject]) -> Void)
+}
+
 class ListSubjectsInteractor: ListSubjectsInteractorInput {
     var output: ListSubjectsInteractorOutput!
-    var worker: ListSubjectsWorker!
-
-    var subjectsWorker = SubjectsWorker(subjectsStore: SubjectsRealmStore())
+    var worker: ListSubjectsWorkerProtocol! = ListSubjectsWorker()
 
     var subjects: [Subject]?
   
     // MARK: Business logic
   
     func fetchSubjects(request: ListSubjects.Request) {
-        subjectsWorker.fetchSubjects { (subjects) in
+        worker.fetchSubjects { (subjects) in
             self.subjects = subjects
             let response = ListSubjects.Response(subjects: subjects)
             self.output.presentFetchedSubjects(response)
