@@ -5,11 +5,13 @@ import com.clean.presentation.ui.BaseView;
 
 import org.json.JSONArray;
 
+import java.util.List;
+
 
 public interface CoursesPresenter extends BasePresenter {
 
     interface View extends BaseView {
-        void displayCourses(JSONArray courses);
+        void displayCourses(List courses);
         // TODO: Add your view methods
     }
 

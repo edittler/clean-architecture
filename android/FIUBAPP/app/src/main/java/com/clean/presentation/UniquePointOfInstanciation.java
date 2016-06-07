@@ -26,12 +26,13 @@ public class UniquePointOfInstanciation {
     /**********************************************************************************************/
     /**********************************************************************************************/
 
-    public static CoursesPresenter initializeCourses(CoursesPresenter.View context) {
+    public static CoursesPresenter initializeCourses(CoursesPresenter.View context, int subjectCode) {
         return new CoursesPresenterImpl(
                 ThreadExecutor.getInstance(),
                 MainThreadImpl.getInstance(),
                 context,
-                new RestApi()
+                new RestApi(),
+                subjectCode
         );
     }
 

@@ -9,6 +9,8 @@ import com.clean.presentation.presenters.AbstractPresenter;
 
 import org.json.JSONArray;
 
+import java.util.List;
+
 /**
  * Created by dmilicic on 12/13/15.
  */
@@ -17,6 +19,7 @@ public class CoursesPresenterImpl extends AbstractPresenter implements CoursesPr
 
     private View mView;
     private StudentRepository mRepository;
+    private int mSubjectCode;
 
     /**********************************************************************************************/
     /**********************************************************************************************/
@@ -24,7 +27,8 @@ public class CoursesPresenterImpl extends AbstractPresenter implements CoursesPr
     public CoursesPresenterImpl(Executor executor,
                                 MainThread mainThread,
                                 View view,
-                                StudentRepository repository) {
+                                StudentRepository repository,
+                                int subjectCode) {
         super(executor, mainThread);
         mView = view;
         mRepository = repository;
@@ -45,6 +49,7 @@ public class CoursesPresenterImpl extends AbstractPresenter implements CoursesPr
                 mRepository
         );
 
+        interactor.setSubjectCode(mSubjectCode);
         // run the interactor
         interactor.execute();
     }
@@ -85,8 +90,8 @@ public class CoursesPresenterImpl extends AbstractPresenter implements CoursesPr
     /**********************************************************************************************/
 
     @Override
-    public void onCoursesRetrieved(JSONArray subjects) {
-        mView.displayCourses(subjects);
+    public void onCoursesRetrieved(List courses) {
+        mView.displayCourses(courses);
     }
 
     /**********************************************************************************************/

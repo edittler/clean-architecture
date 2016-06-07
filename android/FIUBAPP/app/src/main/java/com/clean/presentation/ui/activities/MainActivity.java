@@ -11,11 +11,8 @@ import com.clean.presentation.UniquePointOfInstanciation;
 import com.clean.presentation.model.SubjectModel;
 import com.clean.presentation.presenters.main.MainPresenter;
 import com.clean.presentation.presenters.main.MainPresenter.View;
-import com.clean.presentation.mapper.JsonToSubjectModelMapper;
-import com.clean.presentation.ui.adapters.SimpleStringRecyclerViewAdapter;
+import com.clean.presentation.mapper.SubjectModelMapper;
 import com.clean.presentation.ui.adapters.SubjectModelRecyclerViewAdapter;
-
-import org.json.JSONArray;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -82,7 +79,7 @@ public class MainActivity extends AppCompatActivity implements View {
 
     @Override
     public void displaySubjects(List subjects) {
-        mSubjects = JsonToSubjectModelMapper.transform(subjects);
+        mSubjects = SubjectModelMapper.transform(subjects);
         Log.e("dsada", subjects.toString());
         Log.e("dsada", mSubjects.toString());
         mSubjectsView.setAdapter(new SubjectModelRecyclerViewAdapter(this, mSubjects));
