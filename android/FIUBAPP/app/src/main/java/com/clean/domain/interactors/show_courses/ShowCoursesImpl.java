@@ -33,8 +33,8 @@ public class ShowCoursesImpl extends AbstractInteractor implements ShowCourses {
     /**********************************************************************************************/
     /**********************************************************************************************/
 
-    public void setSubjectCode(int subjecCode) {
-        mSubjectCode = subjecCode;
+    public void setSubjectCode(int subjectCode) {
+        mSubjectCode = subjectCode;
     }
 
     /**********************************************************************************************/
@@ -52,7 +52,7 @@ public class ShowCoursesImpl extends AbstractInteractor implements ShowCourses {
     /**********************************************************************************************/
     /**********************************************************************************************/
 
-    private void postCourses(final JSONArray courses) {
+    private void postCourses(final List courses) {
         mMainThread.post(new Runnable() {
             @Override
             public void run() {
@@ -85,7 +85,7 @@ public class ShowCoursesImpl extends AbstractInteractor implements ShowCourses {
         }
 
         // we have retrieved our message, notify the UI on the main thread
-        postCourses(coursesData);
+        postCourses(courses);
     }
 
 }

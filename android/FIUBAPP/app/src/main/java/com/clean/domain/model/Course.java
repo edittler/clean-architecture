@@ -43,4 +43,17 @@ public class Course {
         return mTeachers;
     }
 
+    public String getSchedule() {
+        return mSchedule;
+    }
+
+    public String getClassroom() {
+        return mClassroom;
+    }
+
+    public int getVacancy() {
+        return mVacancy;
+    }
+
+
 }

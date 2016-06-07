@@ -3,4 +3,10 @@
     <string name="app_name">Materias</string>
     <string name="subjects">Materias</string>
     <string name="courses">Cursos</string>
+
+    <!-- DIALOGS -->
+    <string name="enroll_title">Inscribirse</string>
+    <string name="teachers">Docentes</string>
+    <string name="vacancy">Vacantes</string>
+
 </resources>
