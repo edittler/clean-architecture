@@ -8,31 +8,25 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.clean.R;
-import com.clean.domain.model.Course;
 import com.clean.presentation.UniquePointOfInstanciation;
 import com.clean.presentation.mapper.CourseModelMapper;
 import com.clean.presentation.model.CourseModel;
 import com.clean.presentation.presenters.BasePresenter;
-import com.clean.presentation.presenters.courses.CoursesPresenter;
-import com.clean.presentation.presenters.main.MainPresenter;
+import com.clean.presentation.presenters.enrolled_courses.EnrolledCoursesPresenter;
 import com.clean.presentation.ui.adapters.CoursesNamesRecyclerAdapter;
 import com.clean.presentation.ui.adapters.SimpleStringRecyclerViewAdapter;
 
-import org.json.JSONArray;
-
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import butterknife.ButterKnife;
 
-public class CoursesActivity extends AppCompatActivity implements CoursesPresenter.View {
+public class EnrolledCoursesActivity extends AppCompatActivity implements EnrolledCoursesPresenter.View {
 
-    public static final String SUBJECT_CODE = "code";
-    public static final String SUBJECT_NAME = "name";
     private BasePresenter mPresenter;
-    private RecyclerView mCoursesView;
-    private List<CourseModel> mCourses;
-    private int mSubjectCode;
+    private RecyclerView mInscriptionsView;
+    private List<String> mInscriptions;
 
     /**********************************************************************************************/
     /**********************************************************************************************/
@@ -40,14 +34,14 @@ public class CoursesActivity extends AppCompatActivity implements CoursesPresent
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_courses);
+        setContentView(R.layout.activity_enrolled_courses);
         ButterKnife.bind(this);
-        getSupportActionBar().setTitle(getIntent().getStringExtra(SUBJECT_NAME));
+        getSupportActionBar().setTitle(getString(R.string.inscriptions));
 
-        mCourses = new ArrayList<>();
-        mCoursesView = (RecyclerView) findViewById(R.id.recyclerview);
-        mCoursesView.setLayoutManager(new LinearLayoutManager(mCoursesView.getContext()));
-        mCoursesView.setAdapter(new CoursesNamesRecyclerAdapter(this, mCourses));
+        mInscriptions = new ArrayList<>();
+        mInscriptionsView = (RecyclerView) findViewById(R.id.recyclerview);
+        mInscriptionsView.setLayoutManager(new LinearLayoutManager(mInscriptionsView.getContext()));
+        mInscriptionsView.setAdapter(new SimpleStringRecyclerViewAdapter(this, mInscriptions));
         this.initialize();
     }
 
@@ -56,18 +50,8 @@ public class CoursesActivity extends AppCompatActivity implements CoursesPresent
 
     private void initialize() {
         // create a presenter for this view
-        mSubjectCode = getSubjectCode();
-        ((CoursesNamesRecyclerAdapter) mCoursesView.getAdapter()).setSubjectCode(mSubjectCode);
-        mPresenter = UniquePointOfInstanciation.initializeCourses(this, mSubjectCode);
+        mPresenter = UniquePointOfInstanciation.initializeEnrolledCourses(this);
         mPresenter.resume();
-    }
-
-    /**********************************************************************************************/
-    /**********************************************************************************************/
-
-    public int getSubjectCode() {
-        Toast.makeText(this, getIntent().getStringExtra(SUBJECT_NAME),Toast.LENGTH_SHORT).show();
-        return getIntent().getIntExtra(SUBJECT_CODE, 0);
     }
 
     /**********************************************************************************************/
@@ -99,12 +83,13 @@ public class CoursesActivity extends AppCompatActivity implements CoursesPresent
 
     @Override
     public void displayCourses(List courses) {
-        mCourses = CourseModelMapper.transform(courses);
+        //mInscriptions = CourseModelMapper.transform(courses);
         Log.e("dsada", courses.toString());
         Log.e("dsada", courses.toString());
-        mCoursesView.setAdapter(new CoursesNamesRecyclerAdapter(this, mCourses));
-        ((CoursesNamesRecyclerAdapter) mCoursesView.getAdapter()).setSubjectCode(mSubjectCode);
-        mCoursesView.getAdapter().notifyDataSetChanged();
-        mCoursesView.invalidate();
+        mInscriptions = courses;
+        mInscriptionsView.setAdapter(new SimpleStringRecyclerViewAdapter(this, mInscriptions));
+        mInscriptionsView.getAdapter().notifyDataSetChanged();
+        mInscriptionsView.invalidate();
     }
+
 }

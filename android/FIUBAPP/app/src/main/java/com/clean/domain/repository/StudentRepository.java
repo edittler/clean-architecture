@@ -21,6 +21,7 @@ import com.clean.domain.model.Student;
 import com.clean.domain.model.Subject;
 
 import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -39,10 +40,9 @@ public interface StudentRepository {
     List<Subject> getAvailableSubjects();
 
     /**
-     * Get a List of {@link DegreeProgram}.
-     * @param subjectCode The subject code used to retrieve the courses of the subject.
+     * Get a Map of {@link Course} as value, and the subject code as key.
      */
-    List<DegreeProgram> getEnrolledCourses(final int subjectCode);
+    Map<Integer, Course> getEnrolledCourses();
 
     /**
      * Get a list of {@link Course}.
@@ -56,4 +56,18 @@ public interface StudentRepository {
      * @param courseId The course id used to retrieve the course.
      */
     Course getCourse(final int subjectCode, final int courseId);
+
+    /**
+     * Get a {@link Subject}.
+     */
+    Subject getSubject(final int subjectCode);
+
+
+    /**
+     * Save the enrolled {@link Course}.
+     * @param subjectCode The subject code of the subject from wich is the course.
+     * @param course The course enrolled.
+     */
+    void enrollCourse(final int subjectCode, Course course);
+
 }

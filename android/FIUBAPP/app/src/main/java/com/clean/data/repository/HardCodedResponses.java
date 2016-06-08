@@ -16,7 +16,6 @@ public class HardCodedResponses {
             "    {'name': 'Algoritmos y Programación I', 'code': 7540, 'departament': 'Computación'},"+
             "    {'name': 'Algoritmos y Programación II', 'code': 7541, 'departament': 'Computación'},"+
             "    {'name': 'Algoritmos y Programación III', 'code': 7507, 'departament': 'Computación'},"+
-            "    {'name': 'Algoritmos y Programación I', 'code': 7540, 'departament': 'Computación'},"+
             "    {'name': 'Análisis Numérico', 'code': 7512, 'departament': 'Computación'},"+
             "    {'name': 'Organización de Datos', 'code': 7506, 'departament': 'Computación'},"+
             "    {'name': 'Taller de Programación I', 'code': 7542, 'departament': 'Computación'},"+
@@ -40,7 +39,7 @@ public class HardCodedResponses {
             "{'id': 4, 'teachers': ['proffesor4'], 'schedule': 'Mar y Vie 18 a 19', 'classroom': '4', 'vacancy': 20}," +
             "{'id': 5, 'teachers': ['proffesor5'], 'schedule': 'Lun y Vie 18 a 19', 'classroom': '5', 'vacancy': 10}," +
             "{'id': 6, 'teachers': ['proffesor6'], 'schedule': 'Mar y Jue 18 a 19', 'classroom': '6', 'vacancy': 5}," +
-            "{'id': 7, 'teachers': ['proffesor7'], 'schedule': 'Lun y Mie 10 a 12', 'classroom': '7', 'vacancy': 10}," +
+            "{'id': 7, 'teachers': ['proffesor7'], 'schedule': 'Lun y Mie 10 a 12', 'classroom': '7', 'vacancy': 10}" +
                 "]" +
             "}";
 }

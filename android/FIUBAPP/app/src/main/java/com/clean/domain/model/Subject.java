@@ -51,4 +51,8 @@ public class Subject {
     public String getName() {
         return mName;
     }
+
+    public List<Course> getCourses() {
+        return mCourses;
+    }
 }

@@ -15,6 +15,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by fabrizio on 26/05/16.
@@ -63,18 +64,23 @@ public class RestApi implements StudentRepository {
     }
 
     @Override
-    public List<DegreeProgram> getEnrolledCourses(int subjectCode) {
+    public Map<Integer, Course> getEnrolledCourses() {
         return null;
     }
 
-
-    private Subject getSubject(int subjectCode) {
+    @Override
+    public Subject getSubject(int subjectCode) {
         for (Subject subject : subjectList) {
             if (subject.getCode() == subjectCode) {
                 return subject;
             }
         }
         return null;
+    }
+
+    @Override
+    public void enrollCourse(int subjectCode, Course course) {
+
     }
 
     @Override

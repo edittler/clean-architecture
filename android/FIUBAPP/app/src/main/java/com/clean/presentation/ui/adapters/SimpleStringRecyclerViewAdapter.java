@@ -61,7 +61,7 @@ public class SimpleStringRecyclerViewAdapter
         holder.mBoundString = mValues.get(position);
         holder.mTextView.setText(mValues.get(position));
 
-        holder.mView.setOnClickListener(new View.OnClickListener() {
+        /*holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Context context = v.getContext();
@@ -69,7 +69,7 @@ public class SimpleStringRecyclerViewAdapter
                 intent.putExtra(CoursesActivity.SUBJECT_CODE, holder.mBoundString);
                 context.startActivity(intent);
             }
-        });
+        });*/
     }
 
     /**********************************************************************************************/

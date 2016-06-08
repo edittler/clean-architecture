@@ -3,10 +3,21 @@
     <string name="app_name">Materias</string>
     <string name="subjects">Materias</string>
     <string name="courses">Cursos</string>
+    <string name="inscriptions">Inscripciones</string>
 
     <!-- DIALOGS -->
     <string name="enroll_title">Inscribirse</string>
     <string name="teachers">Docentes</string>
     <string name="vacancy">Vacantes</string>
+    <string name="error_title">Error</string>
+    <string name="limit">Ha llegado al limite de cursos disponibles para anotarse</string>
+    <string name="same_subject">Ya se ha anotado en otro curso de esta materia</string>
+    <string name="sucess_title">Éxito</string>
+    <string name="sucess_enroll">Se ha inscripto exitosamente al curso</string>
+
+    <!-- BUTTONS -->
+    <string name="see_enrolled">Ver inscripciones</string>
+    <string name="enroll">Inscribirse</string>
+
 
 </resources>

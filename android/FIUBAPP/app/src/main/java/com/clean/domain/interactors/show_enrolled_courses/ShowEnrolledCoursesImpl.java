@@ -1,28 +1,32 @@
-package com.clean.domain.interactors.show_available_subjects;
+package com.clean.domain.interactors.show_enrolled_courses;
 
 import com.clean.domain.executor.Executor;
 import com.clean.domain.executor.MainThread;
 import com.clean.domain.interactors.AbstractInteractor;
+import com.clean.domain.model.Course;
 import com.clean.domain.model.Subject;
 import com.clean.domain.repository.StudentRepository;
 
 import org.json.JSONArray;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * Created by fabrizio on 26/05/16.
  */
-public class ShowAvailableSubjectsImpl extends AbstractInteractor implements ShowAvailableSubjects {
+public class ShowEnrolledCoursesImpl extends AbstractInteractor implements ShowEnrolledCourses {
 
-    StudentRepository mRepository;
-    ShowAvailableSubjects.Callback mCallback;
+    private StudentRepository mRepository;
+    private Callback mCallback;
 
     /**********************************************************************************************/
     /**********************************************************************************************/
 
-    public ShowAvailableSubjectsImpl(Executor threadExecutor, MainThread mainThread,
-                                 ShowAvailableSubjects.Callback callback, StudentRepository repo) {
+    public ShowEnrolledCoursesImpl(Executor threadExecutor, MainThread mainThread,
+                                   Callback callback, StudentRepository repo) {
         super(threadExecutor, mainThread);
         mRepository = repo;
         mCallback = callback;
@@ -43,11 +47,11 @@ public class ShowAvailableSubjectsImpl extends AbstractInteractor implements Sho
     /**********************************************************************************************/
     /**********************************************************************************************/
 
-    private void postSubjects(final List subjects) {
+    private void postCourses(final List courses) {
         mMainThread.post(new Runnable() {
             @Override
             public void run() {
-                mCallback.onSubjectsRetrieved(subjects);
+                mCallback.onCoursesRetrieved(courses);
             }
         });
     }
@@ -58,22 +62,27 @@ public class ShowAvailableSubjectsImpl extends AbstractInteractor implements Sho
     @Override
     public void run() {
         // retrieve the message
-        final List<Subject> subjects = mRepository.getAvailableSubjects();
+
+        final Map<Integer, Course> courses = mRepository.getEnrolledCourses();
+        Set<Integer> keys = courses.keySet();
+        List<String> enrolledCourses = new ArrayList<>();
+
+        for (Integer key : keys) {
+            String courseString = "Curso " + Integer.toString(courses.get(key).getId());
+            Subject subject = mRepository.getSubject(key.intValue());
+            String enrolledCourse = subject.getName() + ", " + courseString;
+            enrolledCourses.add(enrolledCourse);
+        }
 
         // check if we have failed to retrieve our message
-        if (subjects == null || subjects.size() == 0) {
+        if (courses == null || courses.size() == 0) {
             // notify the failure on the main thread
             notifyError();
             return;
         }
 
-        JSONArray subjectNames = new JSONArray();
-        for (Subject subject : subjects) {
-            subjectNames.put(subject.getName());
-        }
-
         // we have retrieved our message, notify the UI on the main thread
-        postSubjects(subjects);
+        postCourses(enrolledCourses);
     }
 
 }

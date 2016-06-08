@@ -1,38 +1,41 @@
-package com.clean.presentation.presenters.courses;
+package com.clean.presentation.presenters.enroll_to_course;
 
 import com.clean.domain.executor.Executor;
 import com.clean.domain.executor.MainThread;
+import com.clean.domain.interactors.enroll_to_course.EnrollToCourse;
+import com.clean.domain.interactors.enroll_to_course.EnrollToCourseImpl;
 import com.clean.domain.interactors.show_courses.ShowCourses;
 import com.clean.domain.interactors.show_courses.ShowCoursesImpl;
 import com.clean.domain.repository.StudentRepository;
 import com.clean.presentation.presenters.AbstractPresenter;
-
-import org.json.JSONArray;
 
 import java.util.List;
 
 /**
  * Created by dmilicic on 12/13/15.
  */
-public class CoursesPresenterImpl extends AbstractPresenter implements CoursesPresenter,
-        ShowCourses.Callback {
+public class EnrollToCoursePresenterImpl extends AbstractPresenter implements EnrollToCoursePresenter,
+        EnrollToCourse.Callback {
 
     private View mView;
     private StudentRepository mRepository;
     private int mSubjectCode;
+    private int mCourseId;
 
     /**********************************************************************************************/
     /**********************************************************************************************/
 
-    public CoursesPresenterImpl(Executor executor,
-                                MainThread mainThread,
-                                View view,
-                                StudentRepository repository,
-                                int subjectCode) {
+    public EnrollToCoursePresenterImpl(Executor executor,
+                                       MainThread mainThread,
+                                       View view,
+                                       StudentRepository repository,
+                                       int subjectCode,
+                                       int courseId) {
         super(executor, mainThread);
         mView = view;
         mRepository = repository;
         mSubjectCode = subjectCode;
+        mCourseId = courseId;
     }
 
     /**********************************************************************************************/
@@ -43,14 +46,15 @@ public class CoursesPresenterImpl extends AbstractPresenter implements CoursesPr
         mView.showProgress();
 
         // initialize the interactor
-        ShowCourses interactor = new ShowCoursesImpl(
+        EnrollToCourse interactor = new EnrollToCourseImpl(
                 mExecutor,
                 mMainThread,
                 this,
-                mRepository
+                mRepository,
+                mSubjectCode,
+                mCourseId
         );
 
-        interactor.setSubjectCode(mSubjectCode);
         // run the interactor
         interactor.execute();
     }
@@ -91,8 +95,24 @@ public class CoursesPresenterImpl extends AbstractPresenter implements CoursesPr
     /**********************************************************************************************/
 
     @Override
-    public void onCoursesRetrieved(List courses) {
-        mView.displayCourses(courses);
+    public void onSubjectAlreadyEnrolled() {
+        mView.notifyAlreadyEnrolledSubject();
+    }
+
+    /**********************************************************************************************/
+    /**********************************************************************************************/
+
+    @Override
+    public void onMoreThanSevenCoursesEnrolled() {
+        mView.notifyEnrolledInSevenCourses();
+    }
+
+    /**********************************************************************************************/
+    /**********************************************************************************************/
+
+    @Override
+    public void onCourseEnrolled() {
+        mView.notifyEnrolled();
     }
 
     /**********************************************************************************************/

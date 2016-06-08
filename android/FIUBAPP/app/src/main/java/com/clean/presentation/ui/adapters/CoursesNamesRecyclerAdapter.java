@@ -1,7 +1,6 @@
 package com.clean.presentation.ui.adapters;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -10,8 +9,7 @@ import android.view.ViewGroup;
 
 import com.clean.R;
 import com.clean.presentation.model.CourseModel;
-import com.clean.presentation.ui.EnrollToCourseDialog;
-import com.clean.presentation.ui.activities.CoursesActivity;
+import com.clean.presentation.ui.dialogs.EnrollToCourseDialog;
 import com.clean.presentation.ui.viewholders.ViewHolder;
 
 import java.util.List;
@@ -24,6 +22,7 @@ public class CoursesNamesRecyclerAdapter extends RecyclerView.Adapter<ViewHolder
     private final TypedValue mTypedValue = new TypedValue();
     private int mBackground;
     private List<CourseModel> mValues;
+    private int mSubjectCode;
 
     /**********************************************************************************************/
     /**********************************************************************************************/
@@ -58,7 +57,7 @@ public class CoursesNamesRecyclerAdapter extends RecyclerView.Adapter<ViewHolder
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
         //holder.mBoundString = mValues.get(position).get;
-        CourseModel course = mValues.get(position);
+        final CourseModel course = mValues.get(position);
         holder.mTextView.setText("Curso " + course.getId());
         final String courseInfo = "Docentes: " + getTeachers(course) +  "\n"
                                     + "Horario: " + course.getSchedule() +  "\n"
@@ -69,7 +68,7 @@ public class CoursesNamesRecyclerAdapter extends RecyclerView.Adapter<ViewHolder
             @Override
             public void onClick(View v) {
                 Context context = v.getContext();
-                EnrollToCourseDialog.build(context, courseInfo).show();
+                EnrollToCourseDialog.build(context, courseInfo, course.getId(), mSubjectCode).show();
             }
         });
     }
@@ -93,4 +92,12 @@ public class CoursesNamesRecyclerAdapter extends RecyclerView.Adapter<ViewHolder
     public int getItemCount() {
         return mValues.size();
     }
+
+    /**********************************************************************************************/
+    /**********************************************************************************************/
+
+    public void setSubjectCode(int subjectCode) {
+        mSubjectCode = subjectCode;
+    }
+
 }

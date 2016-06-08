@@ -1,38 +1,36 @@
-package com.clean.presentation.presenters.courses;
+package com.clean.presentation.presenters.enrolled_courses;
 
 import com.clean.domain.executor.Executor;
 import com.clean.domain.executor.MainThread;
 import com.clean.domain.interactors.show_courses.ShowCourses;
 import com.clean.domain.interactors.show_courses.ShowCoursesImpl;
+import com.clean.domain.interactors.show_enrolled_courses.ShowEnrolledCourses;
+import com.clean.domain.interactors.show_enrolled_courses.ShowEnrolledCoursesImpl;
 import com.clean.domain.repository.StudentRepository;
 import com.clean.presentation.presenters.AbstractPresenter;
 
-import org.json.JSONArray;
-
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by dmilicic on 12/13/15.
  */
-public class CoursesPresenterImpl extends AbstractPresenter implements CoursesPresenter,
-        ShowCourses.Callback {
+public class EnrolledCoursesPresenterImpl extends AbstractPresenter implements EnrolledCoursesPresenter,
+        ShowEnrolledCourses.Callback {
 
     private View mView;
     private StudentRepository mRepository;
-    private int mSubjectCode;
 
     /**********************************************************************************************/
     /**********************************************************************************************/
 
-    public CoursesPresenterImpl(Executor executor,
-                                MainThread mainThread,
-                                View view,
-                                StudentRepository repository,
-                                int subjectCode) {
+    public EnrolledCoursesPresenterImpl(Executor executor,
+                                        MainThread mainThread,
+                                        View view,
+                                        StudentRepository repository) {
         super(executor, mainThread);
         mView = view;
         mRepository = repository;
-        mSubjectCode = subjectCode;
     }
 
     /**********************************************************************************************/
@@ -43,14 +41,13 @@ public class CoursesPresenterImpl extends AbstractPresenter implements CoursesPr
         mView.showProgress();
 
         // initialize the interactor
-        ShowCourses interactor = new ShowCoursesImpl(
+        ShowEnrolledCourses interactor = new ShowEnrolledCoursesImpl(
                 mExecutor,
                 mMainThread,
                 this,
                 mRepository
         );
 
-        interactor.setSubjectCode(mSubjectCode);
         // run the interactor
         interactor.execute();
     }
