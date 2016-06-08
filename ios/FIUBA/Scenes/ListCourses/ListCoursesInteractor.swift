@@ -28,7 +28,7 @@ protocol ListCoursesWorkerProtocol {
 class ListCoursesInteractor: ListCoursesInteractorInput {
 
     var output: ListCoursesInteractorOutput!
-    var worker: ListCoursesWorkerProtocol! = ListCoursesWorker()
+    var worker: ListCoursesWorkerProtocol!
 
     var subject: Subject!
     var courses: [Course]?
