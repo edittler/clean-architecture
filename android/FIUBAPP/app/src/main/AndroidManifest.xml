@@ -15,12 +15,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".presentation.ui.activities.MainActivity">
+        <activity android:name=".presentation.ui.activities.MainActivity"
+            android:parentActivityName=".presentation.ui.activities.Main2Activity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".presentation.ui.activities.Main2Activity" />
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".presentation.ui.activities.CoursesActivity">
+        <activity
+            android:name=".presentation.ui.activities.CoursesActivity"
+            android:parentActivityName=".presentation.ui.activities.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".presentation.ui.activities.MainActivity" />
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -29,7 +38,11 @@
             android:name=".presentation.ui.activities.EnrollToCourseActivity"
             android:theme="@style/Theme.AppCompat.Translucent" />
         <activity
-            android:name=".presentation.ui.activities.EnrolledCoursesActivity">
+            android:name=".presentation.ui.activities.EnrolledCoursesActivity"
+            android:parentActivityName=".presentation.ui.activities.Main2Activity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".presentation.ui.activities.Main2Activity" />
         </activity>
     </application>
 

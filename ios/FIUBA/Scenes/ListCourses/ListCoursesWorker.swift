@@ -5,7 +5,7 @@
 
 import Foundation
 
-class ListCoursesWorker {
+class ListCoursesWorker: ListCoursesWorkerProtocol {
 
     let coursesWorker: CoursesWorker = CoursesWorker(coursesStore: CoursesRealmStore())
 
@@ -14,6 +14,12 @@ class ListCoursesWorker {
     func fetchCoursesBySubject(subject: Subject, completionHandler: (courses: [Course]) -> Void) {
         coursesWorker.fetchCoursesBySubject(subject) { (courses) in
             completionHandler(courses: courses)
+        }
+    }
+
+    func fetchEnrolledCourses(completionHandler: (courses: [Course]) -> Void) {
+        coursesWorker.fetchEnrolledCourses { (result) in
+            completionHandler(courses: result)
         }
     }
 

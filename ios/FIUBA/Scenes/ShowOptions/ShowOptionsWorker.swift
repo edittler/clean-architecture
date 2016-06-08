@@ -5,7 +5,7 @@
 
 import Foundation
 
-class ShowOptionsWorker {
+class ShowOptionsWorker: ShowOptionsWorkerProtocol {
 
     // MARK: Business Logic
 

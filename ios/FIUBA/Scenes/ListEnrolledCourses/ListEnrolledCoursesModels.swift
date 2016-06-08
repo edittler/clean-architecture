@@ -27,4 +27,23 @@ struct ListEnrolledCourses {
         var displayedCourses: [DisplayedCourse]
     }
 
+    struct UnenrollCourse {
+
+        struct Request {
+            var id: String
+        }
+
+        struct Response {
+            var unenrollSuccess: Bool
+            var title: String
+            var message: String
+        }
+
+        struct ViewModel {
+            var unenrollSuccess: Bool
+            var title: String
+            var message: String
+        }
+    }
+
 }

@@ -19,10 +19,16 @@ protocol ListCoursesInteractorOutput {
     func presentEnrollCourseResult(response: ListCourses.EnrollCourse.Response)
 }
 
+protocol ListCoursesWorkerProtocol {
+    func fetchCoursesBySubject(subject: Subject, completionHandler: (courses: [Course]) -> Void)
+    func fetchEnrolledCourses(completionHandler: (courses: [Course]) -> Void)
+    func enrollCourse(id: String)
+}
+
 class ListCoursesInteractor: ListCoursesInteractorInput {
 
     var output: ListCoursesInteractorOutput!
-    var worker: ListCoursesWorker! = ListCoursesWorker()
+    var worker: ListCoursesWorkerProtocol!
 
     var subject: Subject!
     var courses: [Course]?
@@ -51,18 +57,18 @@ class ListCoursesInteractor: ListCoursesInteractorInput {
 
     func enrollCourse(request: ListCourses.EnrollCourse.Request) {
         if !isEnrolledCourse() {
-            NSLog("Enroll!!")
-            worker.enrollCourse(request.id)
-            output.presentEnrollCourseResult(ListCourses.EnrollCourse.Response(
-                enrollSuccess: true,
-                title: "Inscripción existosa",
-                message: "Se ha inscripto correctamente al curso"))
+            worker.fetchEnrolledCourses({ (courses) in
+                if courses.count < 3 {
+                    NSLog("Enroll!!")
+                    self.enrollCourse(request.id)
+                } else {
+                    NSLog("Not Enroll :(")
+                    self.notEnrollCourse("No se ha podido inscribir. Ya se ha superado el límite de inscripciones.")
+                }
+            })
         } else {
             NSLog("Not Enroll :(")
-            output.presentEnrollCourseResult(ListCourses.EnrollCourse.Response(
-                enrollSuccess: false,
-                title: "Inscripción fallida",
-                message: "No se ha podido inscribir. Ya se encuentra inscipto en un curso de la asignatura."))
+            notEnrollCourse("No se ha podido inscribir. Ya se encuentra inscipto en un curso de la asignatura.")
         }
     }
 
@@ -74,6 +80,21 @@ class ListCoursesInteractor: ListCoursesInteractorInput {
             return course.enrolled ?? false
         }
         return !enrolledCourses.isEmpty
+    }
+
+    private func enrollCourse(id: String) {
+        worker.enrollCourse(id)
+        output.presentEnrollCourseResult(ListCourses.EnrollCourse.Response(
+            enrollSuccess: true,
+            title: "Inscripción existosa",
+            message: "Se ha inscripto correctamente al curso"))
+    }
+
+    private func notEnrollCourse(message: String) {
+        output.presentEnrollCourseResult(ListCourses.EnrollCourse.Response(
+            enrollSuccess: false,
+            title: "Inscripción fallida",
+            message: message))
     }
 
 }

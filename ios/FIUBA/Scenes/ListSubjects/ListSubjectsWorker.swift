@@ -5,12 +5,16 @@
 
 import Foundation
 
-class ListSubjectsWorker {
+class ListSubjectsWorker: ListSubjectsWorkerProtocol {
+
+    let subjectsWorker: SubjectsWorker = SubjectsWorker(subjectsStore: SubjectsRealmStore())
 
     // MARK: Business Logic
 
-    func doSomeWork() {
-        // NOTE: Do the work
+    func fetchSubjects(completionHandler: (subjects: [Subject]) -> Void) {
+        subjectsWorker.fetchSubjects { (subjects) in
+            completionHandler(subjects: subjects)
+        }
     }
 
 }

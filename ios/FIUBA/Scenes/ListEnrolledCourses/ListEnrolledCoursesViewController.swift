@@ -6,7 +6,8 @@
 import UIKit
 
 protocol ListEnrolledCoursesViewInput: class {
-  func displayFetchedEnrolledCourses(viewModel: ListEnrolledCourses.ViewModel)
+    func displayFetchedEnrolledCourses(viewModel: ListEnrolledCourses.ViewModel)
+    func displayUnenrollCourseResult(viewModel: ListEnrolledCourses.UnenrollCourse.ViewModel)
 }
 
 class ListEnrolledCoursesViewController: UITableViewController,
@@ -46,6 +47,16 @@ class ListEnrolledCoursesViewController: UITableViewController,
         tableView.reloadData()
     }
 
+    func displayUnenrollCourseResult(viewModel: ListEnrolledCourses.UnenrollCourse.ViewModel) {
+        fetchEnrolledCoursesOnLoad()
+        let unenrollCourseResultAlert = UIAlertController(title: viewModel.title,
+                                                          message: viewModel.message,
+                                                          preferredStyle: .Alert)
+        let cancelAction = UIAlertAction(title: "Aceptar", style: .Cancel, handler: nil)
+        unenrollCourseResultAlert.addAction(cancelAction)
+        presentViewController(unenrollCourseResultAlert, animated: true, completion: nil)
+    }
+
     // MARK: - UITableViewDataSource
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -74,6 +85,20 @@ class ListEnrolledCoursesViewController: UITableViewController,
     // MARK: - UITableViewDelegate
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let displayedCourse = displayedCourses[indexPath.row]
+
+        let message = "¿Está seguro que desea desuscribirse del curso?"
+        let enrollCourseConfirmationAlert = UIAlertController(title: "Desuscribirse",
+                                                              message: message,
+                                                              preferredStyle: .Alert)
+        let cancelAction = UIAlertAction(title: "Cancelar", style: .Cancel, handler: nil)
+        enrollCourseConfirmationAlert.addAction(cancelAction)
+        let enrollAction = UIAlertAction(title: "Desuscribir", style: .Default) { (alertAction) in
+            self.output.unenrollCourse(ListEnrolledCourses.UnenrollCourse.Request(id: displayedCourse.id))
+        }
+        enrollCourseConfirmationAlert.addAction(enrollAction)
+        presentViewController(enrollCourseConfirmationAlert, animated: true, completion: nil)
+
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
 

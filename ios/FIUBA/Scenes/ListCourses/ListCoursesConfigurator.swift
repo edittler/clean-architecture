@@ -43,6 +43,7 @@ class ListCoursesConfigurator {
     
         let interactor = ListCoursesInteractor()
         interactor.output = presenter
+        interactor.worker = ListCoursesWorker()
     
         viewController.output = interactor
         viewController.router = router
