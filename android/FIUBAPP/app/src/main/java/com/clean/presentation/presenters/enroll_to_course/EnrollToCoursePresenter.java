@@ -3,8 +3,6 @@ package com.clean.presentation.presenters.enroll_to_course;
 import com.clean.presentation.presenters.BasePresenter;
 import com.clean.presentation.ui.BaseView;
 
-import java.util.List;
-
 
 public interface EnrollToCoursePresenter extends BasePresenter {
 

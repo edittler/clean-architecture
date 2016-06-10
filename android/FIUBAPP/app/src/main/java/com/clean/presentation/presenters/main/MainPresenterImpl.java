@@ -7,8 +7,6 @@ import com.clean.domain.interactors.show_available_subjects.ShowAvailableSubject
 import com.clean.domain.repository.StudentRepository;
 import com.clean.presentation.presenters.AbstractPresenter;
 
-import org.json.JSONArray;
-
 import java.util.List;
 
 /**

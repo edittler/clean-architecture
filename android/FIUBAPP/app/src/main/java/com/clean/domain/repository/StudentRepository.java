@@ -16,8 +16,6 @@
 package com.clean.domain.repository;
 
 import com.clean.domain.model.Course;
-import com.clean.domain.model.DegreeProgram;
-import com.clean.domain.model.Student;
 import com.clean.domain.model.Subject;
 
 import java.util.List;
@@ -25,14 +23,9 @@ import java.util.Map;
 
 
 /**
- * Interface that represents a Repository for getting {@link Student} related data.
+ * Interface that represents a repository for getting student related data.
  */
 public interface StudentRepository {
-
-    /**
-     * Get a List of {@link DegreeProgram}.
-     */
-    List<DegreeProgram> getDegreePrograms();
 
     /**
      * Get a List of {@link Subject}.
@@ -61,7 +54,6 @@ public interface StudentRepository {
      * Get a {@link Subject}.
      */
     Subject getSubject(final int subjectCode);
-
 
     /**
      * Save the enrolled {@link Course}.

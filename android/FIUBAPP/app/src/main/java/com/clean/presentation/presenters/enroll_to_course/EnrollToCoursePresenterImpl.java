@@ -4,8 +4,6 @@ import com.clean.domain.executor.Executor;
 import com.clean.domain.executor.MainThread;
 import com.clean.domain.interactors.enroll_to_course.EnrollToCourse;
 import com.clean.domain.interactors.enroll_to_course.EnrollToCourseImpl;
-import com.clean.domain.interactors.show_courses.ShowCourses;
-import com.clean.domain.interactors.show_courses.ShowCoursesImpl;
 import com.clean.domain.repository.StudentRepository;
 import com.clean.presentation.presenters.AbstractPresenter;
 

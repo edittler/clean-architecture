@@ -1,9 +1,6 @@
 package com.clean.domain.interactors.show_courses;
 
 import com.clean.domain.interactors.Interactor;
-
-import org.json.JSONArray;
-
 import java.util.List;
 
 /**

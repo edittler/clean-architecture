@@ -4,11 +4,7 @@ import com.clean.domain.executor.Executor;
 import com.clean.domain.executor.MainThread;
 import com.clean.domain.interactors.AbstractInteractor;
 import com.clean.domain.model.Course;
-import com.clean.domain.model.Subject;
 import com.clean.domain.repository.StudentRepository;
-
-import org.json.JSONArray;
-
 import java.util.List;
 
 /**
@@ -77,11 +73,6 @@ public class ShowCoursesImpl extends AbstractInteractor implements ShowCourses {
             // notify the failure on the main thread
             notifyError();
             return;
-        }
-
-        JSONArray coursesData = new JSONArray();
-        for (Course course : courses) {
-            coursesData.put(course.getId());
         }
 
         // we have retrieved our message, notify the UI on the main thread

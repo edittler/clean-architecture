@@ -1,13 +1,11 @@
 package com.clean.data.repository;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.util.Log;
 
 import com.clean.data.mapper.JsonToCourseMapper;
 import com.clean.data.mapper.JsonToSubjectMapper;
 import com.clean.domain.model.Course;
-import com.clean.domain.model.DegreeProgram;
 import com.clean.domain.model.Subject;
 import com.clean.domain.repository.StudentRepository;
 import com.colintmiller.simplenosql.NoSQL;
@@ -20,10 +18,8 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
@@ -108,14 +104,6 @@ public class LocalDataBase implements StudentRepository {
         } catch (JSONException e) {
             Log.e("ERROR REPO", e.toString());
         }
-    }
-
-    /**********************************************************************************************/
-    /**********************************************************************************************/
-
-    @Override
-    public List<DegreeProgram> getDegreePrograms() {
-        return null;
     }
 
     /**********************************************************************************************/

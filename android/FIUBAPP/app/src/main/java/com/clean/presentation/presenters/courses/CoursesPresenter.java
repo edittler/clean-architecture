@@ -3,8 +3,6 @@ package com.clean.presentation.presenters.courses;
 import com.clean.presentation.presenters.BasePresenter;
 import com.clean.presentation.ui.BaseView;
 
-import org.json.JSONArray;
-
 import java.util.List;
 
 

@@ -1,9 +1,6 @@
 package com.clean.domain.interactors.show_available_subjects;
 
 import com.clean.domain.interactors.Interactor;
-
-import org.json.JSONArray;
-
 import java.util.List;
 
 /**

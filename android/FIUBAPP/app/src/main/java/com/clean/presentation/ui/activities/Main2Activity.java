@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.Button;
 
 import com.clean.R;
-
 import butterknife.ButterKnife;
 
 public class Main2Activity extends AppCompatActivity {

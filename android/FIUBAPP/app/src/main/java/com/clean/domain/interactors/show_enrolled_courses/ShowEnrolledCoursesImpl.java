@@ -7,8 +7,6 @@ import com.clean.domain.model.Course;
 import com.clean.domain.model.Subject;
 import com.clean.domain.repository.StudentRepository;
 
-import org.json.JSONArray;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -62,8 +60,15 @@ public class ShowEnrolledCoursesImpl extends AbstractInteractor implements ShowE
     @Override
     public void run() {
         // retrieve the message
-
         final Map<Integer, Course> courses = mRepository.getEnrolledCourses();
+
+        // check if we have failed to retrieve our message
+        if (courses == null || courses.size() == 0) {
+            // notify the failure on the main thread
+            notifyError();
+            return;
+        }
+
         Set<Integer> keys = courses.keySet();
         List<String> enrolledCourses = new ArrayList<>();
 
@@ -72,13 +77,6 @@ public class ShowEnrolledCoursesImpl extends AbstractInteractor implements ShowE
             Subject subject = mRepository.getSubject(key.intValue());
             String enrolledCourse = subject.getName() + ", " + courseString;
             enrolledCourses.add(enrolledCourse);
-        }
-
-        // check if we have failed to retrieve our message
-        if (courses == null || courses.size() == 0) {
-            // notify the failure on the main thread
-            notifyError();
-            return;
         }
 
         // we have retrieved our message, notify the UI on the main thread

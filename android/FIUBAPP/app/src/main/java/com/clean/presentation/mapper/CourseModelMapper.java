@@ -25,6 +25,9 @@ public class CourseModelMapper {
         return courseList;
     }
 
+    /**********************************************************************************************/
+    /**********************************************************************************************/
+
     public static List<String> transformToStrings(List<Course> courses) {
         List<String> courseList = new ArrayList<>();
         for (Course course : courses) {

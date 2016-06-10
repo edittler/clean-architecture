@@ -8,17 +8,12 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.clean.R;
-import com.clean.domain.model.Course;
 import com.clean.presentation.UniquePointOfInstanciation;
 import com.clean.presentation.mapper.CourseModelMapper;
 import com.clean.presentation.model.CourseModel;
 import com.clean.presentation.presenters.BasePresenter;
 import com.clean.presentation.presenters.courses.CoursesPresenter;
-import com.clean.presentation.presenters.main.MainPresenter;
 import com.clean.presentation.ui.adapters.CoursesNamesRecyclerAdapter;
-import com.clean.presentation.ui.adapters.SimpleStringRecyclerViewAdapter;
-
-import org.json.JSONArray;
 
 import java.util.ArrayList;
 import java.util.List;
