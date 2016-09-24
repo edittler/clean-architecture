@@ -11,24 +11,24 @@ class ListCoursesWorker: ListCoursesWorkerProtocol {
 
     // MARK: Business Logic
 
-    func fetchCoursesBySubject(subject: Subject, completionHandler: (courses: [Course]) -> Void) {
+    func fetchCoursesBySubject(_ subject: Subject, completionHandler: (_ courses: [Course]) -> Void) {
         coursesWorker.fetchCoursesBySubject(subject) { (courses) in
-            completionHandler(courses: courses)
+            completionHandler(courses)
         }
     }
 
-    func fetchEnrolledCourses(completionHandler: (courses: [Course]) -> Void) {
+    func fetchEnrolledCourses(_ completionHandler: (_ courses: [Course]) -> Void) {
         coursesWorker.fetchEnrolledCourses { (result) in
-            completionHandler(courses: result)
+            completionHandler(result)
         }
     }
 
-    func enrollCourse(id: String) {
+    func enrollCourse(_ id: String) {
         coursesWorker.fetchCourse(id) { (course) in
             guard var course = course else { return }
             course.enrolled = true
             if course.vacancies != nil {
-                course.vacancies = (course.vacancies! - 1) ?? 0
+                course.vacancies = (course.vacancies! - 1) 
             }
             self.coursesWorker.updateCourse(course)
         }

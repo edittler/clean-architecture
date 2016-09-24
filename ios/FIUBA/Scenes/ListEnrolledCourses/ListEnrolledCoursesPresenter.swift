@@ -11,7 +11,7 @@ class ListEnrolledCoursesPresenter: ListEnrolledCoursesInteractorOutput {
   
     // MARK: Presentation logic
   
-    func presentFetchedEnrolledCourses(response: ListEnrolledCourses.Response) {
+    func presentFetchedEnrolledCourses(_ response: ListEnrolledCourses.Response) {
         var displayedCourses: [ListEnrolledCourses.ViewModel.DisplayedCourse] = []
         for course in response.courses {
             let displayedCourse = ListEnrolledCourses.ViewModel.DisplayedCourse(
@@ -26,7 +26,7 @@ class ListEnrolledCoursesPresenter: ListEnrolledCoursesInteractorOutput {
         output.displayFetchedEnrolledCourses(viewModel)
     }
 
-    func presentUnenrollCourseResult(response: ListEnrolledCourses.UnenrollCourse.Response) {
+    func presentUnenrollCourseResult(_ response: ListEnrolledCourses.UnenrollCourse.Response) {
         let viewModel = ListEnrolledCourses.UnenrollCourse.ViewModel(
             unenrollSuccess: response.unenrollSuccess,
             title: response.title,

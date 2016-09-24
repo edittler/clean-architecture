@@ -391,13 +391,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37AB34211CF64E5A00CF8359 /* Build configuration list for PBXNativeTarget "FIUBA" */;
 			buildPhases = (
-				79E771F2D856D3F6AB93ADFE /* 📦 Check Pods Manifest.lock */,
+				79E771F2D856D3F6AB93ADFE /* [CP] Check Pods Manifest.lock */,
 				37AB33F51CF64E5A00CF8359 /* Sources */,
 				37AB33F61CF64E5A00CF8359 /* Frameworks */,
 				37AB33F71CF64E5A00CF8359 /* Resources */,
 				37AB344D1CF65E4900CF8359 /* SwiftLint */,
-				E90E9D7BBA422EFB80214B18 /* 📦 Embed Pods Frameworks */,
-				C5DF0122C2E92711990A2CB1 /* 📦 Copy Pods Resources */,
+				E90E9D7BBA422EFB80214B18 /* [CP] Embed Pods Frameworks */,
+				C5DF0122C2E92711990A2CB1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -412,12 +412,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37AB34241CF64E5A00CF8359 /* Build configuration list for PBXNativeTarget "FIUBATests" */;
 			buildPhases = (
-				A5FD8A96E80E32003A27EFEC /* 📦 Check Pods Manifest.lock */,
+				A5FD8A96E80E32003A27EFEC /* [CP] Check Pods Manifest.lock */,
 				37AB34091CF64E5A00CF8359 /* Sources */,
 				37AB340A1CF64E5A00CF8359 /* Frameworks */,
 				37AB340B1CF64E5A00CF8359 /* Resources */,
-				8CED0E2E9C7FE9581592BEAF /* 📦 Embed Pods Frameworks */,
-				4EA2B64151619AF87563D404 /* 📦 Copy Pods Resources */,
+				8CED0E2E9C7FE9581592BEAF /* [CP] Embed Pods Frameworks */,
+				4EA2B64151619AF87563D404 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -433,11 +433,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37AB34271CF64E5A00CF8359 /* Build configuration list for PBXNativeTarget "FIUBAUITests" */;
 			buildPhases = (
-				A2411F7B4D24D698855E69B6 /* 📦 Check Pods Manifest.lock */,
+				A2411F7B4D24D698855E69B6 /* [CP] Check Pods Manifest.lock */,
 				37AB34141CF64E5A00CF8359 /* Sources */,
 				37AB34151CF64E5A00CF8359 /* Frameworks */,
 				37AB34161CF64E5A00CF8359 /* Resources */,
-				D14FEEB2704A7AC66D55F57B /* 📦 Copy Pods Resources */,
+				D14FEEB2704A7AC66D55F57B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -461,13 +461,16 @@
 				TargetAttributes = {
 					37AB33F81CF64E5A00CF8359 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 					37AB340C1CF64E5A00CF8359 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 37AB33F81CF64E5A00CF8359;
 					};
 					37AB34171CF64E5A00CF8359 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 37AB33F81CF64E5A00CF8359;
 					};
 				};
@@ -536,14 +539,14 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
-		4EA2B64151619AF87563D404 /* 📦 Copy Pods Resources */ = {
+		4EA2B64151619AF87563D404 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -551,14 +554,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FIUBATests/Pods-FIUBATests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		79E771F2D856D3F6AB93ADFE /* 📦 Check Pods Manifest.lock */ = {
+		79E771F2D856D3F6AB93ADFE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -566,14 +569,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		8CED0E2E9C7FE9581592BEAF /* 📦 Embed Pods Frameworks */ = {
+		8CED0E2E9C7FE9581592BEAF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -581,14 +584,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FIUBATests/Pods-FIUBATests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A2411F7B4D24D698855E69B6 /* 📦 Check Pods Manifest.lock */ = {
+		A2411F7B4D24D698855E69B6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -596,14 +599,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		A5FD8A96E80E32003A27EFEC /* 📦 Check Pods Manifest.lock */ = {
+		A5FD8A96E80E32003A27EFEC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -611,14 +614,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		C5DF0122C2E92711990A2CB1 /* 📦 Copy Pods Resources */ = {
+		C5DF0122C2E92711990A2CB1 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -626,14 +629,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FIUBA/Pods-FIUBA-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D14FEEB2704A7AC66D55F57B /* 📦 Copy Pods Resources */ = {
+		D14FEEB2704A7AC66D55F57B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -641,14 +644,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FIUBAUITests/Pods-FIUBAUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E90E9D7BBA422EFB80214B18 /* 📦 Embed Pods Frameworks */ = {
+		E90E9D7BBA422EFB80214B18 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -850,6 +853,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ar.uba.fi.dc.arqsoft.FIUBA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -862,6 +866,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ar.uba.fi.dc.arqsoft.FIUBA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -874,6 +879,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ar.uba.fi.dc.arqsoft.FIUBATests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FIUBA.app/FIUBA";
 			};
 			name = Debug;
@@ -887,6 +893,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ar.uba.fi.dc.arqsoft.FIUBATests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FIUBA.app/FIUBA";
 			};
 			name = Release;
@@ -899,6 +906,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ar.uba.fi.dc.arqsoft.FIUBAUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = FIUBA;
 			};
 			name = Debug;
@@ -911,6 +919,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ar.uba.fi.dc.arqsoft.FIUBAUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = FIUBA;
 			};
 			name = Release;

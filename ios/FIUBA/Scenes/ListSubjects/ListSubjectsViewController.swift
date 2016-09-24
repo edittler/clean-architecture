@@ -6,7 +6,7 @@
 import UIKit
 
 protocol ListSubjectsViewProtocol: class {
-    func displayFetchedSubjects(viewModel: ListSubjects.ViewModel)
+    func displayFetchedSubjects(_ viewModel: ListSubjects.ViewModel)
 }
 
 class ListSubjectsViewController: UITableViewController,
@@ -39,30 +39,30 @@ class ListSubjectsViewController: UITableViewController,
   
     // MARK: Display logic
   
-    func displayFetchedSubjects(viewModel: ListSubjects.ViewModel) {
+    func displayFetchedSubjects(_ viewModel: ListSubjects.ViewModel) {
         displayedSubjects = viewModel.displayedSubjects
         tableView.reloadData()
     }
 
     // MARK: - UITableViewDelegate
 
-    override func tableView(tableView: UITableView,
-                            didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView,
+                            didSelectRowAt indexPath: IndexPath) {
         router.navigateToListCourses()
     }
 
     // MARK: - UITableViewDataSource
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return displayedSubjects.count
     }
 
-    override func tableView(tableView: UITableView,
-                            cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("subjectCell",
-                                                               forIndexPath: indexPath)
+    override func tableView(_ tableView: UITableView,
+                            cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "subjectCell",
+                                                               for: indexPath)
 
-        let displayedSubject = displayedSubjects[indexPath.row]
+        let displayedSubject = displayedSubjects[(indexPath as NSIndexPath).row]
         cell.textLabel?.text = "\(displayedSubject.code) - \(displayedSubject.name)"
 
         return cell

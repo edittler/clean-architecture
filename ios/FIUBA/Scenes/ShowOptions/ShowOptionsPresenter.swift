@@ -10,7 +10,7 @@ class ShowOptionsPresenter: ShowOptionsInteractorOutput {
 
     // MARK: Presentation logic
 
-    func presentSomething(response: ShowOptions.Response) {
+    func presentSomething(_ response: ShowOptions.Response) {
         // NOTE: Format the response from the Interactor and pass the result back to the View Controller
 
         let viewModel = ShowOptions.ViewModel()

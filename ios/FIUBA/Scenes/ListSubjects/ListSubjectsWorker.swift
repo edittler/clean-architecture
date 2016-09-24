@@ -11,9 +11,9 @@ class ListSubjectsWorker: ListSubjectsWorkerProtocol {
 
     // MARK: Business Logic
 
-    func fetchSubjects(completionHandler: (subjects: [Subject]) -> Void) {
+    func fetchSubjects(_ completionHandler: @escaping (_ subjects: [Subject]) -> Void) {
         subjectsWorker.fetchSubjects { (subjects) in
-            completionHandler(subjects: subjects)
+            completionHandler(subjects)
         }
     }
 

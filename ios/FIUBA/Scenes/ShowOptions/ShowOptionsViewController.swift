@@ -6,7 +6,7 @@
 import UIKit
 
 protocol ShowOptionsViewInput: class {
-    func displaySomething(viewModel: ShowOptions.ViewModel)
+    func displaySomething(_ viewModel: ShowOptions.ViewModel)
 }
 
 class ShowOptionsViewController: UIViewController, ShowOptionsViewInput {
@@ -39,7 +39,7 @@ class ShowOptionsViewController: UIViewController, ShowOptionsViewInput {
   
     // MARK: Display logic
 
-    func displaySomething(viewModel: ShowOptions.ViewModel) {
+    func displaySomething(_ viewModel: ShowOptions.ViewModel) {
         // NOTE: Display the result from the Presenter
 
         // nameTextField.text = viewModel.name

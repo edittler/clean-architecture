@@ -9,7 +9,7 @@ import UIKit
 
 extension ListEnrolledCoursesViewController {
 
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         router.passDataToNextScene(segue)
     }
 
@@ -20,21 +20,13 @@ class ListEnrolledCoursesConfigurator {
     // MARK: Object lifecycle
   
     class var sharedInstance: ListEnrolledCoursesConfigurator {
-        struct Static {
-            static var instance: ListEnrolledCoursesConfigurator?
-            static var token: dispatch_once_t = 0
-        }
-    
-        dispatch_once(&Static.token) {
-            Static.instance = ListEnrolledCoursesConfigurator()
-        }
-
-        return Static.instance!
+        let instance = ListEnrolledCoursesConfigurator()
+        return instance
     }
 
     // MARK: Configuration
 
-    func configure(viewController: ListEnrolledCoursesViewController) {
+    func configure(_ viewController: ListEnrolledCoursesViewController) {
         let router = ListEnrolledCoursesRouter()
         router.viewController = viewController
 

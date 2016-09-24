@@ -6,8 +6,8 @@
 import UIKit
 
 protocol ListEnrolledCoursesViewInput: class {
-    func displayFetchedEnrolledCourses(viewModel: ListEnrolledCourses.ViewModel)
-    func displayUnenrollCourseResult(viewModel: ListEnrolledCourses.UnenrollCourse.ViewModel)
+    func displayFetchedEnrolledCourses(_ viewModel: ListEnrolledCourses.ViewModel)
+    func displayUnenrollCourseResult(_ viewModel: ListEnrolledCourses.UnenrollCourse.ViewModel)
 }
 
 class ListEnrolledCoursesViewController: UITableViewController,
@@ -42,31 +42,31 @@ class ListEnrolledCoursesViewController: UITableViewController,
   
     // MARK: Display logic
 
-    func displayFetchedEnrolledCourses(viewModel: ListEnrolledCourses.ViewModel) {
+    func displayFetchedEnrolledCourses(_ viewModel: ListEnrolledCourses.ViewModel) {
         displayedCourses = viewModel.displayedCourses
         tableView.reloadData()
     }
 
-    func displayUnenrollCourseResult(viewModel: ListEnrolledCourses.UnenrollCourse.ViewModel) {
+    func displayUnenrollCourseResult(_ viewModel: ListEnrolledCourses.UnenrollCourse.ViewModel) {
         fetchEnrolledCoursesOnLoad()
         let unenrollCourseResultAlert = UIAlertController(title: viewModel.title,
                                                           message: viewModel.message,
-                                                          preferredStyle: .Alert)
-        let cancelAction = UIAlertAction(title: "Aceptar", style: .Cancel, handler: nil)
+                                                          preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Aceptar", style: .cancel, handler: nil)
         unenrollCourseResultAlert.addAction(cancelAction)
-        presentViewController(unenrollCourseResultAlert, animated: true, completion: nil)
+        present(unenrollCourseResultAlert, animated: true, completion: nil)
     }
 
     // MARK: - UITableViewDataSource
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return displayedCourses.count
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("enrolledCourseCell", forIndexPath: indexPath)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "enrolledCourseCell", for: indexPath)
 
-        let displayedCourse = displayedCourses[indexPath.row]
+        let displayedCourse = displayedCourses[(indexPath as NSIndexPath).row]
 
         cell.textLabel?.text = "Curso \(displayedCourse.number) - \(displayedCourse.teachers)"
         cell.detailTextLabel?.text = "Vacantes: \(displayedCourse.vacancies)"
@@ -74,42 +74,42 @@ class ListEnrolledCoursesViewController: UITableViewController,
         return cell
     }
 
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
 
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
 
     }
 
     // MARK: - UITableViewDelegate
 
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let displayedCourse = displayedCourses[indexPath.row]
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let displayedCourse = displayedCourses[(indexPath as NSIndexPath).row]
 
         let message = "¿Está seguro que desea desuscribirse del curso?"
         let enrollCourseConfirmationAlert = UIAlertController(title: "Desuscribirse",
                                                               message: message,
-                                                              preferredStyle: .Alert)
-        let cancelAction = UIAlertAction(title: "Cancelar", style: .Cancel, handler: nil)
+                                                              preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
         enrollCourseConfirmationAlert.addAction(cancelAction)
-        let enrollAction = UIAlertAction(title: "Desuscribir", style: .Default) { (alertAction) in
+        let enrollAction = UIAlertAction(title: "Desuscribir", style: .default) { (alertAction) in
             self.output.unenrollCourse(ListEnrolledCourses.UnenrollCourse.Request(id: displayedCourse.id))
         }
         enrollCourseConfirmationAlert.addAction(enrollAction)
-        presentViewController(enrollCourseConfirmationAlert, animated: true, completion: nil)
+        present(enrollCourseConfirmationAlert, animated: true, completion: nil)
 
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 
-    override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
-        let unrollAction = UITableViewRowAction(style: .Destructive, title: "DESUSCRIBIR") { (action, indexPath) -> Void in
-            let alert = UIAlertController(title: "Desuscribir", message: "¿Está seguro que desea desuscribirse del curso?", preferredStyle: .Alert)
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let unrollAction = UITableViewRowAction(style: .destructive, title: "DESUSCRIBIR") { (action, indexPath) -> Void in
+            let alert = UIAlertController(title: "Desuscribir", message: "¿Está seguro que desea desuscribirse del curso?", preferredStyle: .alert)
 
-            let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: { (alertAction) in
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: { (alertAction) in
 
             })
-            let unrollAction = UIAlertAction(title: "Desuscribir", style: .Destructive, handler: { (alertAction) in
+            let unrollAction = UIAlertAction(title: "Desuscribir", style: .destructive, handler: { (alertAction) in
 
             })
 
@@ -117,7 +117,7 @@ class ListEnrolledCoursesViewController: UITableViewController,
             alert.addAction(unrollAction)
 
             self.setEditing(false, animated: true)
-            self.presentViewController(alert, animated: true, completion: nil)
+            self.present(alert, animated: true, completion: nil)
         }
         return [unrollAction]
     }

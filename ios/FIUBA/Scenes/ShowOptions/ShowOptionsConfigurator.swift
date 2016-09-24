@@ -9,7 +9,7 @@ import UIKit
 
 extension ShowOptionsViewController {
 
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         router.passDataToNextScene(segue)
     }
 
@@ -19,23 +19,14 @@ class ShowOptionsConfigurator {
 
     // MARK: Object lifecycle
 
-    class var sharedInstance: ShowOptionsConfigurator {
-
-        struct Static {
-            static var instance: ShowOptionsConfigurator?
-            static var token: dispatch_once_t = 0
-        }
-
-        dispatch_once(&Static.token) {
-            Static.instance = ShowOptionsConfigurator()
-        }
-
-        return Static.instance!
-    }
+    static let sharedInstance: ShowOptionsConfigurator = {
+        let instance = ShowOptionsConfigurator()
+        return instance
+    }()
 
     // MARK: Configuration
 
-    func configure(viewController: ShowOptionsViewController) {
+    func configure(_ viewController: ShowOptionsViewController) {
         let router = ShowOptionsRouter()
         router.viewController = viewController
 

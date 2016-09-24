@@ -10,7 +10,7 @@ class ListSubjectsPresenter: ListSubjectsInteractorOutput {
   
     // MARK: Presentation logic
   
-    func presentFetchedSubjects(response: ListSubjects.Response) {
+    func presentFetchedSubjects(_ response: ListSubjects.Response) {
         var displayedSubjects: [ListSubjects.ViewModel.DisplayedSubject] = []
 
         for subject in response.subjects {

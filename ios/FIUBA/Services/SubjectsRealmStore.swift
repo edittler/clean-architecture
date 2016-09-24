@@ -7,32 +7,32 @@ import RealmSwift
 
 class SubjectsRealmStore: SubjectsStoreProtocol {
 
-    func fetchSubjects(completionHandler: SubjectsStoreFetchSubjectsCompletionHandler) {
+    func fetchSubjects(_ completionHandler: @escaping SubjectsStoreFetchSubjectsCompletionHandler) {
         guard let realm = realm() else {
-            completionHandler(result: SubjectsStoreResult.Failure(error: SubjectsStoreError.CannotFetch("No se pudo instanciar Realm")))
+            completionHandler(SubjectsStoreResult.failure(error: SubjectsStoreError.cannotFetch("No se pudo instanciar Realm")))
             return
         }
 
-        let rlmSubjects = realm.objects(SubjectRLM)
+        let rlmSubjects = realm.objects(SubjectRLM.self)
         let subjects: [Subject] = rlmSubjects.map { (rlmSubject) -> Subject in
             return Subject(id: rlmSubject.id,
                 code: rlmSubject.code,
                 name: rlmSubject.name)
         }
-        completionHandler(result: SubjectsStoreResult.Success(result: subjects))
+        completionHandler(SubjectsStoreResult.success(result: subjects))
     }
 
-    func fetchSubject(id: String, completionHandler: SubjectsStoreFetchSubjectCompletionHandler) {
-
-    }
-
-    func createSubject(subjectToCreate: Subject, completionHandler: SubjectsStoreCreateSubjectCompletionHandler) {
+    func fetchSubject(_ id: String, completionHandler: SubjectsStoreFetchSubjectCompletionHandler) {
 
     }
 
-    func createSubjects(subjects: [Subject], completionHandler: SubjectsStoreCreateSubjectsCompletionHandler) {
+    func createSubject(_ subjectToCreate: Subject, completionHandler: SubjectsStoreCreateSubjectCompletionHandler) {
+
+    }
+
+    func createSubjects(_ subjects: [Subject], completionHandler: SubjectsStoreCreateSubjectsCompletionHandler) {
         guard let realm = realm() else {
-            completionHandler(result: SubjectsStoreResult.Failure(error: SubjectsStoreError.CannotCreate("No se pudo instanciar Realm")))
+            completionHandler(SubjectsStoreResult.failure(error: SubjectsStoreError.cannotCreate("No se pudo instanciar Realm")))
             return
         }
 
@@ -50,23 +50,23 @@ class SubjectsRealmStore: SubjectsStoreProtocol {
                 }
             }
         } catch {
-            completionHandler(result: SubjectsStoreResult.Failure(error: SubjectsStoreError.CannotCreate("No se pudo escribir en Realm")))
+            completionHandler(SubjectsStoreResult.failure(error: SubjectsStoreError.cannotCreate("No se pudo escribir en Realm")))
             return
         }
-        completionHandler(result: SubjectsStoreResult.Success(result: ()))
+        completionHandler(SubjectsStoreResult.success(result: ()))
     }
 
-    func updateSubject(subjectToUpdate: Subject, completionHandler: SubjectsStoreUpdateSubjectCompletionHandler) {
+    func updateSubject(_ subjectToUpdate: Subject, completionHandler: SubjectsStoreUpdateSubjectCompletionHandler) {
 
     }
 
-    func deleteSubject(id: String, completionHandler: SubjectsStoreDeleteSubjectCompletionHandler) {
+    func deleteSubject(_ id: String, completionHandler: SubjectsStoreDeleteSubjectCompletionHandler) {
 
     }
 
     // MARK: - Auxiliars
 
-    private func realm() -> Realm? {
+    fileprivate func realm() -> Realm? {
         do {
             return try Realm()
         } catch {

@@ -6,11 +6,11 @@
 import Foundation
 
 protocol ShowOptionsInteractorInput {
-    func doSomething(request: ShowOptions.Request)
+    func doSomething(_ request: ShowOptions.Request)
 }
 
 protocol ShowOptionsInteractorOutput {
-    func presentSomething(response: ShowOptions.Response)
+    func presentSomething(_ response: ShowOptions.Response)
 }
 
 protocol ShowOptionsWorkerProtocol {
@@ -23,7 +23,7 @@ class ShowOptionsInteractor: ShowOptionsInteractorInput {
   
     // MARK: Business logic
   
-    func doSomething(request: ShowOptions.Request) {
+    func doSomething(_ request: ShowOptions.Request) {
         // NOTE: Create some Worker to do the work
 
         worker.doSomeWork()

@@ -6,9 +6,9 @@
 import UIKit
 
 protocol ListCoursesViewProtocol: class {
-    func displayFetchedCourses(viewModel: ListCourses.ViewModel)
-    func displayEnrollCourseConfirmation(viewModel: ListCourses.SelectCourse.ViewModel)
-    func displayEnrollCourseResult(viewModel: ListCourses.EnrollCourse.ViewModel)
+    func displayFetchedCourses(_ viewModel: ListCourses.ViewModel)
+    func displayEnrollCourseConfirmation(_ viewModel: ListCourses.SelectCourse.ViewModel)
+    func displayEnrollCourseResult(_ viewModel: ListCourses.EnrollCourse.ViewModel)
 }
 
 class ListCoursesViewController: UITableViewController,
@@ -44,64 +44,64 @@ class ListCoursesViewController: UITableViewController,
   
     // MARK: Display logic
   
-    func displayFetchedCourses(viewModel: ListCourses.ViewModel) {
+    func displayFetchedCourses(_ viewModel: ListCourses.ViewModel) {
         displayedCourses = viewModel.displayedCourses
         tableView.reloadData()
     }
 
-    func displayEnrollCourseConfirmation(viewModel: ListCourses.SelectCourse.ViewModel) {
+    func displayEnrollCourseConfirmation(_ viewModel: ListCourses.SelectCourse.ViewModel) {
         let message = "Curso \(viewModel.number)\n\(viewModel.teachers)\nVacantes:\(viewModel.vacancies)"
         let enrollCourseConfirmationAlert = UIAlertController(title: "Inscribirse",
                                                           message: message,
-                                                          preferredStyle: .Alert)
-        let cancelAction = UIAlertAction(title: "Cancelar", style: .Cancel, handler: nil)
+                                                          preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
         enrollCourseConfirmationAlert.addAction(cancelAction)
-        let enrollAction = UIAlertAction(title: "Inscribir", style: .Default) { (alertAction) in
+        let enrollAction = UIAlertAction(title: "Inscribir", style: .default) { (alertAction) in
             self.output.enrollCourse(ListCourses.EnrollCourse.Request(id: viewModel.id))
         }
         enrollCourseConfirmationAlert.addAction(enrollAction)
-        presentViewController(enrollCourseConfirmationAlert, animated: true, completion: nil)
+        present(enrollCourseConfirmationAlert, animated: true, completion: nil)
     }
 
-    func displayEnrollCourseResult(viewModel: ListCourses.EnrollCourse.ViewModel) {
+    func displayEnrollCourseResult(_ viewModel: ListCourses.EnrollCourse.ViewModel) {
         fetchCoursesOnLoad()
         let enrollCourseResultAlert = UIAlertController(title: viewModel.title,
                                                         message: viewModel.message,
-                                                        preferredStyle: .Alert)
-        let cancelAction = UIAlertAction(title: "Aceptar", style: .Cancel, handler: nil)
+                                                        preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Aceptar", style: .cancel, handler: nil)
         enrollCourseResultAlert.addAction(cancelAction)
-        presentViewController(enrollCourseResultAlert, animated: true, completion: nil)
+        present(enrollCourseResultAlert, animated: true, completion: nil)
     }
 
     // MARK: - UITableViewDelegate
 
-    override func tableView(tableView: UITableView,
-                            didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView,
+                            didSelectRowAt indexPath: IndexPath) {
 
-        let displayedCourse = displayedCourses[indexPath.row]
+        let displayedCourse = displayedCourses[(indexPath as NSIndexPath).row]
         output.selectCourse(ListCourses.SelectCourse.Request(id: displayedCourse.id))
         
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 
     // MARK: - UITableViewDataSource
 
-    override func tableView(tableView: UITableView,
+    override func tableView(_ tableView: UITableView,
                             numberOfRowsInSection section: Int) -> Int {
         return displayedCourses.count
     }
 
-    override func tableView(tableView: UITableView,
-                            cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("courseCell", forIndexPath: indexPath)
+    override func tableView(_ tableView: UITableView,
+                            cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "courseCell", for: indexPath)
 
-        let displayedCourse = displayedCourses[indexPath.row]
+        let displayedCourse = displayedCourses[(indexPath as NSIndexPath).row]
         if displayedCourse.enrolled {
             cell.backgroundColor = UIColor(red: 13/255, green: 148/255, blue: 252/255, alpha: 1)
             let label = UILabel(frame: CGRect.zero)
             label.text = "INSCRIPTO"
-            label.backgroundColor = UIColor.redColor().colorWithAlphaComponent(0.6)
-            label.textColor = UIColor.whiteColor()
+            label.backgroundColor = UIColor.red.withAlphaComponent(0.6)
+            label.textColor = UIColor.white
             label.sizeToFit()
             label.clipsToBounds = true
             label.layer.cornerRadius = 5

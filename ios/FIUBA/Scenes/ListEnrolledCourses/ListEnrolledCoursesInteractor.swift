@@ -6,18 +6,18 @@
 import Foundation
 
 protocol ListEnrolledCoursesInteractorInput {
-    func fetchEnrolledCourses(request: ListEnrolledCourses.Request)
-    func unenrollCourse(request: ListEnrolledCourses.UnenrollCourse.Request)
+    func fetchEnrolledCourses(_ request: ListEnrolledCourses.Request)
+    func unenrollCourse(_ request: ListEnrolledCourses.UnenrollCourse.Request)
 }
 
 protocol ListEnrolledCoursesInteractorOutput {
-    func presentFetchedEnrolledCourses(response: ListEnrolledCourses.Response)
-    func presentUnenrollCourseResult(response: ListEnrolledCourses.UnenrollCourse.Response)
+    func presentFetchedEnrolledCourses(_ response: ListEnrolledCourses.Response)
+    func presentUnenrollCourseResult(_ response: ListEnrolledCourses.UnenrollCourse.Response)
 }
 
 protocol ListEnrolledCoursesWorkerProtocol {
-    func fetchEnrolledCourses(completionHandler: (courses: [Course]) -> Void)
-    func unenrollCourse(id: String)
+    func fetchEnrolledCourses(_ completionHandler: (_ courses: [Course]) -> Void)
+    func unenrollCourse(_ id: String)
 }
 
 class ListEnrolledCoursesInteractor: ListEnrolledCoursesInteractorInput {
@@ -29,7 +29,7 @@ class ListEnrolledCoursesInteractor: ListEnrolledCoursesInteractorInput {
 
     // MARK: Business logic
   
-    func fetchEnrolledCourses(request: ListEnrolledCourses.Request) {
+    func fetchEnrolledCourses(_ request: ListEnrolledCourses.Request) {
         worker.fetchEnrolledCourses { (courses) in
             self.enrolledCourses = courses
             let response = ListEnrolledCourses.Response(courses: courses)
@@ -37,7 +37,7 @@ class ListEnrolledCoursesInteractor: ListEnrolledCoursesInteractorInput {
         }
     }
 
-    func unenrollCourse(request: ListEnrolledCourses.UnenrollCourse.Request) {
+    func unenrollCourse(_ request: ListEnrolledCourses.UnenrollCourse.Request) {
         worker.unenrollCourse(request.id)
         output.presentUnenrollCourseResult(ListEnrolledCourses.UnenrollCourse.Response(
             unenrollSuccess: true,

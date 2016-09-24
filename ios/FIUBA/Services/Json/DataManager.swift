@@ -8,35 +8,35 @@
 
 import Foundation
 
-public class DataManager {
+open class DataManager {
   
-    public class func loadDataFromJsonFile(fileName: String, success: ((data: NSData) -> Void)) {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
-            let filePath = NSBundle.mainBundle().pathForResource(fileName, ofType:"json")
+    open class func loadDataFromJsonFile(_ fileName: String, success: @escaping ((_ data: Data) -> Void)) {
+        DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default).async(execute: {
+            let filePath = Bundle.main.path(forResource: fileName, ofType:"json")
             // swiftlint:disable:next force_try
-            let data = try! NSData(contentsOfFile: filePath!,
-                                   options: NSDataReadingOptions.DataReadingUncached)
-            success(data: data)
+            let data = try! Data(contentsOf: URL(fileURLWithPath: filePath!),
+                                   options: NSData.ReadingOptions.uncached)
+            success(data)
         })
     }
   
-    public class func loadDataFromURL(url: NSURL, completion:(data: NSData?, error: NSError?) -> Void) {
-        let session = NSURLSession.sharedSession()
+    open class func loadDataFromURL(_ url: URL, completion:@escaping (_ data: Data?, _ error: NSError?) -> Void) {
+        let session = URLSession.shared
     
-        let loadDataTask = session.dataTaskWithURL(url) { (data, response, error) -> Void in
+        let loadDataTask = session.dataTask(with: url, completionHandler: { (data, response, error) -> Void in
             if let responseError = error {
-                completion(data: nil, error: responseError)
-            } else if let httpResponse = response as? NSHTTPURLResponse {
+                completion(nil, responseError as NSError?)
+            } else if let httpResponse = response as? HTTPURLResponse {
                 if httpResponse.statusCode != 200 {
                     let statusError = NSError(domain: "com.raywenderlich",
                                               code: httpResponse.statusCode,
                                               userInfo: [NSLocalizedDescriptionKey : "HTTP status code has unexpected value."])
-                    completion(data: nil, error: statusError)
+                    completion(nil, statusError)
                 } else {
-                    completion(data: data, error: nil)
+                    completion(data, nil)
                 }
             }
-        }
+        }) 
     
         loadDataTask.resume()
     }

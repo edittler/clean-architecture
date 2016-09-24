@@ -7,13 +7,13 @@ import RealmSwift
 
 class CoursesRealmStore: CoursesStoreProtocol {
 
-    func fetchCourses(completionHandler: CoursesStoreFetchCoursesCompletionHandler) {
+    func fetchCourses(_ completionHandler: @escaping CoursesStoreFetchCoursesCompletionHandler) {
         guard let realm = realm() else {
-            completionHandler(result: CoursesStoreResult.Failure(error: CoursesStoreError.CannotFetch("No se pudo instanciar Realm")))
+            completionHandler(CoursesStoreResult.failure(error: CoursesStoreError.cannotFetch("No se pudo instanciar Realm")))
             return
         }
 
-        let rlmCourses = realm.objects(CourseRLM)
+        let rlmCourses = realm.objects(CourseRLM.self)
         let courses: [Course] = rlmCourses.map { (rlmCourse) -> Course in
             return Course(id: rlmCourse.id,
                 subjectId: rlmCourse.subjectId,
@@ -22,17 +22,17 @@ class CoursesRealmStore: CoursesStoreProtocol {
                 vacancies: rlmCourse.vacancies,
                 enrolled: rlmCourse.enrolled)
         }
-        completionHandler(result: CoursesStoreResult.Success(result: courses))
+        completionHandler(CoursesStoreResult.success(result: courses))
     }
 
-    func fetchCoursesBySubject(subject: Subject, completionHandler: CoursesStoreFetchCoursesCompletionHandler) {
+    func fetchCoursesBySubject(_ subject: Subject, completionHandler: CoursesStoreFetchCoursesCompletionHandler) {
         guard let realm = realm() else {
-            completionHandler(result: CoursesStoreResult.Failure(error: CoursesStoreError.CannotFetch("No se pudo instanciar Realm")))
+            completionHandler(CoursesStoreResult.failure(error: CoursesStoreError.cannotFetch("No se pudo instanciar Realm")))
             return
         }
 
         let predicate = NSPredicate(format: "subjectId == %@", subject.id!)
-        let rlmCourses = realm.objects(CourseRLM).filter(predicate)
+        let rlmCourses = realm.objects(CourseRLM.self).filter(predicate)
         let courses: [Course] = rlmCourses.map { (rlmCourse) -> Course in
             return Course(id: rlmCourse.id,
                 subjectId: rlmCourse.subjectId,
@@ -41,17 +41,17 @@ class CoursesRealmStore: CoursesStoreProtocol {
                 vacancies: rlmCourse.vacancies,
                 enrolled: rlmCourse.enrolled)
         }
-        completionHandler(result: CoursesStoreResult.Success(result: courses))
+        completionHandler(CoursesStoreResult.success(result: courses))
     }
 
-    func fetchEnrolledCourses(completionHandler: CoursesStoreFetchCoursesCompletionHandler) {
+    func fetchEnrolledCourses(_ completionHandler: CoursesStoreFetchCoursesCompletionHandler) {
         guard let realm = realm() else {
-            completionHandler(result: CoursesStoreResult.Failure(error: CoursesStoreError.CannotFetch("No se pudo instanciar Realm")))
+            completionHandler(CoursesStoreResult.failure(error: CoursesStoreError.cannotFetch("No se pudo instanciar Realm")))
             return
         }
 
         let predicate = NSPredicate(format: "enrolled == true")
-        let rlmCourses = realm.objects(CourseRLM).filter(predicate)
+        let rlmCourses = realm.objects(CourseRLM.self).filter(predicate)
         let courses: [Course] = rlmCourses.map { (rlmCourse) -> Course in
             return Course(id: rlmCourse.id,
                 subjectId: rlmCourse.subjectId,
@@ -60,18 +60,18 @@ class CoursesRealmStore: CoursesStoreProtocol {
                 vacancies: rlmCourse.vacancies,
                 enrolled: rlmCourse.enrolled)
         }
-        completionHandler(result: CoursesStoreResult.Success(result: courses))
+        completionHandler(CoursesStoreResult.success(result: courses))
     }
 
-    func fetchCourse(id: String, completionHandler: CoursesStoreFetchCourseCompletionHandler) {
+    func fetchCourse(_ id: String, completionHandler: CoursesStoreFetchCourseCompletionHandler) {
         guard let realm = realm() else {
-            completionHandler(result: CoursesStoreResult.Failure(error: CoursesStoreError.CannotFetch("No se pudo instanciar Realm")))
+            completionHandler(CoursesStoreResult.failure(error: CoursesStoreError.cannotFetch("No se pudo instanciar Realm")))
             return
         }
 
         let predicate = NSPredicate(format: "id == %@", id)
-        guard let rlmCourse = realm.objects(CourseRLM).filter(predicate).first else {
-            completionHandler(result: CoursesStoreResult.Failure(error: CoursesStoreError.CannotFetch("No existe un curso con el id dado")))
+        guard let rlmCourse = realm.objects(CourseRLM.self).filter(predicate).first else {
+            completionHandler(CoursesStoreResult.failure(error: CoursesStoreError.cannotFetch("No existe un curso con el id dado")))
             return
         }
 
@@ -81,16 +81,16 @@ class CoursesRealmStore: CoursesStoreProtocol {
                             teachers: rlmCourse.teachers,
                             vacancies: rlmCourse.vacancies,
                             enrolled: rlmCourse.enrolled)
-        completionHandler(result: CoursesStoreResult.Success(result: course))
+        completionHandler(CoursesStoreResult.success(result: course))
     }
 
-    func createCourse(courseToCreate: Course, completionHandler: CoursesStoreCreateCourseCompletionHandler) {
+    func createCourse(_ courseToCreate: Course, completionHandler: CoursesStoreCreateCourseCompletionHandler) {
 
     }
 
-    func createCourses(courses: [Course], completionHandler: CoursesStoreCreateCoursesCompletionHandler) {
+    func createCourses(_ courses: [Course], completionHandler: CoursesStoreCreateCoursesCompletionHandler) {
         guard let realm = realm() else {
-            completionHandler(result: CoursesStoreResult.Failure(error: CoursesStoreError.CannotCreate("No se pudo instanciar Realm")))
+            completionHandler(CoursesStoreResult.failure(error: CoursesStoreError.cannotCreate("No se pudo instanciar Realm")))
             return
         }
 
@@ -111,13 +111,13 @@ class CoursesRealmStore: CoursesStoreProtocol {
                 }
             }
         } catch {
-            completionHandler(result: CoursesStoreResult.Failure(error: CoursesStoreError.CannotCreate("No se pudo escribir en Realm")))
+            completionHandler(CoursesStoreResult.failure(error: CoursesStoreError.cannotCreate("No se pudo escribir en Realm")))
             return
         }
-        completionHandler(result: CoursesStoreResult.Success(result: ()))
+        completionHandler(CoursesStoreResult.success(result: ()))
     }
 
-    func updateCourse(courseToUpdate: Course, completionHandler: CoursesStoreUpdateCourseCompletionHandler) {
+    func updateCourse(_ courseToUpdate: Course, completionHandler: CoursesStoreUpdateCourseCompletionHandler) {
         let course = CourseRLM()
         course.id = courseToUpdate.id!
         course.subjectId = courseToUpdate.subjectId!
@@ -127,7 +127,7 @@ class CoursesRealmStore: CoursesStoreProtocol {
         course.enrolled = courseToUpdate.enrolled!
 
         guard let realm = realm() else {
-            completionHandler(result: CoursesStoreResult.Failure(error: CoursesStoreError.CannotCreate("No se pudo instanciar Realm")))
+            completionHandler(CoursesStoreResult.failure(error: CoursesStoreError.cannotCreate("No se pudo instanciar Realm")))
             return
         }
 
@@ -136,18 +136,18 @@ class CoursesRealmStore: CoursesStoreProtocol {
                 realm.add(course, update: true)
             }
         } catch {
-            completionHandler(result: CoursesStoreResult.Failure(error: CoursesStoreError.CannotCreate("No se pudo escribir en Realm")))
+            completionHandler(CoursesStoreResult.failure(error: CoursesStoreError.cannotCreate("No se pudo escribir en Realm")))
             return
         }
     }
 
-    func deleteCourse(id: String, completionHandler: CoursesStoreDeleteCourseCompletionHandler) {
+    func deleteCourse(_ id: String, completionHandler: CoursesStoreDeleteCourseCompletionHandler) {
 
     }
 
     // MARK: - Auxiliars
 
-    private func realm() -> Realm? {
+    fileprivate func realm() -> Realm? {
         do {
             return try Realm()
         } catch {

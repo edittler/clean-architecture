@@ -12,11 +12,11 @@ import XCTest
 class ListCoursesWorkerMock: ListCoursesWorkerProtocol {
     var enrollCount: Int = 0
 
-    func fetchCoursesBySubject(subject: Subject, completionHandler: (courses: [Course]) -> Void) {
+    func fetchCoursesBySubject(_ subject: Subject, completionHandler: (_ courses: [Course]) -> Void) {
 
     }
 
-    func fetchEnrolledCourses(completionHandler: (courses: [Course]) -> Void) {
+    func fetchEnrolledCourses(_ completionHandler: (_ courses: [Course]) -> Void) {
         var courses: [Course] = []
         for _ in 0..<enrollCount {
             courses.append(Course())
@@ -24,7 +24,7 @@ class ListCoursesWorkerMock: ListCoursesWorkerProtocol {
         completionHandler(courses: courses)
     }
 
-    func enrollCourse(id: String) {
+    func enrollCourse(_ id: String) {
         enrollCount += 1
     }
 
@@ -34,15 +34,15 @@ class ListCoursesPresenterMock: ListCoursesInteractorOutput {
 
     var enrollCourseResponse: ListCourses.EnrollCourse.Response?
 
-    func presentFetchedCourses(response: ListCourses.Response) {
+    func presentFetchedCourses(_ response: ListCourses.Response) {
 
     }
 
-    func presentEnrollCourseConfirmation(response: ListCourses.SelectCourse.Response) {
+    func presentEnrollCourseConfirmation(_ response: ListCourses.SelectCourse.Response) {
 
     }
 
-    func presentEnrollCourseResult(response: ListCourses.EnrollCourse.Response) {
+    func presentEnrollCourseResult(_ response: ListCourses.EnrollCourse.Response) {
         enrollCourseResponse = response
     }
 

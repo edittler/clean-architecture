@@ -6,23 +6,23 @@
 import Foundation
 
 protocol ListCoursesInteractorInput {
-    func fetchCourses(request: ListCourses.Request)
-    func selectCourse(request: ListCourses.SelectCourse.Request)
-    func enrollCourse(request: ListCourses.EnrollCourse.Request)
+    func fetchCourses(_ request: ListCourses.Request)
+    func selectCourse(_ request: ListCourses.SelectCourse.Request)
+    func enrollCourse(_ request: ListCourses.EnrollCourse.Request)
 
     var subject: Subject! { get set }
 }
 
 protocol ListCoursesInteractorOutput {
-    func presentFetchedCourses(response: ListCourses.Response)
-    func presentEnrollCourseConfirmation(response: ListCourses.SelectCourse.Response)
-    func presentEnrollCourseResult(response: ListCourses.EnrollCourse.Response)
+    func presentFetchedCourses(_ response: ListCourses.Response)
+    func presentEnrollCourseConfirmation(_ response: ListCourses.SelectCourse.Response)
+    func presentEnrollCourseResult(_ response: ListCourses.EnrollCourse.Response)
 }
 
 protocol ListCoursesWorkerProtocol {
-    func fetchCoursesBySubject(subject: Subject, completionHandler: (courses: [Course]) -> Void)
-    func fetchEnrolledCourses(completionHandler: (courses: [Course]) -> Void)
-    func enrollCourse(id: String)
+    func fetchCoursesBySubject(_ subject: Subject, completionHandler: (_ courses: [Course]) -> Void)
+    func fetchEnrolledCourses(_ completionHandler: (_ courses: [Course]) -> Void)
+    func enrollCourse(_ id: String)
 }
 
 class ListCoursesInteractor: ListCoursesInteractorInput {
@@ -35,7 +35,7 @@ class ListCoursesInteractor: ListCoursesInteractorInput {
   
     // MARK: Business logic
 
-    func fetchCourses(request: ListCourses.Request) {
+    func fetchCourses(_ request: ListCourses.Request) {
         worker.fetchCoursesBySubject(subject) { (courses) in
             self.courses = courses
             let response = ListCourses.Response(courses: courses)
@@ -43,11 +43,11 @@ class ListCoursesInteractor: ListCoursesInteractorInput {
         }
     }
 
-    func selectCourse(request: ListCourses.SelectCourse.Request) {
+    func selectCourse(_ request: ListCourses.SelectCourse.Request) {
         guard let courses = self.courses else { return }
         guard !courses.isEmpty else { return }
 
-        let index = courses.indexOf { (course) -> Bool in
+        let index = courses.index { (course) -> Bool in
             return request.id == course.id
         }
         
@@ -55,7 +55,7 @@ class ListCoursesInteractor: ListCoursesInteractorInput {
         output.presentEnrollCourseConfirmation(ListCourses.SelectCourse.Response(course: courses[aindex]))
     }
 
-    func enrollCourse(request: ListCourses.EnrollCourse.Request) {
+    func enrollCourse(_ request: ListCourses.EnrollCourse.Request) {
         if !isEnrolledCourse() {
             worker.fetchEnrolledCourses({ (courses) in
                 if courses.count < 3 {
@@ -72,7 +72,7 @@ class ListCoursesInteractor: ListCoursesInteractorInput {
         }
     }
 
-    private func isEnrolledCourse() -> Bool {
+    fileprivate func isEnrolledCourse() -> Bool {
         guard let courses = self.courses else { return false }
         guard !courses.isEmpty else { return false }
 
@@ -82,7 +82,7 @@ class ListCoursesInteractor: ListCoursesInteractorInput {
         return !enrolledCourses.isEmpty
     }
 
-    private func enrollCourse(id: String) {
+    fileprivate func enrollCourse(_ id: String) {
         worker.enrollCourse(id)
         output.presentEnrollCourseResult(ListCourses.EnrollCourse.Response(
             enrollSuccess: true,
@@ -90,7 +90,7 @@ class ListCoursesInteractor: ListCoursesInteractorInput {
             message: "Se ha inscripto correctamente al curso"))
     }
 
-    private func notEnrollCourse(message: String) {
+    fileprivate func notEnrollCourse(_ message: String) {
         output.presentEnrollCourseResult(ListCourses.EnrollCourse.Response(
             enrollSuccess: false,
             title: "Inscripción fallida",

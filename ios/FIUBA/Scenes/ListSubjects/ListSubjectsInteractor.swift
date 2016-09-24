@@ -6,16 +6,16 @@
 import Foundation
 
 protocol ListSubjectsInteractorInput {
-    func fetchSubjects(request: ListSubjects.Request)
+    func fetchSubjects(_ request: ListSubjects.Request)
     var subjects: [Subject]? { get }
 }
 
 protocol ListSubjectsInteractorOutput {
-    func presentFetchedSubjects(response: ListSubjects.Response)
+    func presentFetchedSubjects(_ response: ListSubjects.Response)
 }
 
 protocol ListSubjectsWorkerProtocol {
-    func fetchSubjects(completionHandler: (subjects: [Subject]) -> Void)
+    func fetchSubjects(_ completionHandler: @escaping (_ subjects: [Subject]) -> Void)
 }
 
 class ListSubjectsInteractor: ListSubjectsInteractorInput {
@@ -26,7 +26,7 @@ class ListSubjectsInteractor: ListSubjectsInteractorInput {
   
     // MARK: Business logic
   
-    func fetchSubjects(request: ListSubjects.Request) {
+    func fetchSubjects(_ request: ListSubjects.Request) {
         worker.fetchSubjects { (subjects) in
             self.subjects = subjects
             let response = ListSubjects.Response(subjects: subjects)

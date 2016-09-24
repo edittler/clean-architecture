@@ -9,7 +9,7 @@ import UIKit
 
 extension ListSubjectsViewController {
 
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         router.passDataToNextScene(segue)
     }
 
@@ -19,22 +19,14 @@ class ListSubjectsConfigurator {
 
     // MARK: Object lifecycle
   
-    class var sharedInstance: ListSubjectsConfigurator {
-        struct Static {
-            static var instance: ListSubjectsConfigurator?
-            static var token: dispatch_once_t = 0
-        }
-    
-        dispatch_once(&Static.token) {
-            Static.instance = ListSubjectsConfigurator()
-        }
-    
-        return Static.instance!
-    }
+    static let sharedInstance: ListSubjectsConfigurator = {
+        let instance = ListSubjectsConfigurator()
+        return instance
+    }()
   
     // MARK: Configuration
   
-    func configure(viewController: ListSubjectsViewController) {
+    func configure(_ viewController: ListSubjectsViewController) {
         let router = ListSubjectsRouter()
         router.viewController = viewController
     
