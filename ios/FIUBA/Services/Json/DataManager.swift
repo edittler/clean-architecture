@@ -11,13 +11,13 @@ import Foundation
 open class DataManager {
   
     open class func loadDataFromJsonFile(_ fileName: String, success: @escaping ((_ data: Data) -> Void)) {
-        DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default).async(execute: {
+        DispatchQueue.global(qos: .utility).async {
             let filePath = Bundle.main.path(forResource: fileName, ofType:"json")
             // swiftlint:disable:next force_try
             let data = try! Data(contentsOf: URL(fileURLWithPath: filePath!),
                                    options: NSData.ReadingOptions.uncached)
             success(data)
-        })
+        }
     }
   
     open class func loadDataFromURL(_ url: URL, completion:@escaping (_ data: Data?, _ error: NSError?) -> Void) {
